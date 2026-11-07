@@ -31,6 +31,48 @@ internal static partial class RegressionTests
     }
     private static void RunLocalizationTests()
     {
+        Check("intro dialogue advances through localized lines and places goods only after the last line", () =>
+        {
+            foreach (var locale in new[] { "zh", "en" })
+            foreach (var prefix in new[] { "team.", "team.ore." })
+            for (var level=1; level<=3; level++)
+            {
+                ModHelper.Locale=locale;
+                var client=new StoreClient { displayName="Supplier" };
+                var finished=0;
+                var text=Text.Get(prefix+"intro."+level);
+                var expected=text.Split('\n');
+                Require(expected.Length>=3 && expected.Length<=4, "intro was not split into short lines");
+                SupplierDialogue.Configure(client,text,()=>finished++);
+                var current=client.mainDialogue;
+                for (var i=0; i<expected.Length; i++)
+                {
+                    Require(current!=null && current.Text==expected[i], "missing or reordered line");
+                    current.End?.Invoke();
+                    Require(finished==(i==expected.Length-1 ? 1 : 0), "shipment callback ran before final line");
+                    current=current.nextDialogue;
+                }
+                Require(current==null, "extra dialogue line");
+                SupplierDialogue.Configure(client,Text.Get(prefix+"greeting"),()=>finished++);
+                Require(client.mainDialogue.nextDialogue==null, "normal greeting retained old intro chain");
+            }
+        });
+        Check("first metal greeting follows requested three turns and leaves stock hidden until completion", () =>
+        {
+            BuyUpgrade(1,TeamDefinitions.Metal); StoreStation.Day=11;
+            var manager=new StoreClientManager(); ModHook.Generate(manager);
+            var client=manager.clientStack.Single(); client.OnArrival();
+            var line=client.mainDialogue;
+            Require(line.Text=="店主，你好！我们是王尔德介绍来的拾荒者。", "first line differs");
+            line.End?.Invoke(); Require(Stock.Count==0 && !client.isIntroduced, "stock placed after first line");
+            line=line.nextDialogue;
+            Require(line.Text=="以前捡来的东西总找不到买家，常常忙活一天还得饿肚子。", "second line differs");
+            line.End?.Invoke(); Require(Stock.Count==0, "stock placed after second line");
+            line=line.nextDialogue;
+            Require(line.Text=="现在总算有个能出货的地方了，大伙儿也能吃上饱饭。谢谢你愿意收我们的货！", "last line differs");
+            line.End?.Invoke(); Require(Stock.Count==8 && client.isIntroduced && line.nextDialogue==null, "last line did not place batch");
+            line.End?.Invoke(); Require(Stock.Count==8, "repeated completion duplicated goods");
+        });
         Check("native-style CSV parsing covers all route fields and format arguments in both languages", () =>
         {
             foreach (var locale in new[] { "zh", "en" })
@@ -98,12 +140,12 @@ internal static partial class RegressionTests
                 var prefix=team==TeamDefinitions.Ore ? "team.ore." : "team.";
                 BuyUpgrade(1,team);
                 var first=Visit(team,11);
-                Require(first.mainDialogue.Text==Text.Get(prefix+"intro.1"), "missing first introduction");
+                Require(GreetingText(first)==Text.Get(prefix+"intro.1"), "missing first introduction");
                 Reload(); first=Visit(team,11);
-                Require(first.mainDialogue.Text==Text.Get(prefix+"intro.1") && first.wholesaleDiscount==-50, "reload changed introduction or special");
+                Require(GreetingText(first)==Text.Get(prefix+"intro.1") && first.wholesaleDiscount==-50, "reload changed introduction or special");
                 first.OnDismiss(); Reload();
                 var normal=Visit(team,14);
-                Require(normal.mainDialogue.Text==Text.Get(prefix+"greeting") && normal.wholesaleDiscount==-15, "introduction repeated");
+                Require(GreetingText(normal)==Text.Get(prefix+"greeting") && normal.wholesaleDiscount==-15, "introduction repeated");
                 normal.OnDismiss();
                 for (var level=2; level<=3; level++)
                 {
@@ -111,11 +153,11 @@ internal static partial class RegressionTests
                     BuyUpgrade(level,team);
                     Require(TeamStateRepository.Read(team).nextDay==due, "upgrade reset schedule");
                     Reload(); var upgraded=Visit(team,due);
-                    Require(upgraded.mainDialogue.Text==Text.Get(prefix+"intro."+level), "missing upgrade introduction");
+                    Require(GreetingText(upgraded)==Text.Get(prefix+"intro."+level), "missing upgrade introduction");
                     Require(upgraded.wholesaleDiscount==-15, "upgrade reset discount");
                     upgraded.OnDismiss(); Reload();
                     normal=Visit(team,due+3);
-                    Require(normal.mainDialogue.Text==Text.Get(prefix+"greeting"), "upgrade introduction repeated");
+                    Require(GreetingText(normal)==Text.Get(prefix+"greeting"), "upgrade introduction repeated");
                     normal.OnDismiss();
                 }
             });
@@ -136,7 +178,7 @@ internal static partial class RegressionTests
         {
             BuyUpgrade(1); BuyUpgrade(2); BuyUpgrade(3);
             var client=Arrive(11);
-            Require(client.mainDialogue.Text==Text.Get("team.intro.3") && client.wholesaleDiscount==-50, "wrong introduction or first discount");
+            Require(GreetingText(client)==Text.Get("team.intro.3") && client.wholesaleDiscount==-50, "wrong introduction or first discount");
         });
     }
 }

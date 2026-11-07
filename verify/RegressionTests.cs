@@ -7,6 +7,16 @@ using ScavengerTeams;
 internal static partial class RegressionTests
 {
     private static int passed, failed;
+    private static void FinishDialogue(Dialogue dialogue)
+    {
+        for (var current=dialogue; current!=null; current=current.nextDialogue) current.End?.Invoke();
+    }
+    private static string GreetingText(StoreClient client)
+    {
+        var lines=new List<string>();
+        for (var current=client.mainDialogue; current!=null; current=current.nextDialogue) lines.Add(current.Text);
+        return string.Join("\n",lines);
+    }
     private static readonly ModEntry mod = new ModEntry();
     private static void Require(bool value, string reason)
     { if (!value) throw new Exception(reason); }
@@ -46,7 +56,7 @@ internal static partial class RegressionTests
         var client = manager.clientStack[0];
         PlayerStore.Instance.currentClientInstance = new StoreClientInstance(client);
         client.OnArrival();
-        client.mainDialogue.End();
+        FinishDialogue(client.mainDialogue);
         return client;
     }
     private static void Reload()
@@ -164,7 +174,7 @@ internal static partial class RegressionTests
         Check("upgrade during the first trade keeps current cargo and discount; next trade uses the upgrade", () =>
         {
             BuyUpgrade(1); var client = Arrive(11); var before = Stock.ToArray(); BuyUpgrade(2);
-            client.OnArrival(); client.mainDialogue.End();
+            client.OnArrival(); FinishDialogue(client.mainDialogue);
             Require(Stock.SequenceEqual(before) && client.wholesaleDiscount == -50, "active offer changed during upgrade");
             client.OnDismiss(); PlayerStore.Instance.currentClientInstance = null;
             EmporiumEntry.Instance = new EmporiumEntry(); client = Arrive(14);
@@ -187,7 +197,7 @@ internal static partial class RegressionTests
             Reload(); client = Arrive(11);
             Require(Stock.Count == 6 && Stock.Count(i => i.identifier == "printer_plastic") == 5, "sold goods revived");
             Require(TeamStateRepository.Read().soldMask == mask && client.wholesaleDiscount == -50, "batch changed on reload");
-            client.mainDialogue.End(); Require(Stock.Count == 6, "duplicate introduction");
+            FinishDialogue(client.mainDialogue); Require(Stock.Count == 6, "duplicate introduction");
         });
         Check("all stock sold closes batch; dismissing first visit consumes first discount", () =>
         {

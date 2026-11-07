@@ -241,6 +241,8 @@ public class Dialogue
 {
     public Action End, Choice;
     public string Text;
+    public Dialogue nextDialogue;
+    public Dialogue NextDialogue() => nextDialogue ?? (nextDialogue = new Dialogue());
     public Dialogue SetText(string name, string text) { Text = text; return this; }
     public Dialogue SetEndAction(Action action) { End = action; return this; }
     public Dialogue AddChoice(GameItem item, string name, string description, Action choiceAction)

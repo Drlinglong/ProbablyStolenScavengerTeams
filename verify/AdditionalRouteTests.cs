@@ -15,7 +15,7 @@ internal static partial class RegressionTests
         var manager = new StoreClientManager(); ModHook.Generate(manager);
         var client = manager.clientStack.Single(c => c.identifier == team.ClientId);
         PlayerStore.Instance.currentClientInstance = new StoreClientInstance(client);
-        client.OnArrival(); client.mainDialogue.End();
+        client.OnArrival(); FinishDialogue(client.mainDialogue);
         return client;
     }
 
@@ -121,7 +121,7 @@ internal static partial class RegressionTests
             EmporiumEntry.Instance.frontInvinvElement.Capacity=18;
             var manager=new StoreClientManager(); ModHook.Generate(manager);
             var client=manager.clientStack.Single(); PlayerStore.Instance.currentClientInstance=new StoreClientInstance(client);
-            client.OnArrival(); client.mainDialogue.End();
+            client.OnArrival(); FinishDialogue(client.mainDialogue);
             Require(Stock.Count==2 && Stock.All(i=>i.identifier==TeamDefinitions.Ore.CrateId), "ore junk displaced crates");
             Reload(); Visit(TeamDefinitions.Ore,11);
             Require(Stock.Count==2 && Stock.All(i=>i.identifier==TeamDefinitions.Ore.CrateId), "discarded ore junk reappeared");

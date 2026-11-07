@@ -68,7 +68,7 @@ namespace ScavengerTeams
             DeliveryRules.Arrive(state, TeamStateRepository.Day, TeamStateRepository.GetLevel(team));
             TeamStateRepository.Write(state, team);
             client.SetWholesale(DeliveryRules.WholesaleDiscount(state));
-            client.mainDialogue.SetText(client.displayName, Greeting(team, state.offerGreetingLevel));
+            SupplierDialogue.Configure(client, Greeting(team, state.offerGreetingLevel), () => Introduce(client, team));
         }
         private static string Greeting(TeamDefinition team, int level)
         {

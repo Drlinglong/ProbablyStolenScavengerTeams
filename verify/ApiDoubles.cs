@@ -250,11 +250,21 @@ public class Dialogue
     public Action End, Choice;
     public string Text;
     public Dialogue nextDialogue;
+    public Func<Dialogue,bool> isDisabledFunc;
+    public List<(GameItem,Dialogue,Action)> choices = new List<(GameItem,Dialogue,Action)>();
     public Dialogue NextDialogue() => nextDialogue ?? (nextDialogue = new Dialogue());
     public Dialogue SetText(string name, string text) { Text = text; return this; }
     public Dialogue SetEndAction(Action action) { End = action; return this; }
-    public Dialogue AddChoice(GameItem item, string name, string description, Action choiceAction)
-    { Choice = choiceAction; return this; }
+    public Dialogue AddChoice(GameItem item, string name, string description = "", Dialogue choiceNextDialogue = null,
+        Action choiceAction = null, Func<bool> choiceEnabled = null)
+    {
+        item.name = name; item.shortDescription = description;
+        if (choiceEnabled != null && choiceNextDialogue != null)
+            choiceNextDialogue.isDisabledFunc = _ => !choiceEnabled();
+        choices.Add((item,choiceNextDialogue,choiceAction)); Choice=choiceAction; return this;
+    }
+    public bool IsChoiceEnabledAt(int index) => index>=0 && index<choices.Count
+        && !(choices[index].Item2?.isDisabledFunc?.Invoke(choices[index].Item2) ?? false);
 }
 public class DialogUIManager
 {
@@ -280,6 +290,8 @@ public class PlayerStore
     }
     public int playerCash = 10000;
     public StoreClientInstance currentClientInstance;
+    public StoreClientManager storeClientManager = new StoreClientManager();
+    public Dictionary<long,StorePhoneClient> PhoneClientDict = new Dictionary<long,StorePhoneClient>();
     public Dictionary<string, string> Data = new Dictionary<string, string>();
     public HashSet<string> Unlocked = new HashSet<string>();
     public bool TryAddDirectSellingItemToTable(GameItem item)
@@ -296,3 +308,24 @@ public class PlayerStore
     }
 }
 public class NegociationUIManager { public void OnWholesaleClick() { } }
+
+public class StorePhoneClient
+{
+    public enum PhoneState { None, NotResponding, Responding, Introduction, Regular, Cooldown }
+    public string displayName, locID, dialogFuncId;
+    public bool dialedBefore;
+    public PhoneState phoneState;
+    public string GetLocalizedDisplayName() => locID;
+    public Dialogue GetCallDialog() => PhoneClientList.DialogFuncs[dialogFuncId](this);
+}
+public static class PhoneClientList
+{
+    public static Dictionary<string,Func<StorePhoneClient,Dialogue>> DialogFuncs = new Dictionary<string,Func<StorePhoneClient,Dialogue>>();
+}
+public class PhoneUIManager
+{
+    public static PhoneUIManager Instance = new PhoneUIManager();
+    public StorePhoneClient currentPhoneClient;
+    public int CallsEnded;
+    public void OnPhoneDialogEnd(bool playEndSound = true) { CallsEnded++; }
+}

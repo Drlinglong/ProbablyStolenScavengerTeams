@@ -14,6 +14,8 @@ namespace ScavengerTeams
         public int soldMask; // Compatibility name: entries already bought OR discarded by native overflow.
         public bool closed = true;
         public bool firstOffer;
+        public bool paused;
+        public int resumeAvailableDay; // Missing fields in existing v1 saves default to active/zero.
     }
 
     // Pure policy: no Unity, file IO, UI or global state.
@@ -35,8 +37,27 @@ namespace ScavengerTeams
             if (state.nextDay < 0) state.nextDay = checked(day + 1);
         }
         public static bool CanQueue(DeliveryState state, int day, int level)
-            => level > 0 && ((state.offerDay == day && !state.closed)
+            => !state.paused && level > 0 && ((state.offerDay == day && !state.closed)
                 || (state.nextDay >= 0 && day >= state.nextDay));
+        public static bool Pause(DeliveryState state, int day)
+        {
+            if (state.paused) return false;
+            var available = checked(day + Interval);
+            state.paused = true;
+            state.resumeAvailableDay = available;
+            return true;
+        }
+        public static bool Resume(DeliveryState state, int day)
+        {
+            if (!state.paused || day < state.resumeAvailableDay) return false;
+            var due = checked(day + 1);
+            state.paused = false;
+            state.resumeAvailableDay = 0;
+            state.nextDay = due;
+            // A resumed route must not restore a same-day, already dismissed batch.
+            state.closed = true;
+            return true;
+        }
         public static void Arrive(DeliveryState state, int day, int level)
         {
             if (state.offerDay == day && !state.closed) return; // Restore this batch.
@@ -66,7 +87,8 @@ namespace ScavengerTeams
         }
         public static bool Valid(DeliveryState state, bool looseOnly = false)
         {
-            if (state == null || state.version != 1 || state.nextDay < -1 || state.offerDay < -1)
+            if (state == null || state.version != 1 || state.nextDay < -1 || state.offerDay < -1
+                || state.resumeAvailableDay < 0)
                 return false;
             if (state.greetedLevel < 0 || state.greetedLevel > 3
                 || state.offerGreetingLevel < 0 || state.offerGreetingLevel > state.offerLevel)

@@ -16,6 +16,7 @@ namespace ScavengerTeams
             enabled = true;
             // RegisterModUpgrade touches the lazy PlayerStore singleton. It is unsafe at boot.
             ModHook.OnGameLoadedEarly += NetworkRegistration.Register;
+            ModHook.OnGameLoadedEarly += TeamPhone.Register;
             ModHook.OnNewGameStarted += RegisterNewRun;
             ModHook.OnModItemDirectoryInit += CrateItems.Register;
             ModHook.OnGenerateCustomerVeryLate += SafeQueue;
@@ -27,15 +28,21 @@ namespace ScavengerTeams
             if (!enabled) return;
             enabled = false;
             ModHook.OnGameLoadedEarly -= NetworkRegistration.Register;
+            ModHook.OnGameLoadedEarly -= TeamPhone.Register;
             ModHook.OnNewGameStarted -= RegisterNewRun;
             ModHook.OnModItemDirectoryInit -= CrateItems.Register;
             ModHook.OnGenerateCustomerVeryLate -= SafeQueue;
             ModHook.OnGameLoadedLate -= DeliveryCoordinator.ClearRuntime;
             ModHelper.RemoveNetworkUpgrades(Id);
             NetworkRegistration.RemoveRuntimeIcons();
+            TeamPhone.Remove();
             DeliveryCoordinator.ClearRuntime();
         }
-        private static void RegisterNewRun(string scenario) => NetworkRegistration.Register();
+        private static void RegisterNewRun(string scenario)
+        {
+            NetworkRegistration.Register();
+            TeamPhone.Register();
+        }
         private static void SafeQueue(StoreClientManager manager)
         {
             try { DeliveryCoordinator.Queue(manager); }

@@ -51,3 +51,14 @@ team.bottle.visitor_name,Sammler leerer Flaschen
 team.bottle.service_description.1,"Vermittle über Wildes Kontaktnetzwerk eine kleine Gruppe von Plünderern, die leere Flaschen für dich sammelt. Alle 3 Tage besuchen sie deinen Laden und verkaufen, was sie beim Durchsuchen gefunden haben."
 team.bottle.service_description.2,"Wilde hat weitere Sammler angeheuert, die noch mehr leere Flaschen für dich sammeln. Alle 3 Tage besuchen sie deinen Laden und bringen die gesammelten Flaschen zum Verkauf mit."
 team.bottle.service_description.3,"Ein gut ausgerüstetes, legendäres Sammlerteam wagt sich tief in die Sperrzone vor, um große Mengen leerer Flaschen für dich zu sammeln. Alle 3 Tage besucht es deinen Laden und verkauft dir seine Fundstücke."
+phone.contact_name,Plünderertrupp
+phone.greeting,Hier ist die Kontaktstelle des Plünderertrupps. Was kann ich für dich tun?
+phone.disable_choice,{0}-Trupp deaktivieren
+phone.enable_choice,{0}-Trupp aktivieren
+phone.cooldown_choice,{0}-Trupp (in {1} Tagen verfügbar)
+phone.locked_choice,{0}-Trupp (Dienst noch nicht gekauft)
+phone.pause_reply,"In Ordnung, wir stellen die Besuche ein. Wenn du {0} brauchst, melde dich in {1} Tagen wieder bei uns."
+phone.resume_reply,"In Ordnung, der {0}-Trupp nimmt seine Besuche morgen wieder auf und kommt danach alle 3 Tage vorbei."
+phone.hangup,Auflegen
+phone.goodbye,"In Ordnung, auf Wiedersehen."
+phone.unavailable,Der Zeitplan dieses Trupps kann derzeit nicht geändert werden. Bitte melde dich später wieder.

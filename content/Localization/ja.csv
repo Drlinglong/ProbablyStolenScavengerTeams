@@ -51,3 +51,14 @@ team.bottle.visitor_name,空き瓶スカベンジャー
 team.bottle.service_description.1,ワイルドの人脈を通じて、少数の廃品回収業者に空き瓶を集めてもらいます。彼らは3日ごとに店を訪れ、拾い集めた品を売ります。
 team.bottle.service_description.2,ワイルドはさらに多くのスカベンジャーに連絡し、より多くの空き瓶を集めてもらいました。彼らは3日ごとに店を訪れ、集めた空き瓶を届けて販売します。
 team.bottle.service_description.3,装備の整った伝説のスカベンジャー部隊が廃墟地区の奥深くへと向かい、大量の空き瓶を集めてくれます。彼らは3日ごとに店を訪れ、拾い集めた品を売ってくれます。
+phone.contact_name,スカベンジャー隊
+phone.greeting,こちらはスカベンジャー隊の連絡窓口です。ご用件は何でしょうか？
+phone.disable_choice,{0}隊を停止する
+phone.enable_choice,{0}隊を有効にする
+phone.cooldown_choice,{0}隊（有効化まであと{1}日）
+phone.locked_choice,{0}隊（サービス未購入）
+phone.pause_reply,かしこまりました。訪問を停止します。{0}が必要な場合は、{1}日後に改めてご連絡ください。
+phone.resume_reply,かしこまりました。{0}隊は明日から訪問を再開し、その後は3日ごとに訪問します。
+phone.hangup,電話を切る
+phone.goodbye,かしこまりました。さようなら。
+phone.unavailable,現在、この隊の予定は変更できません。時間をおいてから、改めてご連絡ください。

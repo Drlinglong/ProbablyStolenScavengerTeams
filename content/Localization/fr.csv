@@ -51,3 +51,14 @@ team.bottle.visitor_name,Ramasseur de bouteilles vides
 team.bottle.service_description.1,Contactez un petit groupe de récupérateurs par l’intermédiaire du réseau de Wilde afin qu’ils collectent des bouteilles vides pour vous. Ils viendront à la boutique tous les 3 jours pour vendre le fruit de leur collecte.
 team.bottle.service_description.2,Wilde a contacté davantage de récupérateurs pour vous rapporter encore plus de bouteilles vides. Ils viendront à la boutique tous les 3 jours pour vous apporter les bouteilles vides collectées et les vendre.
 team.bottle.service_description.3,Une équipe légendaire de récupérateurs bien équipée s’aventurera dans la zone abandonnée pour vous rapporter une grande quantité de bouteilles vides. Ils viendront à la boutique tous les 3 jours pour vendre ce qu’ils auront récupéré.
+phone.contact_name,Équipe de récupérateurs
+phone.greeting,Vous êtes bien au bureau de contact de l’équipe de récupérateurs. Que puis-je faire pour vous ?
+phone.disable_choice,Désactiver l’équipe {0}
+phone.enable_choice,Activer l’équipe {0}
+phone.cooldown_choice,Équipe {0} (activation possible dans {1} jours)
+phone.locked_choice,Équipe {0} (service non acheté)
+phone.pause_reply,"Très bien, nous cesserons de passer chez vous. Si vous avez besoin de {0}, recontactez-nous dans {1} jours."
+phone.resume_reply,"Très bien, l’équipe {0} reprendra ses visites demain, puis passera tous les 3 jours."
+phone.hangup,Raccrocher
+phone.goodbye,"Très bien, au revoir."
+phone.unavailable,Il est temporairement impossible de modifier le programme de cette équipe. Veuillez nous recontacter plus tard.

@@ -31,7 +31,7 @@ for locale in ('zh','en','fr','de','ja','ru','es','pl'):
                            if line.strip() and not line.lstrip().startswith('#')))
     assert all(len(row) == 2 and row[0] for row in rows), path
     keys = [row[0] for row in rows]
-    assert len(keys) == len(set(keys)) == 52, path
+    assert len(keys) == len(set(keys)) == 63, path
     if locale_keys is not None: assert set(keys) == locale_keys
     locale_keys = set(keys)
     tables[locale] = dict(rows)

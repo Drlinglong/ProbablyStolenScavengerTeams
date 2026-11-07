@@ -1,0 +1,40 @@
+{
+  "source_language": "zh-CN",
+  "new_key_prefix": "phone.",
+  "new_keys": 11,
+  "total_keys_per_locale": 63,
+  "target_languages": [
+    "en",
+    "fr",
+    "de",
+    "ja",
+    "ru",
+    "es",
+    "pl"
+  ],
+  "tool": "Remis",
+  "version": "3.4.0",
+  "provider": "openai",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "project_id": "594fee8b-6925-4ae0-856a-89273199f911",
+  "job_id": "c6d092c4-b4bf-4fdf-bb8e-4f507534e3e8",
+  "validation": {
+    "errors": 0,
+    "warnings": 0,
+    "human_review_items": 0
+  },
+  "export_sha256": "ccb6ec5053502a69b05621c44ba80bc996cd39400a6c04e7b29cf9bdb0f0d356",
+  "integration": "Only the 11 new phone CSV entries were merged into the author-owned Mod. No Remis runtime or companion Mod is included. All previous 52 values in each locale remain unchanged.",
+  "runtime_acceptance": "Pending user in-game testing",
+  "locale_sha256": {
+    "zh": "8fdafef72757d27cab8e794ca13cefd15f249a502293bd31b39250a2629e0ba6",
+    "en": "42404832455aee6ace18e3114a8466ff82c26e0fe119271690a5ed6087279dfa",
+    "fr": "72d6d99df7fd5850e2a8998e36fbf9ae58996f03561acfeb1ffd96ce497e0480",
+    "de": "292d47b23718ebf12c344ea09b278801d626f363f878017fea629903e53e110b",
+    "ja": "6685a35efb915e91f173562464ac2e990f93be4a2d6eba50be2ea5e28f60c582",
+    "ru": "abcdfc3e997de02ac1affad052720f9e0233cd66461280018c378840e381a922",
+    "es": "58afb39e22d62901d58491e5fe492f84a724f4d085ff9ba472434f1266e3d428",
+    "pl": "13ea78b0148ab2f416207e28816066807c94394f0a69f9aabb9738e547aa294c"
+  }
+}

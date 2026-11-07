@@ -51,3 +51,14 @@ team.bottle.visitor_name,Zbieracz pustych butelek
 team.bottle.service_description.1,"Za pośrednictwem kontaktów Wilde’a zwerbuj niewielką grupę zbieraczy, którzy będą gromadzić dla ciebie puste butelki. Co 3 dni odwiedzą sklep i sprzedadzą zebrane łupy."
 team.bottle.service_description.2,"Wilde skontaktował się z większą liczbą zbieraczy, którzy zgromadzą dla ciebie więcej pustych butelek. Będą odwiedzać sklep co 3 dni i przynosić zebrane butelki na sprzedaż."
 team.bottle.service_description.3,"Doskonale wyposażona, legendarna drużyna zbieraczy zapuści się w głąb opuszczonej strefy, by zgromadzić dla ciebie mnóstwo pustych butelek. Będą odwiedzać sklep co 3 dni, by sprzedawać zebrane łupy."
+phone.contact_name,Ekipa zbieraczy
+phone.greeting,Tu centrala ekipy zbieraczy. W czym możemy pomóc?
+phone.disable_choice,Wyłącz ekipę {0}
+phone.enable_choice,Włącz ekipę {0}
+phone.cooldown_choice,Ekipa {0} (można aktywować za {1} dni)
+phone.locked_choice,Ekipa {0} (usługa nie została jeszcze wykupiona)
+phone.pause_reply,"Dobrze, przestaniemy przychodzić. Jeśli będziecie potrzebować {0}, skontaktujcie się z nami ponownie za {1} dni."
+phone.resume_reply,"Dobrze, ekipa {0} wznowi wizyty jutro, a potem będzie przychodzić co 3 dni."
+phone.hangup,Zakończ połączenie
+phone.goodbye,"Dobrze, do widzenia."
+phone.unavailable,Nie można teraz zmienić harmonogramu tej ekipy. Skontaktuj się z nami ponownie później.

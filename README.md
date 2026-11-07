@@ -1,6 +1,6 @@
 # Wild's Scavenger Teams — 0.3.0-dev
 
-Local candidate: a fifth, bottle-only route (6 / 12 / 18 original wine bottles, no junk) is ready for in-game testing. Public Workshop remains the accepted 0.2.1. See [candidate notes](docs/CANDIDATE_0.3.0.zh-CN.md).
+Local candidate: a fifth, bottle-only route (6 / 12 / 18 original wine bottles, no junk) and an independent six-option supply phone (72283) are ready for in-game testing. Each team can be paused independently and manually resumed after three days; delivery restarts the next day without catch-up or a renewed first discount. Public Workshop remains the accepted 0.2.1. See [candidate notes](docs/CANDIDATE_0.3.0.zh-CN.md).
 
 A Probably Stolen mod adding reliable deliveries of printer filament, scrap metal, common electronic components, and asteroid ore through Wild's Network.
 

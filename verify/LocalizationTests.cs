@@ -78,7 +78,7 @@ internal static partial class RegressionTests
             foreach (var locale in new[] { "zh", "en", "fr", "de", "ja", "ru", "es", "pl" })
             {
                 ModHelper.Locale=locale;
-                Require(ModHelper.Locales[locale].Count == 52, "missing localization rows");
+                Require(ModHelper.Locales[locale].Count == 63, "missing localization rows");
                 foreach (var team in TeamDefinitions.All)
                 {
                     foreach (var field in new[] { "material","visitor_name" })

@@ -51,3 +51,14 @@ team.bottle.visitor_name,空酒瓶拾荒者
 team.bottle.service_description.1,通过王尔德的人脉网络联络一小批拾荒者为你收集空酒瓶。他们将每隔三天造访一次店铺，出售拾荒所得。
 team.bottle.service_description.2,王尔德联络到了更多的拾荒者为你收集更多的空酒瓶，他们将每隔三天造访一次店铺，把收集到的空酒瓶送来出售。
 team.bottle.service_description.3,一支装备精良的传奇拾荒者小队将深入废弃区，为你收集大量的空酒瓶，他们将每隔三天造访一次店铺，出售拾荒所得。
+phone.contact_name,拾荒者小队
+phone.greeting,这里是拾荒者小队联络处。有什么事吗？
+phone.disable_choice,停用{0}小队
+phone.enable_choice,启用{0}小队
+phone.cooldown_choice,{0}小队（{1}天后可启用）
+phone.locked_choice,{0}小队（尚未购买服务）
+phone.pause_reply,好的，我们会停止上门。需要{0}时，请在{1}天后再联系我们。
+phone.resume_reply,好的，{0}小队明天恢复上门，之后每隔3天来一次。
+phone.hangup,挂电话
+phone.goodbye,好的，再见。
+phone.unavailable,暂时不能更改这支小队的安排，请稍后再联系。

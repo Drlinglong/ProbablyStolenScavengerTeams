@@ -333,6 +333,7 @@ internal static partial class RegressionTests
         RunAdditionalRoutes();
         RunLocalizationTests();
         RunBottleTests();
+        RunPhoneTests();
         Console.WriteLine($"RESULT {passed} passed, {failed} failed (host doubles; no Unity runtime)");
         Environment.ExitCode = failed == 0 ? 0 : 1;
     }

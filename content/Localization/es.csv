@@ -51,3 +51,14 @@ team.bottle.visitor_name,Recolector de botellas vacías
 team.bottle.service_description.1,Ponte en contacto con un pequeño grupo de chatarreros a través de la red de contactos de Wilde para que recojan botellas vacías por ti. Visitarán la tienda cada 3 días y venderán lo que hayan conseguido rebuscando.
 team.bottle.service_description.2,Wilde ha contactado con más recolectores para que reúnan más botellas vacías para ti. Visitarán la tienda cada tres días para traer las botellas vacías que hayan recogido y venderlas.
 team.bottle.service_description.3,"Un equipo legendario de recolectores, bien equipado, se adentrará en la zona abandonada para reunir una gran cantidad de botellas vacías para ti. Visitarán la tienda cada tres días para vender lo que hayan recogido."
+phone.contact_name,Equipo de chatarreros
+phone.greeting,Esta es la central de contacto del equipo de chatarreros. ¿En qué podemos ayudarte?
+phone.disable_choice,Desactivar el equipo {0}
+phone.enable_choice,Activar el equipo {0}
+phone.cooldown_choice,Equipo {0} (disponible dentro de {1} días)
+phone.locked_choice,Equipo {0} (servicio aún no adquirido)
+phone.pause_reply,"De acuerdo, dejaremos de pasar por tu casa. Cuando necesites a {0}, vuelve a contactarnos dentro de {1} días."
+phone.resume_reply,"De acuerdo, el equipo {0} volverá a pasar mañana y, después, vendrá cada 3 días."
+phone.hangup,Colgar
+phone.goodbye,"De acuerdo, adiós."
+phone.unavailable,De momento no podemos cambiar el horario de este equipo. Vuelve a contactarnos más tarde.

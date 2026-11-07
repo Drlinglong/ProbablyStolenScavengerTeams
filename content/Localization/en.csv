@@ -51,3 +51,14 @@ team.bottle.visitor_name,Empty Bottle Scavenger
 team.bottle.service_description.1,Use Wild's network of contacts to recruit a small group of scavengers to collect empty bottles for you. They'll visit the shop every 3 days to sell what they've scavenged.
 team.bottle.service_description.2,Wild has recruited more scavengers to collect even more empty bottles for you. They'll visit your shop every 3 days to deliver and sell the empty bottles they've collected.
 team.bottle.service_description.3,"A well-equipped, legendary scavenger squad will venture deep into the abandoned district to collect a large number of empty bottles for you. They'll visit your shop every 3 days to sell what they've scavenged."
+phone.contact_name,Scavenger Squad
+phone.greeting,You've reached the Scavenger Squad hotline. What can I do for you?
+phone.disable_choice,Deactivate {0} Squad
+phone.enable_choice,Activate {0} Squad
+phone.cooldown_choice,{0} Squad (available in {1} days)
+phone.locked_choice,{0} Squad (service not purchased)
+phone.pause_reply,"All right, we'll stop making visits. If you need {0}, please contact us again in {1} days."
+phone.resume_reply,"All right, the {0} Squad will resume visits tomorrow, then come by every 3 days."
+phone.hangup,Hang up
+phone.goodbye,"All right, goodbye."
+phone.unavailable,You can't change this squad's schedule right now. Please contact us again later.

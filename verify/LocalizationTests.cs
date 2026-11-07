@@ -33,7 +33,7 @@ internal static partial class RegressionTests
     {
         Check("intro dialogue advances through localized lines and places goods only after the last line", () =>
         {
-            foreach (var locale in new[] { "zh", "en" })
+            foreach (var locale in new[] { "zh", "en", "fr", "de", "ja", "ru", "es", "pl" })
             foreach (var prefix in new[] { "team.", "team.ore." })
             for (var level=1; level<=3; level++)
             {
@@ -73,9 +73,9 @@ internal static partial class RegressionTests
             line.End?.Invoke(); Require(Stock.Count==8 && client.isIntroduced && line.nextDialogue==null, "last line did not place batch");
             line.End?.Invoke(); Require(Stock.Count==8, "repeated completion duplicated goods");
         });
-        Check("native-style CSV parsing covers all route fields and format arguments in both languages", () =>
+        Check("native-style CSV parsing covers all route fields and format arguments in all eight languages", () =>
         {
-            foreach (var locale in new[] { "zh", "en" })
+            foreach (var locale in new[] { "zh", "en", "fr", "de", "ja", "ru", "es", "pl" })
             {
                 ModHelper.Locale=locale;
                 Require(ModHelper.Locales[locale].Count == 46, "missing localization rows");

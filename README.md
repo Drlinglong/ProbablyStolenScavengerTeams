@@ -1,49 +1,37 @@
-# 王尔德的拾荒者小队
+# Wild's Scavenger Teams — 0.2.1
 
-《深空当铺：可能是偷的 / Probably Stolen》供货Mod。0.2.0四条路线、箱图和开箱均已获用户实机验收，详见[验收记录](docs/ACCEPTANCE_0.2.0.zh-CN.md)。
+A Probably Stolen mod adding reliable deliveries of printer filament, scrap metal, common electronic components, and asteroid ore through Wild's Network.
 
-王尔德人脉“基础”面板中的“拾荒者”大类有四行，每行1→2→3级：
+[简体中文](README.zh-CN.md) · [Build instructions](docs/BUILD.md) · [MIT license](LICENSE)
 
-| 路线 | 标准难度各级基础服务费 |
-| --- | --- |
-| 打印耗材 | 200 / 300 / 450 |
-| 废金属 | 200 / 300 / 450 |
-| 普通电子元件 | 250 / 350 / 500 |
-| 小行星开采队（普通矿石） | 200 / 300 / 450 |
+## Play
 
-购买次日首次来访，以后每隔3天。升级不增加重复低等级队伍，不重置日期或首次优惠。每条路线独立计时及保存状态。
+Find **Scavengers** on the **Basic** page of Wild's Network. Each resource has three service tiers. The first visitor arrives the day after purchase, then every three days without taking a random-customer slot.
 
-- 1级：6个材料＋2垃圾；2级：2箱材料＋4垃圾；3级：3箱材料＋6垃圾。
-- 单买原价；首次来访整批批发五折，此后八五折，均含剩余垃圾。
-- 材料／箱子先上柜台，垃圾最后上；放不下的由原版销毁，读档不补回。
-- 每箱3×3格，基础价为原版单件材料×6，继承标签及分类，双击获得6个对应原版材料。开箱前请预留足够空间。
+| Tier | Useful cargo | Junk |
+| --- | --- | --- |
+| I | 6 loose resources | 2 |
+| II | 2 crates | 4 |
+| III | 3 crates | 6 |
 
-## 构建与测试
+Each 3×3 crate unpacks into 6 original resources. Leave storage space before double-clicking an owned crate. Buy selected goods at normal prices, or the entire remaining shipment including junk at half price on the first visit and 15% off afterward. Upgrades replace the load without duplicating suppliers, rescheduling deliveries, or renewing the introductory discount.
 
-完整步骤见[源码与构建说明](docs/BUILD.zh-CN.md)。本机已运行：
+Base service fees: 200 / 300 / 450 credits, except electronic components at 250 / 350 / 500. Goods cost extra; native difficulty and character modifiers apply. Useful cargo is placed before junk; overflow follows the base game's destruction behavior.
 
-```powershell
-./build.ps1
-./verify.ps1
-python ./verify/validate_artifact.py
-```
+## Languages
 
-构建脚本可显式传入GameRoot及Compiler；输出package/ScavengerTeams，不自动安装，也不分发原版DLL。0.2.0有56项宿主逻辑回归，用户另完成游戏内验收。
+简体中文 · English · Français · Deutsch · 日本語 · Русский · Español · Polski
 
-## 源码布局
+All eight languages are included in this Mod's `Localization` directory. No separate translation Mod or Remis runtime is required. The Chinese source and sequential dialogue have user in-game acceptance; the seven other languages were produced using OpenAI GPT-6 Luna at medium reasoning through [Remis](https://github.com/Drlinglong/Remis). Their keys, placeholders, tags and dialogue boundaries have been checked; rendered UI and language quality still welcome player review. See [localization provenance](docs/LOCALIZATION_PROVENANCE.json).
 
-- src：不可变路线定义、供货策略、存档仓库、顾客接入、箱子与开箱控制。
-- content：清单、发行说明、最终透明PNG。
-- assets/source：原创AI美术源图、编辑提示词和历史素材。
-- tools、verify：美术处理和本地验证。
-- docs：[0.2.0发行说明](docs/RELEASE_0.2.0.zh-CN.md)、验收和开发记录。
+## Compatibility
 
-package、outputs、bin和obj是忽略的生成目录。原版游戏、反编译参考及测试资金Mod不在本仓库中。
+Adds services, suppliers and crates without replacing game files or original item definitions. Designed for existing saves, with stable upgrade/item IDs and independent saved delivery state. Tested gameplay baseline: game 0.46D, Steam build 26496118. Other Mods changing the network panel, customer generation or wholesale trading may interact. Unpack or dispose of custom crates before removal.
 
-当前为独立本地仓库，尚未推送或公开发布。测试资金Mod保持私用。
+## Source and verification
 
-## 文案编辑工作区
+The project is prepared for public release under MIT. It includes C# sources, API doubles, 68 host regression checks, original artwork sources, prompts, and final textures. Use [the build guide](docs/BUILD.md) to compile against your own game installation. No game assemblies, external compiler, saves or private test-money Mod are distributed. Host tests do not replace Unity or in-game verification.
 
-验收的0.2.0基线已提交为42729a2。其后的CSV外置及文案改造为0.2.1-dev候选，包含资源名＋I／II／III标题、各级服务说明和开通／升级后的问候。用户已授权本地提交与实装，尚待本候选的游戏内验收。
+Workshop assets: [English description](docs/WORKSHOP.en.bbcode.txt), [简体中文描述](docs/WORKSHOP.zh-CN.bbcode.txt), [cover JPG](assets/workshop/cover-0.2.1.jpg), [full PNG](assets/workshop/cover-0.2.1.png).
 
-编辑中文：content/Localization/zh.csv；英文回退：content/Localization/en.csv。游戏内文案均经原生本地化API读取。[文案编辑说明](docs/LOCALIZATION.zh-CN.md)列出每个键的用途及参数规则。当前工作区有68项宿主回归，源游戏版号和构建方式同上。
+The private test-money Mod remains a separate, unpublished repository.

@@ -3,7 +3,7 @@
   <ID>ps_scavenger_teams</ID>
   <Name>王尔德的拾荒者小队</Name>
   <Author>Linglong</Author>
-  <ModVersion>0.2.1-dev</ModVersion>
+  <ModVersion>0.2.1</ModVersion>
   <Description>王尔德人脉中的四类供货队：打印耗材、废金属、普通电子元件、小行星矿石。次日首访，每隔三天供货，三级升级，首次批发五折/以后八五折，3×3六件材料箱。</Description>
   <GameVersions><Version>0.46D</Version></GameVersions>
   <Prerequisites />

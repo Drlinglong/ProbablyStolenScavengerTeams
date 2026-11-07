@@ -1,40 +1,40 @@
 # key,value
-mod.name,Wild's Scavenger Teams
-category.scavengers,Scavengers
-team.printer.material,3D printer filament
-team.printer.service_title,3D Printer Filament {0}
-team.printer.visitor_name,Filament Scavenger
-team.printer.crate_name,Crate of 3D Printer Filament
-team.printer.crate_description,Double-click to unpack {0} units of 3D printer filament. Make sure there is enough storage space before opening.
-team.printer.crate_flavor,Six units packed by the team.
-team.metal.material,scrap metal
-team.metal.service_title,Scrap Metal {0}
-team.metal.visitor_name,Scrap Metal Scavenger
-team.metal.crate_name,Crate of Scrap Metal
-team.metal.crate_description,Double-click to unpack {0} units of scrap metal. Make sure there is enough storage space before opening.
-team.metal.crate_flavor,Six units packed by the team.
-team.electronic.material,common electronic components
-team.electronic.service_title,Electronic Components {0}
-team.electronic.visitor_name,Electronics Scavenger
-team.electronic.crate_name,Crate of Common Electronic Components
-team.electronic.crate_description,Double-click to unpack {0} common electronic components. Make sure there is enough storage space before opening.
-team.electronic.crate_flavor,Six units packed by the team.
-team.ore.material,metal ore
-team.ore.service_title,Ore {0}
-team.ore.visitor_name,Asteroid Miner
-team.ore.crate_name,Crate of Metal Ore
-team.ore.crate_description,Double-click to unpack {0} units of metal ore. Make sure there is enough storage space before opening.
-team.ore.crate_flavor,Six units packed by the team.
-team.printer.service_description.1,Wild puts you in touch with a small group of scavengers collecting 3D printer filament for you. They also bring a little junk. They visit the shop every three days to sell their finds.
-team.printer.service_description.2,Wild has found more scavengers to collect more 3D printer filament for you. They visit every three days and have even packed the materials into crates for easier handling!
+mod.name,"Wild's Scavenger Teams"
+category.scavengers,"Scavengers"
+team.printer.material,"3D printer filament"
+team.printer.service_title,"3D Printer Filament {0}"
+team.printer.visitor_name,"Filament Scavenger"
+team.printer.crate_name,"Crate of 3D Printer Filament"
+team.printer.crate_description,"Double-click to unpack {0} units of 3D printer filament. Make sure there is enough storage space before opening."
+team.printer.crate_flavor,"Six units packed by the team."
+team.metal.material,"scrap metal"
+team.metal.service_title,"Scrap Metal {0}"
+team.metal.visitor_name,"Scrap Metal Scavenger"
+team.metal.crate_name,"Crate of Scrap Metal"
+team.metal.crate_description,"Double-click to unpack {0} units of scrap metal. Make sure there is enough storage space before opening."
+team.metal.crate_flavor,"Six units packed by the team."
+team.electronic.material,"common electronic components"
+team.electronic.service_title,"Electronic Components {0}"
+team.electronic.visitor_name,"Electronics Scavenger"
+team.electronic.crate_name,"Crate of Common Electronic Components"
+team.electronic.crate_description,"Double-click to unpack {0} common electronic components. Make sure there is enough storage space before opening."
+team.electronic.crate_flavor,"Six units packed by the team."
+team.ore.material,"metal ore"
+team.ore.service_title,"Ore {0}"
+team.ore.visitor_name,"Asteroid Miner"
+team.ore.crate_name,"Crate of Metal Ore"
+team.ore.crate_description,"Double-click to unpack {0} units of metal ore. Make sure there is enough storage space before opening."
+team.ore.crate_flavor,"Six units packed by the team."
+team.printer.service_description.1,"Wild puts you in touch with a small group of scavengers collecting 3D printer filament for you. They also bring a little junk. They visit the shop every three days to sell their finds."
+team.printer.service_description.2,"Wild has found more scavengers to collect more 3D printer filament for you. They visit every three days and have even packed the materials into crates for easier handling!"
 team.printer.service_description.3,"A legendary, well-equipped scavenger team ventures deep into abandoned districts to collect large quantities of 3D printer filament for you. They visit every three days and pack the materials into crates for easier handling!"
-team.metal.service_description.1,Wild puts you in touch with a small group of scavengers collecting scrap metal for you. They also bring a little junk. They visit the shop every three days to sell their finds.
-team.metal.service_description.2,Wild has found more scavengers to collect more scrap metal for you. They visit every three days and have even packed the materials into crates for easier handling!
+team.metal.service_description.1,"Wild puts you in touch with a small group of scavengers collecting scrap metal for you. They also bring a little junk. They visit the shop every three days to sell their finds."
+team.metal.service_description.2,"Wild has found more scavengers to collect more scrap metal for you. They visit every three days and have even packed the materials into crates for easier handling!"
 team.metal.service_description.3,"A legendary, well-equipped scavenger team ventures deep into abandoned districts to collect large quantities of scrap metal for you. They visit every three days and pack the materials into crates for easier handling!"
-team.electronic.service_description.1,Wild puts you in touch with a small group of scavengers collecting common electronic components for you. They also bring a little junk. They visit the shop every three days to sell their finds.
-team.electronic.service_description.2,Wild has found more scavengers to collect more common electronic components for you. They visit every three days and have even packed the materials into crates for easier handling!
+team.electronic.service_description.1,"Wild puts you in touch with a small group of scavengers collecting common electronic components for you. They also bring a little junk. They visit the shop every three days to sell their finds."
+team.electronic.service_description.2,"Wild has found more scavengers to collect more common electronic components for you. They visit every three days and have even packed the materials into crates for easier handling!"
 team.electronic.service_description.3,"A legendary, well-equipped scavenger team ventures deep into abandoned districts to collect large quantities of common electronic components for you. They visit every three days and pack the materials into crates for easier handling!"
-team.ore.service_description.1,Wild puts you in touch with a group of illicit asteroid miners. They visit the shop every three days to sell the ore they have mined.
+team.ore.service_description.1,"Wild puts you in touch with a group of illicit asteroid miners. They visit the shop every three days to sell the ore they have mined."
 team.ore.service_description.2,"Your investment buys the miners better equipment, so they now bring more ore on each visit. They have even packed it into crates for easier handling!"
 team.ore.service_description.3,"Thanks to you and Wild, the miners can slip their unlicensed ship past spaceport customs and bring large quantities of ore on each visit. They have even packed it into crates for easier handling!"
 team.greeting,"Hello, shopkeeper! Take a look at the good things we have found lately!"
@@ -44,4 +44,4 @@ team.ore.intro.1,"Hello, shopkeeper! Wild told us to come here.\nWe used to risk
 team.intro.2,"Hello again! A few more people have joined the team since word got around about your shop.\nLife is getting better, and everyone asked me to thank you.\nWe have packed this load for you!"
 team.ore.intro.2,"Hello again! Your investment has made the work easier, and more miners have joined us.\nLife is getting better, and everyone is grateful.\nWe have packed this ore for you to inspect!"
 team.intro.3,"Your good name has spread through the scavenger community!\nA few of our crew have saved a little money and are planning shops of their own.\nThey want to give other scavengers a chance, just as you did.\nTake a look at our latest finds!"
-team.ore.intro.3,Everyone in the mining community knows your name now!\nA few of our crew have saved a little money and are planning shops of their own.\nWe used to worry about our next meal; now we can think about a future.\nWe have brought plenty of ore this time!
+team.ore.intro.3,"Everyone in the mining community knows your name now!\nA few of our crew have saved a little money and are planning shops of their own.\nWe used to worry about our next meal; now we can think about a future.\nWe have brought plenty of ore this time!"

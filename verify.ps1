@@ -1,5 +1,6 @@
-param([string]$Compiler = 'J:\codex-tools\probably-stolen-mod\compiler\tasks\net472\csc.exe')
+param([string]$Compiler = $env:CSC_PATH)
 $ErrorActionPreference = 'Stop'
+if (!$Compiler) { throw 'Supply -Compiler or set CSC_PATH to a C# 9 Roslyn csc.exe.' }
 $outDir = Join-Path $PSScriptRoot 'outputs\verification'
 New-Item -ItemType Directory -Path $outDir -Force | Out-Null
 $output = Join-Path $outDir 'RegressionTests.exe'

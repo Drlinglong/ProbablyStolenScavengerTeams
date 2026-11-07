@@ -1,0 +1,69 @@
+{
+  "mod_version": "0.2.1",
+  "source_locale": "zh",
+  "provider": "openai",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "remis_version": "3.4.0",
+  "remis_checkout": "522cb5409f331c9e2912dfa299fd34ae4c2dc859",
+  "remis_project_id": "9d299073-5e74-4622-bfe1-4161eaeaf272",
+  "remis_job_id": "5db3660d-6c66-4697-9a3c-b0ecee311ace",
+  "remis_job_status": "completed",
+  "remis_validation": {
+    "errors": 0,
+    "warnings": 0,
+    "human_review_items": 0
+  },
+  "export_zip_sha256": "811aeecd11af8ba65e511e56b5f221efbaee64ed148a05260f1e0068d3bcbdfe",
+  "delivery": "embedded CSVs in source Mod; no companion binary included",
+  "checks": [
+    "identical key sets",
+    "non-empty UTF-8 text",
+    "format placeholder multiplicity",
+    "rich-text tags",
+    "literal newline counts / dialogue segments"
+  ],
+  "locales": {
+    "zh": {
+      "entries": 46,
+      "sha256": "8502c11c9a43ee136231cbea035f6c56d4e3c282242b3f7084702c3498ed1711",
+      "in_game_acceptance": "user-confirmed Chinese wording and sequential dialogue"
+    },
+    "en": {
+      "entries": 46,
+      "sha256": "687ca6273a52e0ec2fa6ea221b04e016920357c38fdec65b08bcd0dba933cafa",
+      "in_game_acceptance": "not yet reviewed in game"
+    },
+    "fr": {
+      "entries": 46,
+      "sha256": "dceb953c4d6f4c9c3be1f9d777edc39510d080cc91e23485480354c2d3e2039e",
+      "in_game_acceptance": "not yet reviewed in game"
+    },
+    "de": {
+      "entries": 46,
+      "sha256": "70d93c97bf864b64fd5dc7c1710247c0c9c3b796ba06108092457c83c344d923",
+      "in_game_acceptance": "not yet reviewed in game"
+    },
+    "ja": {
+      "entries": 46,
+      "sha256": "21feec2a70070f28bf31f07171b39b832d352ae6df2e617dd5118976acd9f1e3",
+      "in_game_acceptance": "not yet reviewed in game"
+    },
+    "ru": {
+      "entries": 46,
+      "sha256": "5afbb699c0c8686edda6b0d2a08392674415a974f8f2f6d63036f9a315ec56de",
+      "in_game_acceptance": "not yet reviewed in game"
+    },
+    "es": {
+      "entries": 46,
+      "sha256": "6301ef96f86b2dcec3ee60fb4595068f5807fd3741d7a38b523acb9e75c5fca7",
+      "in_game_acceptance": "not yet reviewed in game"
+    },
+    "pl": {
+      "entries": 46,
+      "sha256": "df5cbf84a6a821bc73cfcfe10c5f839a0cf1917a67f7d1f70e8f3c6b51f24b78",
+      "in_game_acceptance": "not yet reviewed in game"
+    }
+  },
+  "linguistic_review": "Machine translation with structural checks; no claim of professional human review."
+}

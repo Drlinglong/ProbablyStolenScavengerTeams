@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>9</LangVersion>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <GameRoot Condition="'$(GameRoot)' == ''">I:\SteamLibrary\steamapps\common\Probably Stolen</GameRoot>
+    <GameRoot Condition="'$(GameRoot)' == ''">$(PROBABLY_STOLEN_GAME_ROOT)</GameRoot>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
@@ -12,4 +12,8 @@
       <Private>false</Private>
     </Reference>
   </ItemGroup>
+  <Target Name="CheckGameReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(GameRoot)\Probably Stolen_Data\Managed\Assembly-CSharp.dll')"
+           Text="Set GameRoot to a local Probably Stolen installation; game assemblies are not distributed here." />
+  </Target>
 </Project>

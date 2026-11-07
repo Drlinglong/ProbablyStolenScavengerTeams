@@ -1,8 +1,11 @@
 param(
-    [string]$GameRoot = 'I:\SteamLibrary\steamapps\common\Probably Stolen',
-    [string]$Compiler = 'J:\codex-tools\probably-stolen-mod\compiler\tasks\net472\csc.exe'
+    [string]$GameRoot = $env:PROBABLY_STOLEN_GAME_ROOT,
+    [string]$Compiler = $env:CSC_PATH
 )
 $ErrorActionPreference = 'Stop'
+if (!$GameRoot -or !$Compiler) {
+    throw 'Supply -GameRoot and -Compiler, or set PROBABLY_STOLEN_GAME_ROOT and CSC_PATH.'
+}
 $managed = Join-Path $GameRoot 'Probably Stolen_Data\Managed'
 $packageRoot = Join-Path $PSScriptRoot 'package\ScavengerTeams'
 foreach ($spriteKey in @('printer_crate','metal_crate','electronic_crate','ore_crate')) {
@@ -20,6 +23,7 @@ $arguments += Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot 'src') -Filter
 if ($LASTEXITCODE -ne 0) { throw 'Compilation failed.' }
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\manifest.xml') -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\README.zh-CN.md') -Destination $packageRoot -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'LICENSE') -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\Textures') -Destination $packageRoot -Recurse -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\Localization') -Destination $packageRoot -Recurse -Force
 foreach ($locale in @('zh-Hans','zh-CN')) {

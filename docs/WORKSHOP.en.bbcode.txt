@@ -26,7 +26,7 @@ Mods that change Wild's Network, customer generation, or wholesale trading may s
 Source code (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavengerTeams]GitHub[/url]
 
 [h2]Localization[/h2]
-This mod's multilingual localization was generated with OpenAI GPT-6 Luna through Remis and checked for tags, line breaks, placeholders, and text structure. The Chinese source and dialogue have been tested in game; the other languages have passed structural checks and welcome player feedback.
+This mod's multilingual localization was generated with OpenAI GPT-6 Luna through Remis and checked for tags, line breaks, placeholders, and text structure. Multilingual display has been confirmed working in user testing. Feedback on wording is welcome.
 
 If you enjoy this mod, please consider starring Remis, reporting issues, or contributing:
 [url=https://github.com/Drlinglong/Remis]Remis — open-source game Mod localization tool[/url]

@@ -72,7 +72,7 @@ source_sizes = {p.name: len(p.read_text(encoding='utf-8').splitlines()) for p in
 assert all(size <= 500 for size in source_sizes.values())
 receipt = {
     'date': '2026-11-07',
-    'status': 'release-artifact-checked; gameplay-and-Chinese-user-accepted; other-locales-structural-checks-only',
+    'status': 'release-artifact-checked; gameplay-and-multilingual-display-user-accepted; individual-tested-locales-not-listed',
     'game_build': '26496118',
     'game_bundle_version': '0.46D',
     'mod_version': manifest.findtext('ModVersion'),

@@ -26,7 +26,7 @@
 源码（MIT）：[url=https://github.com/Drlinglong/ProbablyStolenScavengerTeams]GitHub[/url]
 
 [h2]本地化[/h2]
-本Mod的多语言本地化由OpenAI GPT-6 Luna经Remis生成，并经过标签、换行、占位符及文本结构检查。中文源文案和对话已完成实机测试，其他语言已通过结构检查，欢迎反馈措辞或显示问题。
+本Mod的多语言本地化由OpenAI GPT-6 Luna经Remis生成，并经过标签、换行、占位符及文本结构检查。中文源文案和对话已完成实机测试，多语言显示也已确认正常，欢迎反馈措辞问题。
 
 如果你喜欢这个Mod，欢迎为Remis点亮Star、反馈问题或参与贡献：
 [url=https://github.com/Drlinglong/Remis]Remis：开源游戏Mod本地化工具[/url]

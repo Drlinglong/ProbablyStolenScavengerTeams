@@ -24,7 +24,7 @@ Base service fees: 200 / 300 / 450 credits, except electronic components at 250 
 
 简体中文 · English · Français · Deutsch · 日本語 · Русский · Español · Polski
 
-All eight languages are included in this Mod's `Localization` directory. No separate translation Mod or Remis runtime is required. The Chinese source and sequential dialogue have user in-game acceptance; the seven other languages were produced using OpenAI GPT-6 Luna at medium reasoning through [Remis](https://github.com/Drlinglong/Remis). Their keys, placeholders, tags and dialogue boundaries have been checked; rendered UI and language quality still welcome player review. See [localization provenance](docs/LOCALIZATION_PROVENANCE.json).
+All eight languages are included in this Mod's `Localization` directory. No separate translation Mod or Remis runtime is required. The Chinese source and sequential dialogue have user in-game acceptance; the seven other languages were produced using OpenAI GPT-6 Luna at medium reasoning through [Remis](https://github.com/Drlinglong/Remis). Their keys, placeholders, tags and dialogue boundaries have been checked, and the user has confirmed multilingual display works in game. Wording feedback is welcome. See [localization provenance](docs/LOCALIZATION_PROVENANCE.json).
 
 ## Compatibility
 
@@ -37,3 +37,5 @@ The project is open source under MIT. It includes C# sources, API doubles, 68 ho
 Workshop assets: [English description](docs/WORKSHOP.en.bbcode.txt), [简体中文描述](docs/WORKSHOP.zh-CN.bbcode.txt), [cover JPG](assets/workshop/cover-0.2.1.jpg), [full PNG](assets/workshop/cover-0.2.1.png).
 
 The private test-money Mod remains a separate, unpublished repository.
+
+User has since confirmed multilingual display works in game (individual tested locales were not listed). The Mod browser name and description now use plain English to avoid font issues; gameplay locale CSVs are unchanged.

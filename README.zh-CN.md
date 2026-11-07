@@ -44,6 +44,8 @@ MIT开源仓库：[https://github.com/Drlinglong/ProbablyStolenScavengerTeams](h
 
 ## 文案编辑工作区
 
-验收的0.2.0基线已提交为42729a2。0.2.1的CSV文案、各级问候和分句对话已获用户实机确认。七种非中文语言通过Remis及结构校验，尚待实机显示确认。
+验收的0.2.0基线已提交为42729a2。0.2.1的CSV文案、各级问候和分句对话已获用户实机确认。七种非中文语言通过Remis及结构校验，用户随后确认多国语言显示正常。
 
 编辑中文：content/Localization/zh.csv；英文回退：content/Localization/en.csv。游戏内文案均经原生本地化API读取。[文案编辑说明](docs/LOCALIZATION.zh-CN.md)列出每个键的用途及参数规则。当前工作区有68项宿主回归，源游戏版号和构建方式同上。
+
+用户随后确认多国语言显示正常（未逐一列明测试语言）。Mod列表的名称、简介现改为纯英文，沿用英文工坊描述的纯文本内容；游戏内八语CSV保持不变。

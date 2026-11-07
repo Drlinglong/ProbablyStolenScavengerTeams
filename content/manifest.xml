@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Manifest>
   <ID>ps_scavenger_teams</ID>
-  <Name>王尔德的拾荒者小队</Name>
+  <Name>Wild's Scavenger Teams</Name>
   <Author>Linglong</Author>
   <ModVersion>0.2.1</ModVersion>
-  <Description>王尔德人脉中的四类供货队：打印耗材、废金属、普通电子元件、小行星矿石。次日首访，每隔三天供货，三级升级，首次批发五折/以后八五折，3×3六件材料箱。</Description>
+  <Description><![CDATA[SUPPORTED LANGUAGES
+Simplified Chinese, English, French, German, Japanese, Russian, Spanish, Polish
+
+WHY THIS MOD?
+Building and upgrading equipment can become a waiting game once you need large quantities of materials. In the base game, whether a scavenger turns up - and what they bring - is largely down to luck. This mod gives your shop a steady supply of four basic resources, so production does not have to stop while you wait for the right visitor.
+
+GETTING STARTED
+Open Wild's Network, find the Scavengers category on the Basic page, and purchase the service for the resource you need. Each service has three tiers; buy the next tier to upgrade that team's deliveries.
+
+FEATURES
+- Four independent suppliers: 3D printer filament, scrap metal, common electronic components, and ore from asteroid miners.
+- The first visit is the day after purchase, followed by one visit every three days. These suppliers arrive in addition to the normal random customers.
+- Tier I brings 6 loose resources and 2 junk items. Tier II brings 2 resource crates and 4 junk items. Tier III brings 3 resource crates and 6 junk items.
+- Resource crates make large deliveries easier to receive and store. Each occupies 3x3 cells and opens into 6 units of its resource. Double-click an owned crate to unpack it; leave enough storage space first.
+- Pick individual goods at regular prices, or buy the entire remaining shipment, including junk. Wholesale is half price on that team's first visit and 15% off on later visits.
+- Upgrades improve the same team's cargo without adding duplicate lower-tier visitors, resetting the delivery date, or renewing the first-visit discount.
+Standard base service fees are 200 / 300 / 450 credits for filament, scrap metal, and ore, and 250 / 350 / 500 for electronic components. These are one-time service fees; the goods are purchased separately. Normal difficulty and character price modifiers still apply.
+
+COMPATIBILITY
+Adds new services, suppliers, and resource crates without replacing original game files or item definitions. Designed to work with existing saves; purchasing a service starts its own delivery schedule without resetting your progress. Gameplay and Chinese dialogue have been tested on game version 0.46D.
+
+Mods that change Wild's Network, customer generation, or wholesale trading may still interact with this mod; universal compatibility is not guaranteed. Before removing it, unpack or dispose of its custom crates.
+
+Source code (MIT): GitHub: https://github.com/Drlinglong/ProbablyStolenScavengerTeams
+
+LOCALIZATION
+This mod's multilingual localization was generated with OpenAI GPT-6 Luna through Remis and checked for tags, line breaks, placeholders, and text structure. Multilingual display has been confirmed working in user testing. Feedback on wording is welcome.
+
+If you enjoy this mod, please consider starring Remis, reporting issues, or contributing:
+Remis  -  open-source game Mod localization tool: https://github.com/Drlinglong/Remis]]></Description>
   <GameVersions><Version>0.46D</Version></GameVersions>
   <Prerequisites />
   <Assemblies><Assembly>ScavengerTeams.dll</Assembly></Assemblies>

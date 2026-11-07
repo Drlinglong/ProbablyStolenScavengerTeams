@@ -3,7 +3,7 @@
   <ID>ps_scavenger_teams</ID>
   <Name>Wild's Scavenger Teams</Name>
   <Author>Linglong</Author>
-  <ModVersion>0.3.0-dev</ModVersion>
+  <ModVersion>0.3.0</ModVersion>
   <Description><![CDATA[SUPPORTED LANGUAGES
 Simplified Chinese, English, French, German, Japanese, Russian, Spanish, Polish
 
@@ -27,12 +27,12 @@ Standard base service fees are 200 / 300 / 450 credits for filament, scrap metal
 COMPATIBILITY
 Adds new services, suppliers, and resource crates without replacing original game files or item definitions. Designed to work with existing saves; purchasing a service starts its own delivery schedule without resetting your progress. Gameplay and Chinese dialogue have been tested on game version 0.46D.
 
-Mods that change Wild's Network, customer generation, or wholesale trading may still interact with this mod; universal compatibility is not guaranteed. Before removing it, unpack or dispose of its custom crates.
+Mods that change Wild's Network, the phone UI, customer generation, or wholesale trading may still interact with this mod; universal compatibility is not guaranteed. Before removing it, unpack or dispose of its custom crates.
 
 Source code (MIT): GitHub: https://github.com/Drlinglong/ProbablyStolenScavengerTeams
 
 LOCALIZATION
-This mod's multilingual localization was generated with OpenAI GPT-6 Luna through Remis and checked for tags, line breaks, placeholders, and text structure. Multilingual display has been confirmed working in user testing. Feedback on wording is welcome.
+Short instructions and later wording updates were added directly by Codex. The initial multilingual localization was generated with OpenAI GPT-6 Luna through Remis and checked for tags, line breaks, placeholders, and text structure. Multilingual display has been confirmed working in user testing. Feedback on wording is welcome.
 
 If you enjoy this mod, please consider starring Remis, reporting issues, or contributing:
 Remis  -  open-source game Mod localization tool: https://github.com/Drlinglong/Remis]]></Description>

@@ -9,12 +9,14 @@ Abre la Red de Wild, busca la categoría Chatarreros en la página Básicos y co
 
 [h2]Características[/h2]
 [list]
-[*]Cuatro proveedores independientes: filamento para impresora 3D, chatarra, componentes electrónicos comunes y mineral de los mineros de asteroides.
+[*]Cinco proveedores independientes: filamento para impresora 3D, chatarra, componentes electrónicos comunes, mineral de asteroides y botellas de vino vacías.
 [*]La primera visita tiene lugar al día siguiente de la compra; después, habrá una visita cada tres días. Estos proveedores llegan además de los clientes aleatorios habituales.
-[*]El nivel I trae 6 recursos sueltos y 2 objetos de desecho. El nivel II trae 2 cajas de recursos y 4 objetos de desecho. El nivel III trae 3 cajas de recursos y 6 objetos de desecho.
+[*]Para las cuatro rutas de materiales: El nivel I trae 6 recursos sueltos y 2 objetos de desecho. El nivel II trae 2 cajas de recursos y 4 objetos de desecho. El nivel III trae 3 cajas de recursos y 6 objetos de desecho.
+[*]El equipo de botellas trae 6 / 12 / 18 botellas de vino vacías originales en los niveles I / II / III, sin desechos ni cajas. Tarifas del servicio: 200 / 300 / 450 créditos. Las botellas conservan su uso original para elaborar vino.
 [*]Las cajas de recursos facilitan la recepción y el almacenamiento de grandes entregas. Cada una ocupa 3×3 casillas y contiene 6 unidades de su recurso. Haz doble clic en una caja que tengas para desempaquetarla; asegúrate primero de tener espacio de almacenamiento suficiente.
 [*]Elige productos individuales a su precio habitual o compra todo lo que quede en el envío, incluidos los objetos de desecho. El precio al por mayor es la mitad en la primera visita de ese equipo y tiene un 15 % de descuento en las visitas posteriores.
 [*]Las mejoras aumentan la carga del mismo equipo sin añadir visitantes duplicados de niveles inferiores, reiniciar la fecha de entrega ni renovar el descuento de la primera visita.
+[*]Llama al contacto de los chatarreros (72283) para pausar cada equipo por separado. Después de tres días de juego, vuelve a llamar para reanudar las visitas. Las entregas vuelven al día siguiente, sin recuperar envíos omitidos ni reiniciar el descuento inicial.
 [/list]
 Las tarifas base habituales del servicio son 200 / 300 / 450 créditos para filamento, chatarra y mineral, y 250 / 350 / 500 para componentes electrónicos. Son tarifas de servicio de un solo pago; los productos se compran por separado. También se aplican la dificultad normal y los modificadores de precio de los personajes.
 
@@ -27,6 +29,8 @@ Código fuente (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavenger
 
 [h2]Localización[/h2]
 La localización multilingüe de este mod se generó con OpenAI GPT-6 Luna a través de Remis y se revisó para comprobar las etiquetas, los saltos de línea, los marcadores de posición y la estructura del texto. Las pruebas de usuario han confirmado que la visualización multilingüe funciona. Se agradecen los comentarios sobre la redacción.
+
+Las instrucciones breves y algunos ajustes posteriores de redacción se añadieron directamente con Codex.
 
 Si te gusta este mod, considera dejarle una estrella a Remis, informar de problemas o contribuir:
 [url=https://github.com/Drlinglong/Remis]Remis — herramienta de localización de mods de juegos de código abierto[/url]

@@ -9,12 +9,14 @@ Otwórz Sieć Wilda, znajdź kategorię Zbieracze złomu na stronie Podstawowe i
 
 [h2]Funkcje[/h2]
 [list]
-[*]Czterech niezależnych dostawców: filament do drukarki 3D, złom, podstawowe komponenty elektroniczne i ruda od górników asteroid.
+[*]Pięciu niezależnych dostawców: filament do drukarki 3D, złom, podstawowe komponenty elektroniczne, ruda z asteroid i puste butelki po winie.
 [*]Pierwsza wizyta odbywa się dzień po zakupie, a następnie dostawcy odwiedzają cię raz na trzy dni. Przyjeżdżają niezależnie od zwykłych, losowych klientów.
-[*]Poziom I zapewnia 6 luzem dostarczonych surowców i 2 śmieci. Poziom II zapewnia 2 skrzynie z surowcami i 4 śmieci. Poziom III zapewnia 3 skrzynie z surowcami i 6 śmieci.
+[*]Dla czterech ekip dostarczających materiały: Poziom I zapewnia 6 luzem dostarczonych surowców i 2 śmieci. Poziom II zapewnia 2 skrzynie z surowcami i 4 śmieci. Poziom III zapewnia 3 skrzynie z surowcami i 6 śmieci.
+[*]Ekipa butelek przynosi 6 / 12 / 18 oryginalnych pustych butelek po winie na poziomach I / II / III, bez śmieci i skrzyń. Opłaty za usługę: 200 / 300 / 450 kredytów. Butelki zachowują pierwotne zastosowanie do produkcji wina.
 [*]Skrzynie z surowcami ułatwiają odbieranie i przechowywanie dużych dostaw. Każda zajmuje 3×3 pola i zawiera 6 jednostek danego surowca. Kliknij dwukrotnie posiadaną skrzynię, aby ją rozpakować; najpierw zostaw wystarczająco dużo wolnego miejsca w magazynie.
 [*]Kupuj pojedyncze towary po zwykłych cenach albo całą pozostałą dostawę, włącznie ze śmieciami. Przy pierwszej wizycie danej ekipy zakupy hurtowe kosztują połowę ceny, a przy kolejnych wizytach są tańsze o 15%.
 [*]Ulepszenia zwiększają ładunek tej samej ekipy, nie dodając zduplikowanych dostawców niższego poziomu, nie resetując terminu dostawy ani nie odnawiając zniżki za pierwszą wizytę.
+[*]Zadzwoń do zbieraczy (72283), aby osobno wstrzymać wizyty każdej ekipy. Po trzech dniach w grze możesz zadzwonić ponownie i wznowić dostawy. Pierwsza wizyta nastąpi następnego dnia; zaległe dostawy nie są uzupełniane, a zniżka za pierwszy przyjazd nie odnawia się.
 [/list]
 Standardowe podstawowe opłaty za usługi wynoszą 200 / 300 / 450 kredytów za filament, złom i rudę oraz 250 / 350 / 500 za komponenty elektroniczne. Są to jednorazowe opłaty za usługę; towary kupuje się osobno. Nadal obowiązują modyfikatory cen wynikające z poziomu trudności i postaci.
 
@@ -27,6 +29,8 @@ Kod źródłowy (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavenge
 
 [h2]Lokalizacja[/h2]
 Wielojęzyczna lokalizacja tego moda została wygenerowana przez OpenAI GPT-6 Luna za pośrednictwem Remis i sprawdzona pod kątem tagów, podziału wierszy, symboli zastępczych oraz struktury tekstu. Testy użytkowników potwierdziły, że wyświetlanie wielu języków działa prawidłowo. Opinie na temat użytego słownictwa są mile widziane.
+
+Krótkie instrukcje i część późniejszych zmian tekstu dodano bezpośrednio przez Codex.
 
 Jeśli podoba ci się ten mod, rozważ oznaczenie projektu Remis gwiazdką, zgłoszenie problemów lub współtworzenie projektu:
 [url=https://github.com/Drlinglong/Remis]Remis — open-source game Mod localization tool[/url]

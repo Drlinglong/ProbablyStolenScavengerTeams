@@ -6,7 +6,7 @@ The source tree contains readable C# sources, host API doubles and regression ch
 
 Before the public push, confirm that the tracked tree and complete Git history contain no provider credentials, player saves, game/third-party DLLs, Remis application state or private test-money Mod. Generated local receipts remain ignored under `outputs/`. The test-money repository must retain its private/local scope.
 
-The Mod does not perform networking or load arbitrary files. Its only Harmony patch is scoped to this Mod's suppliers and guards wholesale invocation. It adds native services, custom item factories and customer hooks. Source availability allows inspection; it is not a guarantee about every game build or Mod combination.
+The Mod does not perform networking or load arbitrary files. Its Harmony patches guard wholesale invocation for its suppliers, localize its own phone contact, and prepare its own phone menu layout. It adds native services, custom item factories and customer hooks. Source availability allows inspection; it is not a guarantee about every game build or Mod combination.
 
 Public repository: https://github.com/Drlinglong/ProbablyStolenScavengerTeams. It contains only this independent project. Both Workshop descriptions include this verified repository URL. A prepared local release, Git tag, or description does not establish that GitHub or Steam publication has occurred.
 

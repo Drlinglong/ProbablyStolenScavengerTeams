@@ -9,12 +9,14 @@ Ouvrez le Réseau de Wild, trouvez la catégorie Récupérateurs sur la page Bas
 
 [h2]Fonctionnalités[/h2]
 [list]
-[*]Quatre fournisseurs indépendants : filament d’imprimante 3D, ferraille, composants électroniques courants et minerai provenant de mineurs d’astéroïdes.
+[*]Cinq fournisseurs indépendants : filament d’imprimante 3D, ferraille, composants électroniques courants, minerai d’astéroïdes et bouteilles de vin vides.
 [*]La première visite a lieu le lendemain de l’achat, puis une visite a lieu tous les trois jours. Ces fournisseurs s’ajoutent aux clients habituels qui apparaissent aléatoirement.
-[*]Le niveau I apporte 6 ressources en vrac et 2 objets de rebut. Le niveau II apporte 2 caisses de ressources et 4 objets de rebut. Le niveau III apporte 3 caisses de ressources et 6 objets de rebut.
+[*]Pour les quatre équipes de matériaux : Le niveau I apporte 6 ressources en vrac et 2 objets de rebut. Le niveau II apporte 2 caisses de ressources et 4 objets de rebut. Le niveau III apporte 3 caisses de ressources et 6 objets de rebut.
+[*]L’équipe de bouteilles apporte 6 / 12 / 18 bouteilles de vin vides d’origine aux niveaux I / II / III, sans rebuts ni caisses. Frais de service : 200 / 300 / 450 crédits. Les bouteilles conservent leur usage pour la vinification.
 [*]Les caisses de ressources facilitent la réception et le stockage des grosses livraisons. Chacune occupe 3×3 cases et contient 6 unités de sa ressource. Double-cliquez sur une caisse en votre possession pour la déballer ; assurez-vous d’avoir assez d’espace de stockage au préalable.
 [*]Achetez des articles individuellement au prix normal, ou achetez toute la cargaison restante, rebuts compris. Le prix de gros est réduit de moitié lors de la première visite de cette équipe, puis de 15 % lors des visites suivantes.
 [*]Les améliorations augmentent le chargement de la même équipe sans ajouter de visiteurs en double de niveau inférieur, réinitialiser la date de livraison ni renouveler la réduction de première visite.
+[*]Appelez le contact des récupérateurs (72283) pour suspendre chaque équipe séparément. Après trois jours de jeu, rappelez pour reprendre les visites. Les livraisons reprennent le lendemain, sans rattrapage ni renouvellement de la réduction initiale.
 [/list]
 Les frais de service de base sont de 200 / 300 / 450 crédits pour le filament, la ferraille et le minerai, et de 250 / 350 / 500 pour les composants électroniques. Ces frais de service sont payés une seule fois ; les marchandises s’achètent séparément. La difficulté normale et les modificateurs de prix des personnages s’appliquent toujours.
 
@@ -27,6 +29,8 @@ Code source (MIT) : [url=https://github.com/Drlinglong/ProbablyStolenScavengerTe
 
 [h2]Localisation[/h2]
 La localisation multilingue de ce mod a été générée avec OpenAI GPT-6 Luna via Remis, puis vérifiée pour les balises, les sauts de ligne, les espaces réservés et la structure du texte. Le bon affichage multilingue a été confirmé lors de tests auprès d’utilisateurs. Vos commentaires sur les formulations sont les bienvenus.
+
+Les instructions courtes et certaines formulations ultérieures ont été ajoutées directement par Codex.
 
 Si ce mod vous plaît, pensez à mettre une étoile à Remis, à signaler les problèmes ou à contribuer :
 [url=https://github.com/Drlinglong/Remis]Remis — outil open source de localisation de mods de jeux[/url]

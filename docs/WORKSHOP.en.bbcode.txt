@@ -9,12 +9,14 @@ Open Wild's Network, find the Scavengers category on the Basic page, and purchas
 
 [h2]Features[/h2]
 [list]
-[*]Four independent suppliers: 3D printer filament, scrap metal, common electronic components, and ore from asteroid miners.
+[*]Five independent suppliers: 3D printer filament, scrap metal, common electronic components, asteroid ore, and empty wine bottles.
 [*]The first visit is the day after purchase, followed by one visit every three days. These suppliers arrive in addition to the normal random customers.
-[*]Tier I brings 6 loose resources and 2 junk items. Tier II brings 2 resource crates and 4 junk items. Tier III brings 3 resource crates and 6 junk items.
+[*]For the four material routes: Tier I brings 6 loose resources and 2 junk items. Tier II brings 2 resource crates and 4 junk items. Tier III brings 3 resource crates and 6 junk items.
+[*]The bottle team brings 6 / 12 / 18 original empty wine bottles at tiers I / II / III, with no junk and no crates. Service fees are 200 / 300 / 450 credits. The bottles retain their original winemaking functionality.
 [*]Resource crates make large deliveries easier to receive and store. Each occupies 3×3 cells and opens into 6 units of its resource. Double-click an owned crate to unpack it; leave enough storage space first.
 [*]Pick individual goods at regular prices, or buy the entire remaining shipment, including junk. Wholesale is half price on that team's first visit and 15% off on later visits.
 [*]Upgrades improve the same team's cargo without adding duplicate lower-tier visitors, resetting the delivery date, or renewing the first-visit discount.
+[*]Call the Scavenger Squad contact (72283) to pause each team independently. After three in-game days, call again to resume. Deliveries restart the next day, with no catch-up shipments and no reset of the first-visit discount.
 [/list]
 Standard base service fees are 200 / 300 / 450 credits for filament, scrap metal, and ore, and 250 / 350 / 500 for electronic components. These are one-time service fees; the goods are purchased separately. Normal difficulty and character price modifiers still apply.
 
@@ -27,6 +29,8 @@ Source code (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavengerTea
 
 [h2]Localization[/h2]
 This mod's multilingual localization was generated with OpenAI GPT-6 Luna through Remis and checked for tags, line breaks, placeholders, and text structure. Multilingual display has been confirmed working in user testing. Feedback on wording is welcome.
+
+Short instructions and later wording updates were added directly by Codex.
 
 If you enjoy this mod, please consider starring Remis, reporting issues, or contributing:
 [url=https://github.com/Drlinglong/Remis]Remis — open-source game Mod localization tool[/url]

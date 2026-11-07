@@ -19,7 +19,7 @@ root = Path(__file__).resolve().parents[1]
 package = root / 'package' / 'ScavengerTeams'
 manifest = ET.parse(package / 'manifest.xml').getroot()
 assert manifest.findtext('ID') == 'ps_scavenger_teams'
-assert manifest.findtext('ModVersion') == '0.3.0-dev'
+assert manifest.findtext('ModVersion') == '0.3.0'
 assert manifest.findtext('GameVersions/Version') == '0.46D'
 assert manifest.findtext('Assemblies/Assembly') == 'ScavengerTeams.dll'
 assert not list(manifest.find('Capabilities'))
@@ -75,8 +75,8 @@ for folder in ('src', 'docs', 'content', 'verify'):
 source_sizes = {p.name: len(p.read_text(encoding='utf-8').splitlines()) for p in (root / 'src').glob('*.cs')}
 assert all(size <= 500 for size in source_sizes.values())
 receipt = {
-    'date': '2026-11-07',
-    'status': 'local-candidate; original four routes accepted; bottle route pending in-game testing',
+    'date': '2026-11-08',
+    'status': '0.3.0 release; user accepted all routes, phone menu, pause and resume',
     'game_build': '26496118',
     'game_bundle_version': '0.46D',
     'mod_version': manifest.findtext('ModVersion'),

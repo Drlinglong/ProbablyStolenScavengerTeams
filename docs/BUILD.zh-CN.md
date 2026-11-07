@@ -13,7 +13,7 @@ python ./verify/validate_artifact.py --game-root $env:PROBABLY_STOLEN_GAME_ROOT
 
 也可显式传入-GameRoot和-Compiler参数。编译器可从Microsoft.Net.Compilers.Toolset 4.12.0获得，游戏程序集仅作为本机编译引用，不收入包。输出为package/ScavengerTeams，不自动安装。原SDK项目也可传入GameRoot构建DLL，但该入口未在当前无SDK的机器上验证，且不自动打完整发行包。
 
-68项宿主回归覆盖玩法、四路独立存档、异常路径及八语分句链。结构检查包含八语46键、格式参数、标签、分句、透明贴图及发行文件一致性；不等于Unity显示或人工语言质量验收。
+90项宿主回归覆盖玩法、五路独立存档及电话暂停恢复、异常路径及八语分句链。结构检查包含八语63键、格式参数、标签、分句、透明贴图及发行文件一致性；不等于Unity显示或人工语言质量验收。
 
 用户已实测0.2.0全部路线、箱图和开箱；之后已确认0.2.1中文文案、各级问候及分句正常。用户随后确认多国语言显示正常。实测游戏基线为Steam Build26496118、bundleVersion0.46D。
 

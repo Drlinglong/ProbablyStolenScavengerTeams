@@ -9,12 +9,14 @@ Das Herstellen und Aufrüsten von Ausrüstung kann zur Geduldsprobe werden, soba
 
 [h2]Features[/h2]
 [list]
-[*]Vier unabhängige Lieferanten: 3D-Drucker-Filament, Altmetall, gewöhnliche elektronische Komponenten und Erz von Asteroidenbergleuten.
+[*]Fünf unabhängige Lieferanten: 3D-Drucker-Filament, Altmetall, gewöhnliche elektronische Komponenten, Asteroidenerz und leere Weinflaschen.
 [*]Der erste Besuch findet am Tag nach dem Kauf statt, danach folgt alle drei Tage ein Besuch. Diese Lieferanten kommen zusätzlich zu den normalen zufälligen Kunden.
-[*]Stufe I bringt 6 lose Ressourcen und 2 Gerümpelgegenstände. Stufe II bringt 2 Ressourcenkisten und 4 Gerümpelgegenstände. Stufe III bringt 3 Ressourcenkisten und 6 Gerümpelgegenstände.
+[*]Für die vier Materialteams gilt: Stufe I bringt 6 lose Ressourcen und 2 Gerümpelgegenstände. Stufe II bringt 2 Ressourcenkisten und 4 Gerümpelgegenstände. Stufe III bringt 3 Ressourcenkisten und 6 Gerümpelgegenstände.
+[*]Das Flaschenteam bringt auf Stufe I / II / III jeweils 6 / 12 / 18 originale leere Weinflaschen, ohne Gerümpel und ohne Kisten. Dienstgebühren: 200 / 300 / 450 Credits. Die Flaschen behalten ihre ursprüngliche Funktion zur Weinherstellung.
 [*]Ressourcenkisten erleichtern die Annahme und Lagerung großer Lieferungen. Jede belegt 3×3 Felder und lässt sich in 6 Einheiten der jeweiligen Ressource auspacken. Doppelklicke auf eine Kiste in deinem Besitz, um sie auszupacken; sorge vorher für ausreichend Lagerplatz.
 [*]Kaufe einzelne Waren zum regulären Preis oder die gesamte verbleibende Lieferung einschließlich Gerümpel. Beim ersten Besuch des jeweiligen Teams kostet der Großhandel die Hälfte, bei späteren Besuchen gibt es 15 % Rabatt.
 [*]Aufrüstungen verbessern die Ladung desselben Teams, ohne zusätzliche Besucher niedrigerer Stufen hinzuzufügen, den Liefertermin zurückzusetzen oder den Rabatt für den ersten Besuch zu erneuern.
+[*]Rufe den Plünderer-Kontakt (72283) an, um jedes Team einzeln zu pausieren. Nach drei Spieltagen kannst du die Besuche telefonisch fortsetzen. Die Lieferungen beginnen am Folgetag wieder; es gibt weder Nachlieferungen noch einen neuen Erstbesuchsrabatt.
 [/list]
 Die üblichen Grundgebühren für Dienste betragen 200 / 300 / 450 Credits für Filament, Altmetall und Erz sowie 250 / 350 / 500 für elektronische Komponenten. Diese Gebühren für den Dienst fallen einmalig an; die Waren werden separat gekauft. Der normale Schwierigkeitsgrad und die Preisänderungen durch Charaktere gelten weiterhin.
 
@@ -27,6 +29,8 @@ Quellcode (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavengerTeams
 
 [h2]Lokalisierung[/h2]
 Die mehrsprachige Lokalisierung dieser Mod wurde mit OpenAI GPT-6 Luna über Remis erstellt und auf Tags, Zeilenumbrüche, Platzhalter und Textstruktur überprüft. In Benutzertests wurde bestätigt, dass die mehrsprachige Anzeige funktioniert. Rückmeldungen zur Formulierung sind willkommen.
+
+Kurze Hinweise und spätere Textänderungen wurden direkt von Codex ergänzt.
 
 Wenn dir diese Mod gefällt, kannst du Remis gerne mit einem Stern unterstützen, Probleme melden oder mitwirken:
 [url=https://github.com/Drlinglong/Remis]Remis — Open-Source-Tool zur Lokalisierung von Spiel-Mods[/url]

@@ -1,4 +1,4 @@
-# Building 0.3.0-dev
+# Building 0.3.0
 
 Requires Windows PowerShell, a local installation of Probably Stolen (tested against 0.46D), and a C# 9 compatible Roslyn compiler. The game and its assemblies are not distributed in this repository.
 

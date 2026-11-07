@@ -12,6 +12,6 @@
 
 用户已确认1140c6e文案、问候及c7554ea分句对话实机正常。其他七语通过自动结构及宿主检查，用户随后确认多国语言显示正常；未逐一记录所测试语言，不代表专业人工审校。版本整理和增加语言未改已验收的玩法及贴图。
 
-原版游戏程序集、第三方Mod、Remis运行时和私用测试资金Mod均不在发行包中。尚未上传Steam；GitHub开源地址：https://github.com/Drlinglong/ProbablyStolenScavengerTeams 。
+原版游戏程序集、第三方Mod、Remis运行时和私用测试资金Mod均不在发行包中。已通过SteamCMD公开发布至https://steamcommunity.com/sharedfiles/filedetails/?id=3835169100 ，八语页面描述已分别提交并读回验证；GitHub开源地址：https://github.com/Drlinglong/ProbablyStolenScavengerTeams 。
 
 用户随后确认多国语言显示正常（未逐一列明测试语言）。Mod列表的名称、简介现改为纯英文，沿用英文工坊描述的纯文本内容；游戏内八语CSV保持不变。

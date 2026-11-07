@@ -1,0 +1,32 @@
+[h2]Idiomas compatibles[/h2]
+简体中文 · English · Français · Deutsch · 日本語 · Русский · Español · Polski
+
+[h2]¿Por qué este mod?[/h2]
+Fabricar y mejorar equipo puede convertirse en una espera interminable cuando necesitas grandes cantidades de materiales. En el juego base, que aparezca un chatarrero y lo que traiga depende en gran medida de la suerte. Este mod proporciona a tu tienda un suministro constante de cuatro recursos básicos, para que la producción no tenga que detenerse mientras esperas al visitante adecuado.
+
+[h2]Primeros pasos[/h2]
+Abre la Red de Wild, busca la categoría Chatarreros en la página Básicos y compra el servicio del recurso que necesites. Cada servicio tiene tres niveles; compra el siguiente para mejorar las entregas de ese equipo.
+
+[h2]Características[/h2]
+[list]
+[*]Cuatro proveedores independientes: filamento para impresora 3D, chatarra, componentes electrónicos comunes y mineral de los mineros de asteroides.
+[*]La primera visita tiene lugar al día siguiente de la compra; después, habrá una visita cada tres días. Estos proveedores llegan además de los clientes aleatorios habituales.
+[*]El nivel I trae 6 recursos sueltos y 2 objetos de desecho. El nivel II trae 2 cajas de recursos y 4 objetos de desecho. El nivel III trae 3 cajas de recursos y 6 objetos de desecho.
+[*]Las cajas de recursos facilitan la recepción y el almacenamiento de grandes entregas. Cada una ocupa 3×3 casillas y contiene 6 unidades de su recurso. Haz doble clic en una caja que tengas para desempaquetarla; asegúrate primero de tener espacio de almacenamiento suficiente.
+[*]Elige productos individuales a su precio habitual o compra todo lo que quede en el envío, incluidos los objetos de desecho. El precio al por mayor es la mitad en la primera visita de ese equipo y tiene un 15 % de descuento en las visitas posteriores.
+[*]Las mejoras aumentan la carga del mismo equipo sin añadir visitantes duplicados de niveles inferiores, reiniciar la fecha de entrega ni renovar el descuento de la primera visita.
+[/list]
+Las tarifas base habituales del servicio son 200 / 300 / 450 créditos para filamento, chatarra y mineral, y 250 / 350 / 500 para componentes electrónicos. Son tarifas de servicio de un solo pago; los productos se compran por separado. También se aplican la dificultad normal y los modificadores de precio de los personajes.
+
+[h2]Compatibilidad[/h2]
+Añade nuevos servicios, proveedores y cajas de recursos sin sustituir archivos originales del juego ni definiciones de objetos. Está diseñado para funcionar con partidas guardadas existentes; comprar un servicio inicia su propio calendario de entregas sin reiniciar tu progreso. Se han probado la jugabilidad y los diálogos en chino en la versión 0.46D del juego.
+
+Los mods que cambien la Red de Wild, la generación de clientes o el comercio al por mayor podrían interactuar con este mod; no se garantiza la compatibilidad universal. Antes de desinstalarlo, desempaqueta o desecha sus cajas personalizadas.
+
+Código fuente (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavengerTeams]GitHub[/url]
+
+[h2]Localización[/h2]
+La localización multilingüe de este mod se generó con OpenAI GPT-6 Luna a través de Remis y se revisó para comprobar las etiquetas, los saltos de línea, los marcadores de posición y la estructura del texto. Las pruebas de usuario han confirmado que la visualización multilingüe funciona. Se agradecen los comentarios sobre la redacción.
+
+Si te gusta este mod, considera dejarle una estrella a Remis, informar de problemas o contribuir:
+[url=https://github.com/Drlinglong/Remis]Remis — herramienta de localización de mods de juegos de código abierto[/url]

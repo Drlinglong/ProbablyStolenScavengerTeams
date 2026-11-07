@@ -1,0 +1,90 @@
+{
+  "version": "0.2.1",
+  "workshop_item_id": "3835169100",
+  "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835169100",
+  "app_id": 4348910,
+  "visibility": "public",
+  "content_upload": "SteamCMD Committing update...Success",
+  "preview_verified_sha1": "9253F934598F714554F2B09A0D7F2511DB5EE87C",
+  "metadata_api": "Valve ISteamUGC SetItemUpdateLanguage; per-language SubmitItemUpdate and query readback",
+  "languages": {
+    "en": {
+      "steam_language": "english",
+      "result": 1,
+      "needs_legal_agreement": false,
+      "expected_sha256": "56219a1ead13f52f841e392d61010a4588ecf3cb993c110612fa42d019d3086b",
+      "verified": true,
+      "actual_sha256": "56219a1ead13f52f841e392d61010a4588ecf3cb993c110612fa42d019d3086b"
+    },
+    "zh-CN": {
+      "steam_language": "schinese",
+      "result": 1,
+      "needs_legal_agreement": false,
+      "expected_sha256": "a8ec9c639b77fd54c8b835b00836f4358497a36c420a24dc1d2bf1df5bd4c78d",
+      "verified": true,
+      "actual_sha256": "a8ec9c639b77fd54c8b835b00836f4358497a36c420a24dc1d2bf1df5bd4c78d"
+    },
+    "fr": {
+      "steam_language": "french",
+      "result": 1,
+      "needs_legal_agreement": false,
+      "expected_sha256": "19dbac7a7e54535f48b387520fca0ce4620273179b2d0095cd80aeaea8bbacc9",
+      "verified": true,
+      "actual_sha256": "19dbac7a7e54535f48b387520fca0ce4620273179b2d0095cd80aeaea8bbacc9"
+    },
+    "de": {
+      "steam_language": "german",
+      "result": 1,
+      "needs_legal_agreement": false,
+      "expected_sha256": "e1fd850373dacd502d06de3c4decd856af2326da06e8b374c1d02f3d7b441fee",
+      "verified": true,
+      "actual_sha256": "e1fd850373dacd502d06de3c4decd856af2326da06e8b374c1d02f3d7b441fee"
+    },
+    "ja": {
+      "steam_language": "japanese",
+      "result": 1,
+      "needs_legal_agreement": false,
+      "expected_sha256": "3c38819c632fc0e587e034f469eacaef8baf2f4bcb511bb1f4bd0012d24af615",
+      "verified": true,
+      "actual_sha256": "3c38819c632fc0e587e034f469eacaef8baf2f4bcb511bb1f4bd0012d24af615"
+    },
+    "ru": {
+      "steam_language": "russian",
+      "result": 1,
+      "needs_legal_agreement": false,
+      "expected_sha256": "d8ec2737e1a094f32e164848205eb395214de5417eb58762b35b1ec3a30a9347",
+      "verified": true,
+      "actual_sha256": "d8ec2737e1a094f32e164848205eb395214de5417eb58762b35b1ec3a30a9347"
+    },
+    "es": {
+      "steam_language": "spanish",
+      "result": 1,
+      "needs_legal_agreement": false,
+      "expected_sha256": "a00bbbbbb11606d3dc9aad06edce350b38f4d293b7e6ad2c0aca6f91da26d9d5",
+      "verified": true,
+      "actual_sha256": "a00bbbbbb11606d3dc9aad06edce350b38f4d293b7e6ad2c0aca6f91da26d9d5"
+    },
+    "pl": {
+      "steam_language": "polish",
+      "result": 1,
+      "needs_legal_agreement": false,
+      "expected_sha256": "097ca2e02e253a620fce2f7729b0b07dcf506adec39f5b4386cfc8e6724cbc91",
+      "verified": true,
+      "actual_sha256": "097ca2e02e253a620fce2f7729b0b07dcf506adec39f5b4386cfc8e6724cbc91"
+    }
+  },
+  "translation_provider": "openai",
+  "translation_model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "translation_tool": "Remis 3.4.0",
+  "additional_descriptions": [
+    "fr",
+    "de",
+    "ja",
+    "ru",
+    "es",
+    "pl"
+  ],
+  "review": "BBCode sections, six feature entries, prices, source/Remis links checked; targeted JA/PL/RU wording corrections retained in managed version history",
+  "private_test_mod_included": false
+}

@@ -1,0 +1,32 @@
+[h2]Langues prises en charge[/h2]
+简体中文 · English · Français · Deutsch · 日本語 · Русский · Español · Polski
+
+[h2]Pourquoi ce mod ?[/h2]
+Fabriquer et améliorer de l’équipement peut vite devenir une longue attente lorsque vous avez besoin de grandes quantités de matériaux. Dans le jeu de base, l’arrivée d’un récupérateur — et ce qu’il apporte — dépend en grande partie de la chance. Ce mod fournit à votre boutique un approvisionnement régulier en quatre ressources de base, afin que la production ne soit pas interrompue pendant que vous attendez le bon visiteur.
+
+[h2]Pour commencer[/h2]
+Ouvrez le Réseau de Wild, trouvez la catégorie Récupérateurs sur la page Basic, puis achetez le service correspondant à la ressource dont vous avez besoin. Chaque service comporte trois niveaux ; achetez le niveau suivant pour améliorer les livraisons de cette équipe.
+
+[h2]Fonctionnalités[/h2]
+[list]
+[*]Quatre fournisseurs indépendants : filament d’imprimante 3D, ferraille, composants électroniques courants et minerai provenant de mineurs d’astéroïdes.
+[*]La première visite a lieu le lendemain de l’achat, puis une visite a lieu tous les trois jours. Ces fournisseurs s’ajoutent aux clients habituels qui apparaissent aléatoirement.
+[*]Le niveau I apporte 6 ressources en vrac et 2 objets de rebut. Le niveau II apporte 2 caisses de ressources et 4 objets de rebut. Le niveau III apporte 3 caisses de ressources et 6 objets de rebut.
+[*]Les caisses de ressources facilitent la réception et le stockage des grosses livraisons. Chacune occupe 3×3 cases et contient 6 unités de sa ressource. Double-cliquez sur une caisse en votre possession pour la déballer ; assurez-vous d’avoir assez d’espace de stockage au préalable.
+[*]Achetez des articles individuellement au prix normal, ou achetez toute la cargaison restante, rebuts compris. Le prix de gros est réduit de moitié lors de la première visite de cette équipe, puis de 15 % lors des visites suivantes.
+[*]Les améliorations augmentent le chargement de la même équipe sans ajouter de visiteurs en double de niveau inférieur, réinitialiser la date de livraison ni renouveler la réduction de première visite.
+[/list]
+Les frais de service de base sont de 200 / 300 / 450 crédits pour le filament, la ferraille et le minerai, et de 250 / 350 / 500 pour les composants électroniques. Ces frais de service sont payés une seule fois ; les marchandises s’achètent séparément. La difficulté normale et les modificateurs de prix des personnages s’appliquent toujours.
+
+[h2]Compatibilité[/h2]
+Ajoute de nouveaux services, fournisseurs et caisses de ressources sans remplacer les fichiers du jeu d’origine ni les définitions d’objets. Conçu pour fonctionner avec les sauvegardes existantes ; l’achat d’un service lance son propre calendrier de livraison sans réinitialiser votre progression. Le gameplay et les dialogues chinois ont été testés avec la version 0.46D du jeu.
+
+Les mods qui modifient le Réseau de Wild, la génération des clients ou le commerce de gros peuvent interagir avec ce mod ; la compatibilité universelle n’est pas garantie. Avant de le désinstaller, déballez ou éliminez ses caisses personnalisées.
+
+Code source (MIT) : [url=https://github.com/Drlinglong/ProbablyStolenScavengerTeams]GitHub[/url]
+
+[h2]Localisation[/h2]
+La localisation multilingue de ce mod a été générée avec OpenAI GPT-6 Luna via Remis, puis vérifiée pour les balises, les sauts de ligne, les espaces réservés et la structure du texte. Le bon affichage multilingue a été confirmé lors de tests auprès d’utilisateurs. Vos commentaires sur les formulations sont les bienvenus.
+
+Si ce mod vous plaît, pensez à mettre une étoile à Remis, à signaler les problèmes ou à contribuer :
+[url=https://github.com/Drlinglong/Remis]Remis — outil open source de localisation de mods de jeux[/url]

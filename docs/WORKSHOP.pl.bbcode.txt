@@ -1,0 +1,32 @@
+[h2]Obsługiwane języki[/h2]
+简体中文 · English · Français · Deutsch · 日本語 · Русский · Español · Polski
+
+[h2]Dlaczego ten mod?[/h2]
+Budowanie i ulepszanie sprzętu może zamienić się w czekanie, gdy potrzebujesz dużych ilości materiałów. W podstawowej wersji gry to, czy pojawi się zbieracz złomu — i co przyniesie — zależy głównie od szczęścia. Ten mod zapewnia twojemu sklepowi stałe dostawy czterech podstawowych surowców, dzięki czemu produkcja nie musi stawać, gdy czekasz na odpowiedniego gościa.
+
+[h2]Pierwsze kroki[/h2]
+Otwórz Sieć Wilda, znajdź kategorię Zbieracze złomu na stronie Podstawowe i kup usługę dla potrzebnego surowca. Każda usługa ma trzy poziomy; kup następny poziom, aby ulepszyć dostawy danej ekipy.
+
+[h2]Funkcje[/h2]
+[list]
+[*]Czterech niezależnych dostawców: filament do drukarki 3D, złom, podstawowe komponenty elektroniczne i ruda od górników asteroid.
+[*]Pierwsza wizyta odbywa się dzień po zakupie, a następnie dostawcy odwiedzają cię raz na trzy dni. Przyjeżdżają niezależnie od zwykłych, losowych klientów.
+[*]Poziom I zapewnia 6 luzem dostarczonych surowców i 2 śmieci. Poziom II zapewnia 2 skrzynie z surowcami i 4 śmieci. Poziom III zapewnia 3 skrzynie z surowcami i 6 śmieci.
+[*]Skrzynie z surowcami ułatwiają odbieranie i przechowywanie dużych dostaw. Każda zajmuje 3×3 pola i zawiera 6 jednostek danego surowca. Kliknij dwukrotnie posiadaną skrzynię, aby ją rozpakować; najpierw zostaw wystarczająco dużo wolnego miejsca w magazynie.
+[*]Kupuj pojedyncze towary po zwykłych cenach albo całą pozostałą dostawę, włącznie ze śmieciami. Przy pierwszej wizycie danej ekipy zakupy hurtowe kosztują połowę ceny, a przy kolejnych wizytach są tańsze o 15%.
+[*]Ulepszenia zwiększają ładunek tej samej ekipy, nie dodając zduplikowanych dostawców niższego poziomu, nie resetując terminu dostawy ani nie odnawiając zniżki za pierwszą wizytę.
+[/list]
+Standardowe podstawowe opłaty za usługi wynoszą 200 / 300 / 450 kredytów za filament, złom i rudę oraz 250 / 350 / 500 za komponenty elektroniczne. Są to jednorazowe opłaty za usługę; towary kupuje się osobno. Nadal obowiązują modyfikatory cen wynikające z poziomu trudności i postaci.
+
+[h2]Kompatybilność[/h2]
+Dodaje nowe usługi, dostawców i skrzynie z surowcami bez zastępowania oryginalnych plików gry ani definicji przedmiotów. Mod zaprojektowano z myślą o istniejących zapisach; zakup usługi rozpoczyna jej własny harmonogram dostaw i nie resetuje postępów. Rozgrywka i chińskie dialogi zostały przetestowane na wersji gry 0.46D.
+
+Mody zmieniające Sieć Wilda, pojawianie się klientów lub handel hurtowy mogą nadal wchodzić w interakcje z tym modem; nie gwarantujemy uniwersalnej kompatybilności. Przed usunięciem moda rozpakuj jego niestandardowe skrzynie lub się ich pozbądź.
+
+Kod źródłowy (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavengerTeams]GitHub[/url]
+
+[h2]Lokalizacja[/h2]
+Wielojęzyczna lokalizacja tego moda została wygenerowana przez OpenAI GPT-6 Luna za pośrednictwem Remis i sprawdzona pod kątem tagów, podziału wierszy, symboli zastępczych oraz struktury tekstu. Testy użytkowników potwierdziły, że wyświetlanie wielu języków działa prawidłowo. Opinie na temat użytego słownictwa są mile widziane.
+
+Jeśli podoba ci się ten mod, rozważ oznaczenie projektu Remis gwiazdką, zgłoszenie problemów lub współtworzenie projektu:
+[url=https://github.com/Drlinglong/Remis]Remis — open-source game Mod localization tool[/url]

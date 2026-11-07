@@ -25,3 +25,5 @@
 - 用户已明确授权创建公开仓库https://github.com/Drlinglong/ProbablyStolenScavengerTeams，推送本拾荒者源码及v0.2.1标签，并将实际链接加入工坊描述。此授权不包括测试资金Mod或Steam上传。
 
 - Mod列表元数据Name、Description固定用纯英文（ASCII），避免非中文客户端字体问题。Description沿用英文工坊内容，转换为原生面板的纯文本，语言名称也用英文；游戏内八语CSV继续按当前语言显示。
+
+- 用户已明确授权SteamCMD公开发布本拾荒者Mod、封面及八语工坊描述。既有条目ID为3835169100（AppID4348910），后续更新必须使用此ID，不新建重复条目。内容与封面走SteamCMD；多语言页面描述使用官方ISteamUGC SetItemUpdateLanguage并逐语言读回验证，要求桌面Steam已登录，无需computer use。测试资金Mod始终私用。

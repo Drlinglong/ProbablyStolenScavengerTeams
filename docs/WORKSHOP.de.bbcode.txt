@@ -1,0 +1,32 @@
+[h2]Unterstützte Sprachen[/h2]
+简体中文 · English · Français · Deutsch · 日本語 · Русский · Español · Polski
+
+[h2]Warum diese Mod?[/h2]
+Das Herstellen und Aufrüsten von Ausrüstung kann zur Geduldsprobe werden, sobald man große Mengen an Materialien benötigt. Im Grundspiel ist es größtenteils Glückssache, ob ein Plünderer auftaucht – und was er mitbringt. Diese Mod versorgt deinen Laden zuverlässig mit vier grundlegenden Ressourcen, damit die Produktion nicht stillstehen muss, während du auf den richtigen Besucher wartest.
+
+[h2]Erste Schritte[/h2]
+Öffne Wild's Network, suche auf der Grundlagen-Seite die Kategorie „Plünderer“ und kaufe den Dienst für die Ressource, die du benötigst. Jeder Dienst hat drei Stufen; kaufe die nächste Stufe, um die Lieferungen des jeweiligen Teams aufzuwerten.
+
+[h2]Features[/h2]
+[list]
+[*]Vier unabhängige Lieferanten: 3D-Drucker-Filament, Altmetall, gewöhnliche elektronische Komponenten und Erz von Asteroidenbergleuten.
+[*]Der erste Besuch findet am Tag nach dem Kauf statt, danach folgt alle drei Tage ein Besuch. Diese Lieferanten kommen zusätzlich zu den normalen zufälligen Kunden.
+[*]Stufe I bringt 6 lose Ressourcen und 2 Gerümpelgegenstände. Stufe II bringt 2 Ressourcenkisten und 4 Gerümpelgegenstände. Stufe III bringt 3 Ressourcenkisten und 6 Gerümpelgegenstände.
+[*]Ressourcenkisten erleichtern die Annahme und Lagerung großer Lieferungen. Jede belegt 3×3 Felder und lässt sich in 6 Einheiten der jeweiligen Ressource auspacken. Doppelklicke auf eine Kiste in deinem Besitz, um sie auszupacken; sorge vorher für ausreichend Lagerplatz.
+[*]Kaufe einzelne Waren zum regulären Preis oder die gesamte verbleibende Lieferung einschließlich Gerümpel. Beim ersten Besuch des jeweiligen Teams kostet der Großhandel die Hälfte, bei späteren Besuchen gibt es 15 % Rabatt.
+[*]Aufrüstungen verbessern die Ladung desselben Teams, ohne zusätzliche Besucher niedrigerer Stufen hinzuzufügen, den Liefertermin zurückzusetzen oder den Rabatt für den ersten Besuch zu erneuern.
+[/list]
+Die üblichen Grundgebühren für Dienste betragen 200 / 300 / 450 Credits für Filament, Altmetall und Erz sowie 250 / 350 / 500 für elektronische Komponenten. Diese Gebühren für den Dienst fallen einmalig an; die Waren werden separat gekauft. Der normale Schwierigkeitsgrad und die Preisänderungen durch Charaktere gelten weiterhin.
+
+[h2]Kompatibilität[/h2]
+Fügt neue Dienste, Lieferanten und Ressourcenkisten hinzu, ohne Originaldateien des Spiels oder Item-Definitionen zu ersetzen. Die Mod ist für bestehende Spielstände ausgelegt; der Kauf eines Dienstes startet dessen eigenen Lieferplan, ohne deinen Fortschritt zurückzusetzen. Gameplay und chinesische Dialoge wurden mit Spielversion 0.46D getestet.
+
+Mods, die Wild's Network, die Generierung von Kunden oder den Großhandel verändern, können weiterhin mit dieser Mod interagieren; eine universelle Kompatibilität ist nicht garantiert. Packe vor dem Entfernen der Mod ihre benutzerdefinierten Kisten aus oder entsorge sie.
+
+Quellcode (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavengerTeams]GitHub[/url]
+
+[h2]Lokalisierung[/h2]
+Die mehrsprachige Lokalisierung dieser Mod wurde mit OpenAI GPT-6 Luna über Remis erstellt und auf Tags, Zeilenumbrüche, Platzhalter und Textstruktur überprüft. In Benutzertests wurde bestätigt, dass die mehrsprachige Anzeige funktioniert. Rückmeldungen zur Formulierung sind willkommen.
+
+Wenn dir diese Mod gefällt, kannst du Remis gerne mit einem Stern unterstützen, Probleme melden oder mitwirken:
+[url=https://github.com/Drlinglong/Remis]Remis — Open-Source-Tool zur Lokalisierung von Spiel-Mods[/url]

@@ -2,7 +2,7 @@
 
 A Probably Stolen mod adding reliable deliveries of printer filament, scrap metal, common electronic components, and asteroid ore through Wild's Network.
 
-[简体中文](README.zh-CN.md) · [Build instructions](docs/BUILD.md) · [MIT license](LICENSE) · [GitHub source](https://github.com/Drlinglong/ProbablyStolenScavengerTeams)
+[简体中文](README.zh-CN.md) · [Build instructions](docs/BUILD.md) · [MIT license](LICENSE) · [GitHub source](https://github.com/Drlinglong/ProbablyStolenScavengerTeams) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3835169100)
 
 ![Workshop cover](assets/workshop/cover-0.2.1.jpg)
 

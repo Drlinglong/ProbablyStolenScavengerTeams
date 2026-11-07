@@ -1,7 +1,8 @@
 param(
     [Parameter(Mandatory=$true)][string]$Background,
     [Parameter(Mandatory=$true)][string[]]$Icons,
-    [Parameter(Mandatory=$true)][string]$OutputStem
+    [Parameter(Mandatory=$true)][string]$OutputStem,
+    [ValidateSet('row','staggered')][string]$Layout = 'staggered'
 )
 $ErrorActionPreference='Stop'
 if ($Icons.Count -ne 4) { throw 'Supply exactly four original resource icons in display order.' }
@@ -12,8 +13,8 @@ try {
     $graphics.InterpolationMode=[System.Drawing.Drawing2D.InterpolationMode]::NearestNeighbor
     $graphics.PixelOffsetMode=[System.Drawing.Drawing2D.PixelOffsetMode]::Half
     $graphics.CompositingMode=[System.Drawing.Drawing2D.CompositingMode]::SourceOver
-    $cellWidth=$canvas.Width * 0.24
-    $rowCenter=$canvas.Height * 0.72
+    $maxWidth=$canvas.Width * $(if ($Layout -eq 'staggered') { 0.32 } else { 0.24*0.88 })
+    $maxHeight=$canvas.Height * $(if ($Layout -eq 'staggered') { 0.26 } else { 0.22 })
     for ($i=0; $i -lt 4; $i++) {
         $icon=New-Object System.Drawing.Bitmap((Resolve-Path -LiteralPath $Icons[$i]).Path)
         try {
@@ -28,10 +29,14 @@ try {
             }
             if ($right -lt 0) { throw 'Empty source icon.' }
             $w=$right-$left+1; $h=$bottom-$top+1
-            $scale=[Math]::Max(1,[Math]::Floor([Math]::Min(($cellWidth*0.88)/$w,($canvas.Height*0.22)/$h)))
+            $scale=[Math]::Max(1,[Math]::Floor([Math]::Min($maxWidth/$w,$maxHeight/$h)))
             $dw=[int]($w*$scale); $dh=[int]($h*$scale)
-            $centerX=$canvas.Width*(0.14+$i*0.24)
-            $destination=New-Object System.Drawing.Rectangle([int]($centerX-$dw/2),[int]($rowCenter-$dh/2),$dw,$dh)
+            $centerX=$canvas.Width * $(if ($Layout -eq 'staggered') { 0.17+$i*0.22 } else { 0.14+$i*0.24 })
+            $centerY=$canvas.Height * $(if ($Layout -eq 'staggered') { if ($i%2 -eq 0) { 0.60 } else { 0.84 } } else { 0.72 })
+            $destination=New-Object System.Drawing.Rectangle([int]($centerX-$dw/2),[int]($centerY-$dh/2),$dw,$dh)
+            if ($destination.Left -lt 0 -or $destination.Right -gt $canvas.Width -or $destination.Top -lt 0 -or $destination.Bottom -gt $canvas.Height) {
+                throw 'Icon placement exceeds canvas.'
+            }
             $source=New-Object System.Drawing.Rectangle($left,$top,$w,$h)
             $graphics.DrawImage($icon,$destination,$source,[System.Drawing.GraphicsUnit]::Pixel)
         } finally { $icon.Dispose() }

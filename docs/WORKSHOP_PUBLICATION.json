@@ -5,7 +5,7 @@
   "app_id": 4348910,
   "visibility": "public",
   "content_upload": "SteamCMD Committing update...Success",
-  "preview_verified_sha1": "9253F934598F714554F2B09A0D7F2511DB5EE87C",
+  "preview_verified_sha1": "5E4342910C8A5DCCAE5C191ACD3ED6A3E5F28CBF",
   "metadata_api": "Valve ISteamUGC SetItemUpdateLanguage; per-language SubmitItemUpdate and query readback",
   "languages": {
     "en": {
@@ -86,5 +86,13 @@
     "pl"
   ],
   "review": "BBCode sections, six feature entries, prices, source/Remis links checked; targeted JA/PL/RU wording corrections retained in managed version history",
-  "private_test_mod_included": false
+  "private_test_mod_included": false,
+  "cover_revision": {
+    "file": "assets/workshop/cover-0.2.1-original-icons-zh-en.jpg",
+    "layout": "large Chinese and English titles; printer filament, scrap metal, common electronics and ore original sprites in one horizontal row",
+    "upload": "SteamCMD preview-only update succeeded",
+    "content_size_unchanged": true,
+    "english_description_unchanged": true,
+    "localized_description_setters_used": false
+  }
 }

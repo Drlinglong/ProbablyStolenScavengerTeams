@@ -27,3 +27,5 @@
 - Mod列表元数据Name、Description固定用纯英文（ASCII），避免非中文客户端字体问题。Description沿用英文工坊内容，转换为原生面板的纯文本，语言名称也用英文；游戏内八语CSV继续按当前语言显示。
 
 - 用户已明确授权SteamCMD公开发布本拾荒者Mod、封面及八语工坊描述。既有条目ID为3835169100（AppID4348910），后续更新必须使用此ID，不新建重复条目。内容与封面走SteamCMD；多语言页面描述使用官方ISteamUGC SetItemUpdateLanguage并逐语言读回验证，要求桌面Steam已登录，无需computer use。测试资金Mod始终私用。
+
+- 工坊当前封面为中英文大标题＋四个原版资源图标一字排开，用户否定了小字号和四箱封面。原始图标从游戏只读提取，不作为独立原始资源收入仓库／Mod包；合成封面为用户明确请求。只更新封面时SteamCMD VDF省略内容、标题、描述、可见性字段。通用发布流程已固化为本地steam-workshop-publish技能。

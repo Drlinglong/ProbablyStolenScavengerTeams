@@ -25,16 +25,16 @@ team.ore.visitor_name,Asteroid Miner
 team.ore.crate_name,Crate of Metal Ore
 team.ore.crate_description,Double-click to unpack {0} units of metal ore. Make sure there is enough storage space before opening.
 team.ore.crate_flavor,Six units packed by the team.
-team.printer.service_description.1,Wild puts you in touch with a small group of scavengers collecting 3D printer filament for you. They also bring a little junk. They visit the shop every three days to sell their finds.
+team.printer.service_description.1,"Wild puts you in touch with a small group of scavengers collecting 3D printer filament for you. They also bring a little junk. They visit the shop every three days to sell their finds. If you no longer need 3D printer filament, you can call to pause their visits. You can resume the service by phone later."
 team.printer.service_description.2,Wild has found more scavengers to collect more 3D printer filament for you. They visit every three days and have even packed the materials into crates for easier handling!
 team.printer.service_description.3,"A legendary, well-equipped scavenger team ventures deep into abandoned districts to collect large quantities of 3D printer filament for you. They visit every three days and pack the materials into crates for easier handling!"
-team.metal.service_description.1,Wild puts you in touch with a small group of scavengers collecting scrap metal for you. They also bring a little junk. They visit the shop every three days to sell their finds.
+team.metal.service_description.1,"Wild puts you in touch with a small group of scavengers collecting scrap metal for you. They also bring a little junk. They visit the shop every three days to sell their finds. If you no longer need scrap metal, you can call to pause their visits. You can resume the service by phone later."
 team.metal.service_description.2,Wild has found more scavengers to collect more scrap metal for you. They visit every three days and have even packed the materials into crates for easier handling!
 team.metal.service_description.3,"A legendary, well-equipped scavenger team ventures deep into abandoned districts to collect large quantities of scrap metal for you. They visit every three days and pack the materials into crates for easier handling!"
-team.electronic.service_description.1,Wild puts you in touch with a small group of scavengers collecting common electronic components for you. They also bring a little junk. They visit the shop every three days to sell their finds.
+team.electronic.service_description.1,"Wild puts you in touch with a small group of scavengers collecting common electronic components for you. They also bring a little junk. They visit the shop every three days to sell their finds. If you no longer need common electronic components, you can call to pause their visits. You can resume the service by phone later."
 team.electronic.service_description.2,Wild has found more scavengers to collect more common electronic components for you. They visit every three days and have even packed the materials into crates for easier handling!
 team.electronic.service_description.3,"A legendary, well-equipped scavenger team ventures deep into abandoned districts to collect large quantities of common electronic components for you. They visit every three days and pack the materials into crates for easier handling!"
-team.ore.service_description.1,Wild puts you in touch with a group of illicit asteroid miners. They visit the shop every three days to sell the ore they have mined.
+team.ore.service_description.1,"Wild puts you in touch with a group of illicit asteroid miners. They visit the shop every three days to sell the ore they have mined. If you no longer need metal ore, you can call to pause their visits. You can resume the service by phone later."
 team.ore.service_description.2,"Your investment buys the miners better equipment, so they now bring more ore on each visit. They have even packed it into crates for easier handling!"
 team.ore.service_description.3,"Thanks to you and Wild, the miners can slip their unlicensed ship past spaceport customs and bring large quantities of ore on each visit. They have even packed it into crates for easier handling!"
 team.greeting,"Hello, shopkeeper! Take a look at the good things we have found lately!"
@@ -48,15 +48,15 @@ team.ore.intro.3,Everyone in the mining community knows your name now!\nA few of
 team.bottle.material,Empty Bottle
 team.bottle.service_title,Empty Bottle{0}
 team.bottle.visitor_name,Empty Bottle Scavenger
-team.bottle.service_description.1,Use Wild's network of contacts to recruit a small group of scavengers to collect empty bottles for you. They'll visit the shop every 3 days to sell what they've scavenged.
+team.bottle.service_description.1,"Use Wild's network of contacts to recruit a small group of scavengers to collect empty bottles for you. They'll visit the shop every 3 days to sell what they've scavenged. If you no longer need Empty Bottle, you can call to pause their visits. You can resume the service by phone later."
 team.bottle.service_description.2,Wild has recruited more scavengers to collect even more empty bottles for you. They'll visit your shop every 3 days to deliver and sell the empty bottles they've collected.
 team.bottle.service_description.3,"A well-equipped, legendary scavenger squad will venture deep into the abandoned district to collect a large number of empty bottles for you. They'll visit your shop every 3 days to sell what they've scavenged."
 phone.contact_name,Scavenger Squad
 phone.greeting,You've reached the Scavenger Squad hotline. What can I do for you?
-phone.disable_choice,Deactivate {0} Squad
-phone.enable_choice,Activate {0} Squad
-phone.cooldown_choice,{0} Squad (available in {1} days)
-phone.locked_choice,{0} Squad (service not purchased)
+phone.disable_choice,Pause: {0}
+phone.enable_choice,Resume: {0}
+phone.cooldown_choice,{0} (resume in {1} days)
+phone.locked_choice,{0} (not purchased)
 phone.pause_reply,"All right, we'll stop making visits. If you need {0}, please contact us again in {1} days."
 phone.resume_reply,"All right, the {0} Squad will resume visits tomorrow, then come by every 3 days."
 phone.hangup,Hang up

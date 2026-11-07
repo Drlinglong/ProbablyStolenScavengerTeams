@@ -59,6 +59,10 @@ for key in sprite_keys:
     assert sprite.getchannel('A').getextrema() == (0, 255), key
     sprite_hashes.add(hashlib.sha256(path.read_bytes()).hexdigest())
 assert len(sprite_hashes) == 4, 'Material icons must not be accidental duplicate files'
+bottles = Image.open(package / 'Textures/Items/bottle_icon.png')
+assert bottles.size == (48,48) and bottles.mode == 'RGBA'
+assert bottles.getchannel('A').getextrema() == (0,255)
+assert (root / 'assets/source/bottle-squad-scattered-0.3.0.png').is_file()
 assert (root / 'assets/source/printer-crate-original-style-two-spools-v4.png').is_file()
 assert (root / 'assets/source/printer-crate-generated.png').is_file()
 assert (root / 'assets/source/PROMPT.md').is_file()

@@ -19,30 +19,49 @@ internal static partial class RegressionTests
     }
     private static void RunPhoneTests()
     {
-        Check("six phone choices use a nonoverlapping two-column layout and restore native geometry", () =>
+        Check("fixed-width single-column phone menu disables native fitters and restores original slots", () =>
         {
-            var group=new UnityEngine.RectTransform {
-                sizeDelta=new UnityEngine.Vector2(306.486f,175.649f),
-                anchoredPosition=new UnityEngine.Vector2(435,-245)};
+            var parent=new UnityEngine.RectTransform();
+            var group=new UnityEngine.RectTransform {parent=parent};
             var ui=new DialoguePhoneUIManager();
-            for(var i=0;i<3;i++) ui.dialogChoiceBubbles.Add(new DialogChoiceBubble {
-                index=i,type=1,transform=new UnityEngine.RectTransform {parent=group,
-                    anchoredPosition=new UnityEngine.Vector2(0,-22.5f-i*40)}});
+            for(var i=0;i<3;i++)
+            {
+                var bubble=new DialogChoiceBubble {index=i,type=1};
+                bubble.transform.parent=group;
+                ((UnityEngine.RectTransform)bubble.transform).anchoredPosition=new UnityEngine.Vector2(0,-22.5f-i*40);
+                ui.dialogChoiceBubbles.Add(bubble);
+            }
+            var original=ui.dialogChoiceBubbles;
             try
             {
                 TeamPhoneLayout.Prepare(ui,true);
-                Require(ui.dialogChoiceBubbles.Count==6,"native three slots were not extended");
-                var points=ui.dialogChoiceBubbles.Select(b=>((UnityEngine.RectTransform)b.transform).anchoredPosition).ToArray();
-                Require(points[1].x-points[0].x>256.96f && points[0].y-points[2].y>=40,"choice rectangles overlap");
-                Require(ui.dialogChoiceBubbles[5].index==5 && ui.dialogChoiceBubbles[5].type==1,"wrong cloned click target");
-                TeamPhoneLayout.Prepare(ui,true);
-                Require(ui.dialogChoiceBubbles.Count==6,"duplicated cloned options");
+                Require(ui.dialogChoiceBubbles.Count==6 && !ReferenceEquals(ui.dialogChoiceBubbles,original),"not six separate slots");
+                for(var i=0;i<6;i++)
+                {
+                    var bubble=ui.dialogChoiceBubbles[i];var rect=(UnityEngine.RectTransform)bubble.transform;
+                    Require(rect.sizeDelta.x==520 && rect.anchoredPosition.x==0,"not fixed-width single column");
+                    Require(!bubble.Fitter.enabled && !bubble.Layout.enabled,"native auto-width remains active");
+                    Require(bubble.TMP.enableWordWrapping && bubble.TMP.enableAutoSizing,"long locale text cannot fit");
+                    if(i>0) Require(-rect.anchoredPosition.y>=i*68,"rows overlap");
+                }
+                var last=ui.dialogChoiceBubbles[5];
+                Require(last.index==5 && last.type==1,"wrong cloned click target");
+                TeamPhoneLayout.Prepare(ui,true);Require(ui.dialogChoiceBubbles.Count==6,"duplicated clones");
+                foreach(var viewport in new[]{new UnityEngine.Vector2(640,480),new UnityEngine.Vector2(1280,720),new UnityEngine.Vector2(1920,1080)})
+                {
+                    ((UnityEngine.RectTransform)ui.Canvas.transform).rect=new UnityEngine.Rect {width=viewport.x,height=viewport.y};
+                    TeamPhoneLayout.Prepare(ui,true);
+                    var panel=(UnityEngine.RectTransform)ui.dialogChoiceBubbles[0].transform.parent;
+                    Require(panel.anchoredPosition.x<=viewport.x/2-20 && panel.anchoredPosition.x-panel.sizeDelta.x>=-viewport.x/2+20,"menu outside horizontal screen bounds");
+                    Require(panel.anchoredPosition.y<=viewport.y/2-20 && panel.anchoredPosition.y-panel.sizeDelta.y>=-viewport.y/2+20,"menu outside vertical screen bounds");
+                }
                 TeamPhoneLayout.Prepare(ui,false);
-                Require(group.sizeDelta.x==306.486f && group.anchoredPosition.x==435,"native group geometry not restored");
-                Require(((UnityEngine.RectTransform)ui.dialogChoiceBubbles[1].transform).anchoredPosition.x==0,"native choice moved");
+                Require(ReferenceEquals(ui.dialogChoiceBubbles,original),"native list not restored");
+                Require(original[0].Fitter.enabled && original[0].Layout.enabled,"modified native controls");
+                TeamPhoneLayout.Prepare(ui,true);
             }
             finally {TeamPhoneLayout.Remove();}
-            Require(ui.dialogChoiceBubbles.Count==3,"cloned slots leaked on disable");
+            Require(ReferenceEquals(ui.dialogChoiceBubbles,original) && original.Count==3,"cleanup lost original slots");
         });
         Check("independent contact registers once after load and leaves native contacts alone", () =>
         {

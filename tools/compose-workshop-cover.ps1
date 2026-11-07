@@ -2,10 +2,11 @@ param(
     [Parameter(Mandatory=$true)][string]$Background,
     [Parameter(Mandatory=$true)][string[]]$Icons,
     [Parameter(Mandatory=$true)][string]$OutputStem,
-    [ValidateSet('row','staggered')][string]$Layout = 'staggered'
+    [ValidateSet('row','staggered','five')][string]$Layout = 'staggered'
 )
 $ErrorActionPreference='Stop'
-if ($Icons.Count -ne 4) { throw 'Supply exactly four original resource icons in display order.' }
+$expected = $(if ($Layout -eq 'five') { 5 } else { 4 })
+if ($Icons.Count -ne $expected) { throw "Supply $expected resource icons in display order." }
 Add-Type -AssemblyName System.Drawing
 $canvas=[System.Drawing.Bitmap]::FromFile((Resolve-Path -LiteralPath $Background).Path)
 $graphics=[System.Drawing.Graphics]::FromImage($canvas)
@@ -13,9 +14,9 @@ try {
     $graphics.InterpolationMode=[System.Drawing.Drawing2D.InterpolationMode]::NearestNeighbor
     $graphics.PixelOffsetMode=[System.Drawing.Drawing2D.PixelOffsetMode]::Half
     $graphics.CompositingMode=[System.Drawing.Drawing2D.CompositingMode]::SourceOver
-    $maxWidth=$canvas.Width * $(if ($Layout -eq 'staggered') { 0.32 } else { 0.24*0.88 })
-    $maxHeight=$canvas.Height * $(if ($Layout -eq 'staggered') { 0.26 } else { 0.22 })
-    for ($i=0; $i -lt 4; $i++) {
+    $maxWidth=$canvas.Width * $(if ($Layout -eq 'five') { 0.28 } elseif ($Layout -eq 'staggered') { 0.32 } else { 0.24*0.88 })
+    $maxHeight=$canvas.Height * $(if ($Layout -eq 'five') { 0.24 } elseif ($Layout -eq 'staggered') { 0.26 } else { 0.22 })
+    for ($i=0; $i -lt $expected; $i++) {
         $icon=New-Object System.Drawing.Bitmap((Resolve-Path -LiteralPath $Icons[$i]).Path)
         try {
             $left=$icon.Width; $top=$icon.Height; $right=-1; $bottom=-1
@@ -31,8 +32,8 @@ try {
             $w=$right-$left+1; $h=$bottom-$top+1
             $scale=[Math]::Max(1,[Math]::Floor([Math]::Min($maxWidth/$w,$maxHeight/$h)))
             $dw=[int]($w*$scale); $dh=[int]($h*$scale)
-            $centerX=$canvas.Width * $(if ($Layout -eq 'staggered') { 0.17+$i*0.22 } else { 0.14+$i*0.24 })
-            $centerY=$canvas.Height * $(if ($Layout -eq 'staggered') { if ($i%2 -eq 0) { 0.60 } else { 0.84 } } else { 0.72 })
+            $centerX=$canvas.Width * $(if ($Layout -eq 'five') { @(0.18,0.50,0.82,0.34,0.66)[$i] } elseif ($Layout -eq 'staggered') { 0.17+$i*0.22 } else { 0.14+$i*0.24 })
+            $centerY=$canvas.Height * $(if ($Layout -eq 'five') { if ($i -lt 3) { 0.61 } else { 0.85 } } elseif ($Layout -eq 'staggered') { if ($i%2 -eq 0) { 0.60 } else { 0.84 } } else { 0.72 })
             $destination=New-Object System.Drawing.Rectangle([int]($centerX-$dw/2),[int]($centerY-$dh/2),$dw,$dh)
             if ($destination.Left -lt 0 -or $destination.Right -gt $canvas.Width -or $destination.Top -lt 0 -or $destination.Bottom -gt $canvas.Height) {
                 throw 'Icon placement exceeds canvas.'

@@ -45,7 +45,7 @@ public class UpgradeDefinition
     public int Cost;
     public string[] Prerequisites;
     public Action Unlock;
-    public string Tab, Subtitle;
+    public string Tab, Subtitle, IconKey;
 }
 public static class ModHelper
 {
@@ -67,7 +67,7 @@ public static class ModHelper
         Func<string> subtitleLabel = null, Func<string> alreadyBought = null, bool recommended = false)
     {
         Upgrades[id] = new UpgradeDefinition { Cost = cost, Prerequisites = prerequisites,
-            Unlock = onUnlock, Tab = tab, Subtitle = subtitleLabel == null ? subtitle : subtitleLabel() };
+            Unlock = onUnlock, Tab = tab, IconKey = iconKey, Subtitle = subtitleLabel == null ? subtitle : subtitleLabel() };
         // Real RegisterModUpgrade stores its definition, THEN dereferences the lazy singleton.
         var player = PlayerStore.Instance;
     }

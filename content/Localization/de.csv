@@ -25,16 +25,16 @@ team.ore.visitor_name,Asteroidenbergleute
 team.ore.crate_name,1 Kiste mit Erz
 team.ore.crate_description,"Doppelklicken, um {0} Einheiten Erz zu erhalten. Stelle vor dem Öffnen sicher, dass im Lager genügend Platz ist."
 team.ore.crate_flavor,6 Stück pro Kiste – dein Team hat sie für dich verpackt.
-team.printer.service_description.1,"Über Wildes Netzwerk an Kontakten heuerst du eine kleine Gruppe Schrottsammler an, die für dich 3D-Druckmaterial sammelt und nebenbei auch etwas Müll mitbringt. Sie kommen alle 3 Tage in den Laden und verkaufen ihre Fundstücke."
+team.printer.service_description.1,"Über Wildes Netzwerk an Kontakten heuerst du eine kleine Gruppe Schrottsammler an, die für dich 3D-Druckmaterial sammelt und nebenbei auch etwas Müll mitbringt. Sie kommen alle 3 Tage in den Laden und verkaufen ihre Fundstücke. Wenn du 3D-Druckmaterial nicht mehr benötigst, kannst du ihre Besuche telefonisch pausieren. Später kannst du den Dienst per Telefon wieder aufnehmen."
 team.printer.service_description.2,"Wilde hat weitere Schrottsammler angeheuert, die für dich mehr 3D-Druckmaterial sammeln. Sie kommen alle 3 Tage in den Laden. Damit du die Ware leichter entgegennehmen kannst, haben sie das 3D-Druckmaterial sogar für dich verpackt!"
 team.printer.service_description.3,"Ein legendäres, bestens ausgerüstetes Schrottsammlerteam dringt tief ins Ödland vor, um große Mengen 3D-Druckmaterial für dich zu sammeln. Sie kommen alle 3 Tage in den Laden. Damit du die Ware leichter entgegennehmen kannst, haben sie das 3D-Druckmaterial sogar für dich verpackt!"
-team.metal.service_description.1,"Über Wildes Netzwerk an Kontakten heuerst du eine kleine Gruppe Schrottsammler an, die für dich Altmetall sammelt und nebenbei auch etwas Müll mitbringt. Sie kommen alle 3 Tage in den Laden und verkaufen ihre Fundstücke."
+team.metal.service_description.1,"Über Wildes Netzwerk an Kontakten heuerst du eine kleine Gruppe Schrottsammler an, die für dich Altmetall sammelt und nebenbei auch etwas Müll mitbringt. Sie kommen alle 3 Tage in den Laden und verkaufen ihre Fundstücke. Wenn du Altmetall nicht mehr benötigst, kannst du ihre Besuche telefonisch pausieren. Später kannst du den Dienst per Telefon wieder aufnehmen."
 team.metal.service_description.2,"Wilde hat weitere Schrottsammler angeheuert, die für dich mehr Altmetall sammeln. Sie kommen alle 3 Tage in den Laden. Damit du die Ware leichter entgegennehmen kannst, haben sie das Altmetall sogar für dich verpackt!"
 team.metal.service_description.3,"Ein legendäres, bestens ausgerüstetes Schrottsammlerteam dringt tief ins Ödland vor, um große Mengen Altmetall für dich zu sammeln. Sie kommen alle 3 Tage in den Laden. Damit du die Ware leichter entgegennehmen kannst, haben sie das Altmetall sogar für dich verpackt!"
-team.electronic.service_description.1,"Über Wildes Netzwerk an Kontakten heuerst du eine kleine Gruppe Schrottsammler an, die für dich Elektronikbauteile (gewöhnlich) sammelt und nebenbei auch etwas Müll mitbringt. Sie kommen alle 3 Tage in den Laden und verkaufen ihre Fundstücke."
+team.electronic.service_description.1,"Über Wildes Netzwerk an Kontakten heuerst du eine kleine Gruppe Schrottsammler an, die für dich Elektronikbauteile (gewöhnlich) sammelt und nebenbei auch etwas Müll mitbringt. Sie kommen alle 3 Tage in den Laden und verkaufen ihre Fundstücke. Wenn du Elektronikbauteile (gewöhnlich) nicht mehr benötigst, kannst du ihre Besuche telefonisch pausieren. Später kannst du den Dienst per Telefon wieder aufnehmen."
 team.electronic.service_description.2,"Wilde hat noch mehr Plünderer angeworben, die weitere gewöhnliche elektronische Bauteile für dich sammeln. Sie besuchen deinen Laden alle 3 Tage. Damit du die Ware bequem entgegennehmen kannst, haben sie die gewöhnlichen elektronischen Bauteile sogar schon verpackt!"
 team.electronic.service_description.3,"Ein bestens ausgerüstetes Team legendärer Plünderer dringt tief in die Sperrzone vor, um große Mengen gewöhnlicher elektronischer Bauteile für dich zu sammeln. Sie besuchen deinen Laden alle 3 Tage. Damit du die Ware bequem entgegennehmen kannst, haben sie die gewöhnlichen elektronischen Bauteile sogar schon verpackt!"
-team.ore.service_description.1,"Nutze Wildes Kontakte, um eine Gruppe illegaler Asteroidenbergleute anzuwerben. Sie besuchen deinen Laden alle 3 Tage und verkaufen die von ihnen abgebauten Erze."
+team.ore.service_description.1,"Nutze Wildes Kontakte, um eine Gruppe illegaler Asteroidenbergleute anzuwerben. Sie besuchen deinen Laden alle 3 Tage und verkaufen die von ihnen abgebauten Erze. Wenn du Erz nicht mehr benötigst, kannst du ihre Besuche telefonisch pausieren. Später kannst du den Dienst per Telefon wieder aufnehmen."
 team.ore.service_description.2,"Investiere in die Bergleute, damit sie bessere Ausrüstung für den Abbau bekommen. Jetzt bringen sie bei jedem Besuch mehr Erz mit. Damit du die Ware bequem entgegennehmen kannst, haben sie die Erze sogar schon verpackt!"
 team.ore.service_description.3,"Dank deiner und Wildes Bemühungen können die nicht lizenzierten Bergbauschiffe der Bergleute jetzt unbemerkt an der Raumhafen-Zollkontrolle vorbei ein- und ausfliegen. Bei jedem Besuch bringen sie große Mengen Erz mit. Damit du die Ware bequem entgegennehmen kannst, haben sie die Erze sogar schon verpackt!"
 team.greeting,"Hallo, Ladenbesitzer! Schau dir an, was für gute Sachen wir neulich gefunden haben!"
@@ -48,15 +48,15 @@ team.ore.intro.3,"Ladenbesitzer, wer in der Bergarbeitersiedlung kennt dich nich
 team.bottle.material,Leere Flasche
 team.bottle.service_title,Leere Flasche{0}
 team.bottle.visitor_name,Sammler leerer Flaschen
-team.bottle.service_description.1,"Vermittle über Wildes Kontaktnetzwerk eine kleine Gruppe von Plünderern, die leere Flaschen für dich sammelt. Alle 3 Tage besuchen sie deinen Laden und verkaufen, was sie beim Durchsuchen gefunden haben."
+team.bottle.service_description.1,"Vermittle über Wildes Kontaktnetzwerk eine kleine Gruppe von Plünderern, die leere Flaschen für dich sammelt. Alle 3 Tage besuchen sie deinen Laden und verkaufen, was sie beim Durchsuchen gefunden haben. Wenn du Leere Flasche nicht mehr benötigst, kannst du ihre Besuche telefonisch pausieren. Später kannst du den Dienst per Telefon wieder aufnehmen."
 team.bottle.service_description.2,"Wilde hat weitere Sammler angeheuert, die noch mehr leere Flaschen für dich sammeln. Alle 3 Tage besuchen sie deinen Laden und bringen die gesammelten Flaschen zum Verkauf mit."
 team.bottle.service_description.3,"Ein gut ausgerüstetes, legendäres Sammlerteam wagt sich tief in die Sperrzone vor, um große Mengen leerer Flaschen für dich zu sammeln. Alle 3 Tage besucht es deinen Laden und verkauft dir seine Fundstücke."
 phone.contact_name,Plünderertrupp
 phone.greeting,Hier ist die Kontaktstelle des Plünderertrupps. Was kann ich für dich tun?
-phone.disable_choice,{0}-Trupp deaktivieren
-phone.enable_choice,{0}-Trupp aktivieren
-phone.cooldown_choice,{0}-Trupp (in {1} Tagen verfügbar)
-phone.locked_choice,{0}-Trupp (Dienst noch nicht gekauft)
+phone.disable_choice,Pausieren: {0}
+phone.enable_choice,Fortsetzen: {0}
+phone.cooldown_choice,{0} (in {1} Tagen fortsetzen)
+phone.locked_choice,{0} (nicht gekauft)
 phone.pause_reply,"In Ordnung, wir stellen die Besuche ein. Wenn du {0} brauchst, melde dich in {1} Tagen wieder bei uns."
 phone.resume_reply,"In Ordnung, der {0}-Trupp nimmt seine Besuche morgen wieder auf und kommt danach alle 3 Tage vorbei."
 phone.hangup,Auflegen

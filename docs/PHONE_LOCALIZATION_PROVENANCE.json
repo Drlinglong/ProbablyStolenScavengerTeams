@@ -36,5 +36,13 @@
     "ru": "abcdfc3e997de02ac1affad052720f9e0233cd66461280018c378840e381a922",
     "es": "58afb39e22d62901d58491e5fe492f84a724f4d085ff9ba472434f1266e3d428",
     "pl": "13ea78b0148ab2f416207e28816066807c94394f0a69f9aabb9738e547aa294c"
+  },
+  "author_edits_2026_11_08": {
+    "by": "Codex; direct author-approved edits, no Remis or paid translation call",
+    "changes": [
+      "Shorten four phone option labels in all eight locales",
+      "Append phone pause/resume instructions to five tier-I service descriptions per locale"
+    ],
+    "validation": "63 keys per locale, same placeholders/tags/dialogue splits; UTF-8 integrity checked"
   }
 }

@@ -64,12 +64,12 @@ internal static partial class RegressionTests
             try { DeliveryRules.Sold(state,18,true); throw new Exception("out-of-range index accepted"); }
             catch(ArgumentOutOfRangeException) { }
         });
-        Check("native bottle artwork is registered under own UI key without copying or altering native assets", () =>
+        Check("bottle service uses own scattered-bottle icon without changing native sprites", () =>
         {
             var sprites=SpriteDict.Instance.spriteDictionary;
             sprites["native-sentinel"]=new object(); var native=sprites["native-sentinel"];
             NetworkRegistration.Register();
-            Require((string)sprites[ModEntry.Id+".bottle_icon"]=="Items/items_winemaking/wine_bottle", "wrong source icon");
+            Require(ModHelper.Upgrades[TeamDefinitions.Bottle.UpgradeId(1)].IconKey==ModEntry.Id+":bottle_icon", "wrong service icon");
             NetworkRegistration.RemoveRuntimeIcons();
             Require(!sprites.ContainsKey(ModEntry.Id+".bottle_icon") && ReferenceEquals(native,sprites["native-sentinel"]), "native icon changed during cleanup");
             NetworkRegistration.Register();

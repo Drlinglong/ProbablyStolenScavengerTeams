@@ -25,16 +25,16 @@ team.ore.visitor_name,Górnik asteroid
 team.ore.crate_name,1 skrzynia rudy
 team.ore.crate_description,"Kliknij dwukrotnie, aby otrzymać {0} szt. rudy. Przed otwarciem upewnij się, że masz wystarczająco dużo miejsca w magazynie."
 team.ore.crate_flavor,"6 sztuk w każdej skrzyni, członkowie drużyny spakowali je za ciebie."
-team.printer.service_description.1,"Za pośrednictwem swojej siatki kontaktów Wilde zwerbuje niewielką grupę zbieraczy złomu, którzy będą zbierać dla ciebie materiały do druku 3D, a przy okazji przyniosą trochę śmieci. Co 3 dni będą odwiedzać sklep i sprzedawać to, co udało im się znaleźć."
+team.printer.service_description.1,"Za pośrednictwem swojej siatki kontaktów Wilde zwerbuje niewielką grupę zbieraczy złomu, którzy będą zbierać dla ciebie materiały do druku 3D, a przy okazji przyniosą trochę śmieci. Co 3 dni będą odwiedzać sklep i sprzedawać to, co udało im się znaleźć. Jeśli nie potrzebujesz już zasobów takich jak Materiały do druku 3D, możesz telefonicznie wstrzymać wizyty. Później możesz wznowić usługę przez telefon."
 team.printer.service_description.2,"Wilde zwerbował więcej zbieraczy złomu, którzy przyniosą ci więcej materiałów do druku 3D. Co 3 dni będą odwiedzać sklep, a żeby ułatwić ci odbiór, spakowali te materiały do druku 3D w skrzynie!"
 team.printer.service_description.3,"Dobrze wyposażona, legendarna drużyna zbieraczy złomu wyruszy w głąb opuszczonej strefy, by zebrać dla ciebie mnóstwo materiałów do druku 3D. Co 3 dni będą odwiedzać sklep, a żeby ułatwić ci odbiór, spakowali te materiały do druku 3D w skrzynie!"
-team.metal.service_description.1,"Za pośrednictwem swojej siatki kontaktów Wilde zwerbuje niewielką grupę zbieraczy złomu, którzy będą zbierać dla ciebie złom, a przy okazji przyniosą trochę śmieci. Co 3 dni będą odwiedzać sklep i sprzedawać to, co udało im się znaleźć."
+team.metal.service_description.1,"Za pośrednictwem swojej siatki kontaktów Wilde zwerbuje niewielką grupę zbieraczy złomu, którzy będą zbierać dla ciebie złom, a przy okazji przyniosą trochę śmieci. Co 3 dni będą odwiedzać sklep i sprzedawać to, co udało im się znaleźć. Jeśli nie potrzebujesz już zasobów takich jak Złom, możesz telefonicznie wstrzymać wizyty. Później możesz wznowić usługę przez telefon."
 team.metal.service_description.2,"Wilde zwerbował więcej zbieraczy złomu, którzy przyniosą ci więcej złomu. Co 3 dni będą odwiedzać sklep, a żeby ułatwić ci odbiór, spakowali złom w skrzynie!"
 team.metal.service_description.3,"Dobrze wyposażona, legendarna drużyna zbieraczy złomu wyruszy w głąb opuszczonej strefy, by zebrać dla ciebie mnóstwo złomu. Co 3 dni będą odwiedzać sklep, a żeby ułatwić ci odbiór, spakowali złom w skrzynie!"
-team.electronic.service_description.1,"Za pośrednictwem swojej siatki kontaktów Wilde zwerbuje niewielką grupę zbieraczy złomu, którzy będą zbierać dla ciebie zwykłe komponenty elektroniczne, a przy okazji przyniosą trochę śmieci. Co 3 dni będą odwiedzać sklep i sprzedawać to, co udało im się znaleźć."
+team.electronic.service_description.1,"Za pośrednictwem swojej siatki kontaktów Wilde zwerbuje niewielką grupę zbieraczy złomu, którzy będą zbierać dla ciebie zwykłe komponenty elektroniczne, a przy okazji przyniosą trochę śmieci. Co 3 dni będą odwiedzać sklep i sprzedawać to, co udało im się znaleźć. Jeśli nie potrzebujesz już zasobów takich jak Komponenty elektroniczne (zwykłe), możesz telefonicznie wstrzymać wizyty. Później możesz wznowić usługę przez telefon."
 team.electronic.service_description.2,"Wilde skontaktował się z kolejnymi złomiarzami, żeby zbierali dla ciebie więcej zwykłych podzespołów elektronicznych. Będą odwiedzać sklep co 3 dni, a żeby ułatwić ci odbiór, zapakowali nawet te zwykłe podzespoły elektroniczne!"
 team.electronic.service_description.3,"Dobrze wyposażona, legendarna ekipa złomiarzy zapuści się na opuszczone tereny, żeby zebrać dla ciebie mnóstwo zwykłych podzespołów elektronicznych. Będą odwiedzać sklep co 3 dni, a żeby ułatwić ci odbiór, zapakowali nawet te zwykłe podzespoły elektroniczne!"
-team.ore.service_description.1,"Korzystając z kontaktów Wilde’a, skontaktuj się z grupą nielegalnych górników asteroid. Będą odwiedzać sklep co 3 dni i sprzedawać wydobyte rudy."
+team.ore.service_description.1,"Korzystając z kontaktów Wilde’a, skontaktuj się z grupą nielegalnych górników asteroid. Będą odwiedzać sklep co 3 dni i sprzedawać wydobyte rudy. Jeśli nie potrzebujesz już zasobów takich jak Ruda, możesz telefonicznie wstrzymać wizyty. Później możesz wznowić usługę przez telefon."
 team.ore.service_description.2,"Zainwestuj w górników, żeby mogli zdobyć lepszy sprzęt wydobywczy. Teraz podczas każdej wizyty będą przynosić więcej rudy. Żeby ułatwić ci odbiór, zapakowali nawet tę rudę!"
 team.ore.service_description.3,"Dzięki twoim staraniom i pomocy Wilde’a statki górnicze bez wymaganych zezwoleń mogą teraz swobodnie przekraczać granice portu kosmicznego, tuż pod nosem celników. Podczas każdej wizyty będą przywozić mnóstwo rudy. Żeby ułatwić ci odbiór, zapakowali nawet tę rudę!"
 team.greeting,"Witaj, szefie! Zobacz, jakie świetne rzeczy ostatnio znaleźliśmy!"
@@ -48,15 +48,15 @@ team.ore.intro.3,"Szefie, któż wśród górników cię nie zna!\nKilka osób z
 team.bottle.material,Pusta butelka
 team.bottle.service_title,Pusta butelka{0}
 team.bottle.visitor_name,Zbieracz pustych butelek
-team.bottle.service_description.1,"Za pośrednictwem kontaktów Wilde’a zwerbuj niewielką grupę zbieraczy, którzy będą gromadzić dla ciebie puste butelki. Co 3 dni odwiedzą sklep i sprzedadzą zebrane łupy."
+team.bottle.service_description.1,"Za pośrednictwem kontaktów Wilde’a zwerbuj niewielką grupę zbieraczy, którzy będą gromadzić dla ciebie puste butelki. Co 3 dni odwiedzą sklep i sprzedadzą zebrane łupy. Jeśli nie potrzebujesz już zasobów takich jak Pusta butelka, możesz telefonicznie wstrzymać wizyty. Później możesz wznowić usługę przez telefon."
 team.bottle.service_description.2,"Wilde skontaktował się z większą liczbą zbieraczy, którzy zgromadzą dla ciebie więcej pustych butelek. Będą odwiedzać sklep co 3 dni i przynosić zebrane butelki na sprzedaż."
 team.bottle.service_description.3,"Doskonale wyposażona, legendarna drużyna zbieraczy zapuści się w głąb opuszczonej strefy, by zgromadzić dla ciebie mnóstwo pustych butelek. Będą odwiedzać sklep co 3 dni, by sprzedawać zebrane łupy."
 phone.contact_name,Ekipa zbieraczy
 phone.greeting,Tu centrala ekipy zbieraczy. W czym możemy pomóc?
-phone.disable_choice,Wyłącz ekipę {0}
-phone.enable_choice,Włącz ekipę {0}
-phone.cooldown_choice,Ekipa {0} (można aktywować za {1} dni)
-phone.locked_choice,Ekipa {0} (usługa nie została jeszcze wykupiona)
+phone.disable_choice,Wstrzymaj: {0}
+phone.enable_choice,Wznów: {0}
+phone.cooldown_choice,{0} (wznów za {1} dni)
+phone.locked_choice,{0} (niekupione)
 phone.pause_reply,"Dobrze, przestaniemy przychodzić. Jeśli będziecie potrzebować {0}, skontaktujcie się z nami ponownie za {1} dni."
 phone.resume_reply,"Dobrze, ekipa {0} wznowi wizyty jutro, a potem będzie przychodzić co 3 dni."
 phone.hangup,Zakończ połączenie

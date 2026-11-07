@@ -25,16 +25,16 @@ team.ore.visitor_name,Mineur d’astéroïdes
 team.ore.crate_name,1 caisse de minerai
 team.ore.crate_description,Double-cliquez pour obtenir {0} minerais. Veuillez vous assurer que votre entrepôt dispose de suffisamment d’espace avant d’ouvrir la caisse.
 team.ore.crate_flavor,"6 pièces par caisse, emballées pour vous par l’équipe."
-team.printer.service_description.1,"Grâce au réseau de contacts de Wilde, recrutez un petit groupe de récupérateurs pour vous rapporter des matériaux d’impression 3D, ainsi qu’un peu de déchets. Ils passeront à la boutique tous les 3 jours pour vendre leurs trouvailles."
+team.printer.service_description.1,"Grâce au réseau de contacts de Wilde, recrutez un petit groupe de récupérateurs pour vous rapporter des matériaux d’impression 3D, ainsi qu’un peu de déchets. Ils passeront à la boutique tous les 3 jours pour vendre leurs trouvailles. Si vous n’avez plus besoin de Matériaux d’impression 3D, vous pouvez leur téléphoner pour suspendre leurs visites. Vous pourrez reprendre le service par téléphone plus tard."
 team.printer.service_description.2,"Wilde a recruté davantage de récupérateurs pour vous rapporter encore plus de matériaux d’impression 3D. Ils passeront à la boutique tous les 3 jours et, pour vous faciliter la tâche, ils ont même emballé ces matériaux d’impression 3D !"
 team.printer.service_description.3,"Une équipe légendaire de récupérateurs bien équipés s’aventurera dans la zone abandonnée pour vous rapporter une grande quantité de matériaux d’impression 3D. Ils passeront à la boutique tous les 3 jours et, pour vous faciliter la tâche, ils ont même emballé ces matériaux d’impression 3D !"
-team.metal.service_description.1,"Grâce au réseau de contacts de Wilde, recrutez un petit groupe de récupérateurs pour vous rapporter de la ferraille, ainsi qu’un peu de déchets. Ils passeront à la boutique tous les 3 jours pour vendre leurs trouvailles."
+team.metal.service_description.1,"Grâce au réseau de contacts de Wilde, recrutez un petit groupe de récupérateurs pour vous rapporter de la ferraille, ainsi qu’un peu de déchets. Ils passeront à la boutique tous les 3 jours pour vendre leurs trouvailles. Si vous n’avez plus besoin de Ferraille, vous pouvez leur téléphoner pour suspendre leurs visites. Vous pourrez reprendre le service par téléphone plus tard."
 team.metal.service_description.2,"Wilde a recruté davantage de récupérateurs pour vous rapporter encore plus de ferraille. Ils passeront à la boutique tous les 3 jours et, pour vous faciliter la tâche, ils ont même emballé cette ferraille !"
 team.metal.service_description.3,"Une équipe légendaire de récupérateurs bien équipés s’aventurera dans la zone abandonnée pour vous rapporter une grande quantité de ferraille. Ils passeront à la boutique tous les 3 jours et, pour vous faciliter la tâche, ils ont même emballé cette ferraille !"
-team.electronic.service_description.1,"Grâce au réseau de contacts de Wilde, recrutez un petit groupe de récupérateurs pour vous rapporter des composants électroniques (ordinaires), ainsi qu’un peu de déchets. Ils passeront à la boutique tous les 3 jours pour vendre leurs trouvailles."
+team.electronic.service_description.1,"Grâce au réseau de contacts de Wilde, recrutez un petit groupe de récupérateurs pour vous rapporter des composants électroniques (ordinaires), ainsi qu’un peu de déchets. Ils passeront à la boutique tous les 3 jours pour vendre leurs trouvailles. Si vous n’avez plus besoin de Composants électroniques (ordinaires), vous pouvez leur téléphoner pour suspendre leurs visites. Vous pourrez reprendre le service par téléphone plus tard."
 team.electronic.service_description.2,"Wilde a contacté davantage de récupérateurs pour qu’ils te trouvent plus de composants électroniques (ordinaires). Ils passeront à la boutique tous les 3 jours et, pour te faciliter la tâche, ils ont même emballé les composants électroniques (ordinaires) !"
 team.electronic.service_description.3,"Une équipe légendaire de récupérateurs, bien équipée, va s’aventurer dans la zone abandonnée pour te rapporter une grande quantité de composants électroniques (ordinaires). Ils passeront à la boutique tous les 3 jours et, pour te faciliter la tâche, ils ont même emballé les composants électroniques (ordinaires) !"
-team.ore.service_description.1,"Grâce au réseau de contacts de Wilde, rassemble un groupe de mineurs d’astéroïdes qui exploitent illégalement. Ils passeront à la boutique tous les 3 jours pour vendre les minerais qu’ils auront extraits."
+team.ore.service_description.1,"Grâce au réseau de contacts de Wilde, rassemble un groupe de mineurs d’astéroïdes qui exploitent illégalement. Ils passeront à la boutique tous les 3 jours pour vendre les minerais qu’ils auront extraits. Si vous n’avez plus besoin de Minerai, vous pouvez leur téléphoner pour suspendre leurs visites. Vous pourrez reprendre le service par téléphone plus tard."
 team.ore.service_description.2,"Investis dans les mineurs pour leur fournir de meilleurs équipements d’extraction. Désormais, ils apporteront davantage de minerais à chacune de leurs visites. Pour te faciliter la tâche, ils ont même emballé les minerais !"
 team.ore.service_description.3,"Grâce à tes efforts et à ceux de Wilde, les vaisseaux sans licence des mineurs peuvent désormais passer par les douanes du spatioport sans se faire repérer. Ils apporteront une grande quantité de minerais à chacune de leurs visites. Pour te faciliter la tâche, ils ont même emballé les minerais !"
 team.greeting,"Salut, patron ! Viens voir les bonnes trouvailles qu’on a faites récemment !"
@@ -48,15 +48,15 @@ team.ore.intro.3,"Patron, qui ne vous connaît pas dans la communauté des mineu
 team.bottle.material,Bouteille vide
 team.bottle.service_title,Bouteille vide{0}
 team.bottle.visitor_name,Ramasseur de bouteilles vides
-team.bottle.service_description.1,Contactez un petit groupe de récupérateurs par l’intermédiaire du réseau de Wilde afin qu’ils collectent des bouteilles vides pour vous. Ils viendront à la boutique tous les 3 jours pour vendre le fruit de leur collecte.
+team.bottle.service_description.1,"Contactez un petit groupe de récupérateurs par l’intermédiaire du réseau de Wilde afin qu’ils collectent des bouteilles vides pour vous. Ils viendront à la boutique tous les 3 jours pour vendre le fruit de leur collecte. Si vous n’avez plus besoin de Bouteille vide, vous pouvez leur téléphoner pour suspendre leurs visites. Vous pourrez reprendre le service par téléphone plus tard."
 team.bottle.service_description.2,Wilde a contacté davantage de récupérateurs pour vous rapporter encore plus de bouteilles vides. Ils viendront à la boutique tous les 3 jours pour vous apporter les bouteilles vides collectées et les vendre.
 team.bottle.service_description.3,Une équipe légendaire de récupérateurs bien équipée s’aventurera dans la zone abandonnée pour vous rapporter une grande quantité de bouteilles vides. Ils viendront à la boutique tous les 3 jours pour vendre ce qu’ils auront récupéré.
 phone.contact_name,Équipe de récupérateurs
 phone.greeting,Vous êtes bien au bureau de contact de l’équipe de récupérateurs. Que puis-je faire pour vous ?
-phone.disable_choice,Désactiver l’équipe {0}
-phone.enable_choice,Activer l’équipe {0}
-phone.cooldown_choice,Équipe {0} (activation possible dans {1} jours)
-phone.locked_choice,Équipe {0} (service non acheté)
+phone.disable_choice,Suspendre : {0}
+phone.enable_choice,Reprendre : {0}
+phone.cooldown_choice,{0} (reprise dans {1} jours)
+phone.locked_choice,{0} (non acheté)
 phone.pause_reply,"Très bien, nous cesserons de passer chez vous. Si vous avez besoin de {0}, recontactez-nous dans {1} jours."
 phone.resume_reply,"Très bien, l’équipe {0} reprendra ses visites demain, puis passera tous les 3 jours."
 phone.hangup,Raccrocher

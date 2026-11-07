@@ -1,74 +1,98 @@
 using System.Collections.Generic;
 using HarmonyLib;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ScavengerTeams
 {
-    // The native phone scene has only three choice bubbles. Extend this contact to two columns.
+    // Use a separate set of native-looking bubbles: native fit-to-text controls cannot form fixed columns.
     internal static class TeamPhoneLayout
     {
         private static DialoguePhoneUIManager owner;
-        private static readonly List<DialogChoiceBubble> added = new List<DialogChoiceBubble>();
-        private static RectTransform group;
-        private static Vector2 groupSize, groupPosition;
-        private static Vector2[] positions;
+        private static List<DialogChoiceBubble> native;
+        private static readonly List<DialogChoiceBubble> choices = new List<DialogChoiceBubble>();
+        private static RectTransform panel;
 
         internal static void Prepare(DialoguePhoneUIManager ui, bool supplyMenu)
         {
             if (!supplyMenu) { Restore(); return; }
             if (owner != ui) { Remove(); owner = ui; }
-            var bubbles = ui.dialogChoiceBubbles;
-            // Another UI mod may already provide six positions; preserve its layout.
-            if (positions == null && bubbles.Count >= 6) return;
-            if (positions == null)
-            {
-                positions = new Vector2[bubbles.Count];
-                for (var i = 0; i < bubbles.Count; i++)
-                    positions[i] = ((RectTransform)bubbles[i].transform).anchoredPosition;
-                group = (RectTransform)bubbles[0].transform.parent;
-                groupSize = group.sizeDelta;
-                groupPosition = group.anchoredPosition;
-                while (bubbles.Count < 6)
-                {
-                    var copy = Object.Instantiate(bubbles[0], group);
-                    copy.gameObject.SetActive(false);
-                    copy.index = bubbles.Count;
-                    copy.type = 1;
-                    bubbles.Add(copy);
-                    added.Add(copy);
-                }
-            }
-            var first = (RectTransform)bubbles[0].transform;
-            var width = first.rect.width * first.localScale.x;
-            var rowStep = positions.Length > 1 ? positions[0].y - positions[1].y
-                : first.rect.height * first.localScale.y + 4;
-            var columnStep = width + 12;
-            var expandedWidth = Mathf.Max(groupSize.x, columnStep + width);
-            group.sizeDelta = new Vector2(expandedWidth, groupSize.y);
-            // Keep the original group's right edge fixed when making room for a second column.
-            group.anchoredPosition = new Vector2(groupPosition.x - (expandedWidth - groupSize.x) * (1 - group.pivot.x), groupPosition.y);
+            if (panel == null) Create(ui);
+            foreach (var bubble in native) bubble.gameObject.SetActive(false);
+            ui.dialogChoiceBubbles = choices;
+            Position();
+            panel.gameObject.SetActive(true);
+        }
+        private static void Create(DialoguePhoneUIManager ui)
+        {
+            native = ui.dialogChoiceBubbles;
+            var template = native[0];
+            var group = (RectTransform)template.transform.parent;
+            panel = (RectTransform)new GameObject("ScavengerPhoneChoices", typeof(RectTransform)).transform;
+            panel.SetParent(group.parent, false); // Retain native phone visibility/dragging hierarchy.
+            panel.anchorMin = panel.anchorMax = ((RectTransform)group.parent).pivot;
+            panel.pivot = new Vector2(1, 1);
             for (var i = 0; i < 6; i++)
-                ((RectTransform)bubbles[i].transform).anchoredPosition =
-                    new Vector2(positions[0].x + (i % 2) * columnStep, positions[0].y - (i / 2) * rowStep);
+            {
+                var bubble = Object.Instantiate(template, panel);
+                bubble.index = i;
+                bubble.type = 1;
+                // The prefab's preferred-width fitter was the cause of the overlapping columns.
+                foreach (var fitter in bubble.GetComponentsInChildren<ContentSizeFitter>(true)) fitter.enabled = false;
+                foreach (var layout in bubble.GetComponentsInChildren<LayoutGroup>(true)) layout.enabled = false;
+                var rect = (RectTransform)bubble.transform;
+                rect.localScale = new Vector3(1, 1, 1);
+                rect.anchorMin = rect.anchorMax = new Vector2(0, 1);
+                rect.pivot = new Vector2(0, 1);
+                var text = bubble.TMP;
+                text.enableAutoSizing = true;
+                text.fontSizeMax = text.fontSize * template.transform.localScale.y;
+                text.fontSizeMin = text.fontSizeMax * 0.7f;
+                text.enableWordWrapping = true;
+                text.overflowMode = TextOverflowModes.Ellipsis;
+                text.alignment = TextAlignmentOptions.MidlineLeft;
+                var textRect = text.rectTransform;
+                textRect.anchorMin = new Vector2(0, 0);
+                textRect.anchorMax = new Vector2(1, 1);
+                textRect.offsetMin = new Vector2(18, 6);
+                textRect.offsetMax = new Vector2(-18, -6);
+                bubble.gameObject.SetActive(false);
+                choices.Add(bubble);
+            }
+        }
+        private static void Position()
+        {
+            var canvas = owner.GetComponentInParent<Canvas>().rootCanvas;
+            var root = (RectTransform)canvas.transform;
+            var bounds = root.rect;
+            var width = Mathf.Clamp(bounds.width * 0.42f, 280, 520);
+            var row = Mathf.Min(68, (bounds.height - 140) / 6);
+            var height = row * 6 + 8;
+            panel.sizeDelta = new Vector2(width, height);
+            // Canvas coordinates -> phone-local coordinates, so the menu stays inside the screen.
+            var point = panel.parent.InverseTransformPoint(root.TransformPoint(
+                new Vector3(bounds.xMax - 24, bounds.yMax - 60, 0)));
+            panel.anchoredPosition = new Vector2(point.x, point.y);
+            for (var i = 0; i < 6; i++)
+            {
+                var rect = (RectTransform)choices[i].transform;
+                rect.sizeDelta = new Vector2(width, row - 8);
+                rect.anchoredPosition = new Vector2(0, -i * row - (i == 5 ? 8 : 0));
+            }
         }
         private static void Restore()
         {
-            if (owner == null || group == null || positions == null) return;
-            group.sizeDelta = groupSize;
-            group.anchoredPosition = groupPosition;
-            for (var i = 0; i < positions.Length; i++)
-                ((RectTransform)owner.dialogChoiceBubbles[i].transform).anchoredPosition = positions[i];
-            foreach (var bubble in added) if (bubble != null) bubble.gameObject.SetActive(false);
+            if (owner != null && native != null && ReferenceEquals(owner.dialogChoiceBubbles, choices))
+                owner.dialogChoiceBubbles = native;
+            if (panel != null) panel.gameObject.SetActive(false);
+            foreach (var bubble in choices) if (bubble != null) bubble.gameObject.SetActive(false);
         }
         internal static void Remove()
         {
             Restore();
-            foreach (var bubble in added)
-            {
-                if (owner != null) owner.dialogChoiceBubbles.Remove(bubble);
-                if (bubble != null) Object.Destroy(bubble.gameObject);
-            }
-            added.Clear(); positions = null; group = null; owner = null;
+            if (panel != null) Object.Destroy(panel.gameObject);
+            choices.Clear(); native = null; panel = null; owner = null;
         }
     }
 

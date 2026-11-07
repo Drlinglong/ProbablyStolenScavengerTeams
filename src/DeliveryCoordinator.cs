@@ -55,8 +55,7 @@ namespace ScavengerTeams
             client.OnDismiss = () => Close(client, team);
             // Native OnItemBought calls the supplier's onItemSold before ownership is transferred.
             client.onItemSold = (item, price) => MarkSold(client, item, team);
-            client.mainDialogue.SetText(client.displayName,
-                "王尔德介绍的队伍，来送这一趟的" + team.MaterialName + "。可以按原价挑着买；首次上门整批五折，此后八五折，都是连剩下的垃圾一起包圆。")
+            client.mainDialogue.SetText(client.displayName, Greeting(team, 0))
                 .SetEndAction(() => Introduce(client, team));
             ModHelper.SetClientSource(client, ModEntry.Id);
             client.CompleteClientCreation();
@@ -69,6 +68,12 @@ namespace ScavengerTeams
             DeliveryRules.Arrive(state, TeamStateRepository.Day, TeamStateRepository.GetLevel(team));
             TeamStateRepository.Write(state, team);
             client.SetWholesale(DeliveryRules.WholesaleDiscount(state));
+            client.mainDialogue.SetText(client.displayName, Greeting(team, state.offerGreetingLevel));
+        }
+        private static string Greeting(TeamDefinition team, int level)
+        {
+            var prefix = team == TeamDefinitions.Ore ? "team.ore." : "team.";
+            return Text.Get(prefix + (level > 0 ? "intro." + level : "greeting"));
         }
         private static void Introduce(StoreClient client, TeamDefinition team)
         {

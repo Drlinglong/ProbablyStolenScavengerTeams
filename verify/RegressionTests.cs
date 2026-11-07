@@ -18,6 +18,7 @@ internal static partial class RegressionTests
     }
     private static void Reset()
     {
+        ModHelper.Locale = "zh";
         PlayerStore.Instance = new PlayerStore();
         EmporiumEntry.Instance = new EmporiumEntry();
         StoreStation.Day = 10;
@@ -81,6 +82,7 @@ internal static partial class RegressionTests
 
     private static void Main()
     {
+        LoadLocalization();
         mod.Init(new ModManifest());
         PlayerStore.Ready = false;
         try
@@ -319,6 +321,7 @@ internal static partial class RegressionTests
             Require(Guard(out var state), "other customer intercepted"); ReleaseGuard(state);
         });
         RunAdditionalRoutes();
+        RunLocalizationTests();
         Console.WriteLine($"RESULT {passed} passed, {failed} failed (host doubles; no Unity runtime)");
         Environment.ExitCode = failed == 0 ? 0 : 1;
     }

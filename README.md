@@ -41,3 +41,9 @@ python ./verify/validate_artifact.py
 package、outputs、bin和obj是忽略的生成目录。原版游戏、反编译参考及测试资金Mod不在本仓库中。
 
 当前为独立本地仓库，尚未推送或公开发布。测试资金Mod保持私用。
+
+## 文案编辑工作区
+
+验收的0.2.0基线已提交为42729a2。其后的CSV外置及文案改造为0.2.1-dev候选，包含资源名＋I／II／III标题、各级服务说明和开通／升级后的问候。用户已授权本地提交与实装，尚待本候选的游戏内验收。
+
+编辑中文：content/Localization/zh.csv；英文回退：content/Localization/en.csv。游戏内文案均经原生本地化API读取。[文案编辑说明](docs/LOCALIZATION.zh-CN.md)列出每个键的用途及参数规则。当前工作区有66项宿主回归，源游戏版号和构建方式同上。

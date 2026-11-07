@@ -21,4 +21,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Compilation failed.' }
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\manifest.xml') -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\README.zh-CN.md') -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\Textures') -Destination $packageRoot -Recurse -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\Localization') -Destination $packageRoot -Recurse -Force
+foreach ($locale in @('zh-Hans','zh-CN')) {
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'content\Localization\zh.csv') -Destination (Join-Path $packageRoot ('Localization\' + $locale + '.csv')) -Force
+}
 Get-FileHash -LiteralPath $output -Algorithm SHA256

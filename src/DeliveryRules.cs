@@ -9,6 +9,8 @@ namespace ScavengerTeams
         public int nextDay = -1;
         public int offerDay = -1;
         public int offerLevel;
+        public int greetedLevel;
+        public int offerGreetingLevel;
         public int soldMask; // Compatibility name: entries already bought OR discarded by native overflow.
         public bool closed = true;
         public bool firstOffer;
@@ -35,6 +37,10 @@ namespace ScavengerTeams
         public static void Arrive(DeliveryState state, int day, int level)
         {
             if (state.offerDay == day && !state.closed) return; // Restore this batch.
+            // Previous offerLevel also seeds old v1 saves that predate greeting fields.
+            var previousLevel = Math.Max(state.greetedLevel, state.offerLevel);
+            state.offerGreetingLevel = level > previousLevel ? level : 0;
+            state.greetedLevel = Math.Max(previousLevel, level);
             state.firstOffer = state.offerDay < 0;
             state.offerDay = day;
             state.offerLevel = level;
@@ -58,6 +64,9 @@ namespace ScavengerTeams
         public static bool Valid(DeliveryState state)
         {
             if (state == null || state.version != 1 || state.nextDay < -1 || state.offerDay < -1)
+                return false;
+            if (state.greetedLevel < 0 || state.greetedLevel > 3
+                || state.offerGreetingLevel < 0 || state.offerGreetingLevel > state.offerLevel)
                 return false;
             if (state.offerDay == -1)
                 return state.closed && state.offerLevel == 0 && state.soldMask == 0;

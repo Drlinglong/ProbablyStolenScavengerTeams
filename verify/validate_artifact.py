@@ -1,6 +1,7 @@
 """Read-only package/text/art checks. Does not load the game or edit images."""
 from pathlib import Path
 import hashlib
+import csv
 import json
 import re
 import sys
@@ -16,6 +17,19 @@ assert manifest.findtext('ID') == 'ps_scavenger_teams'
 assert manifest.findtext('GameVersions/Version') == '0.46D'
 assert manifest.findtext('Assemblies/Assembly') == 'ScavengerTeams.dll'
 assert not list(manifest.find('Capabilities'))
+locale_keys = None
+for locale in ('zh','en'):
+    path = root / f'content/Localization/{locale}.csv'
+    rows = list(csv.reader(line for line in path.read_text(encoding='utf-8-sig').splitlines()
+                           if line.strip() and not line.lstrip().startswith('#')))
+    assert all(len(row) == 2 and row[0] for row in rows), path
+    keys = [row[0] for row in rows]
+    assert len(keys) == len(set(keys)) == 46, path
+    if locale_keys is not None: assert set(keys) == locale_keys
+    locale_keys = set(keys)
+    assert (package / f'Localization/{locale}.csv').read_bytes() == path.read_bytes()
+for alias in ('zh-Hans','zh-CN'):
+    assert (package / f'Localization/{alias}.csv').read_bytes() == (root / 'content/Localization/zh.csv').read_bytes()
 assert {p.name for p in package.rglob('*.dll')} == {'ScavengerTeams.dll'}
 image = Image.open(package / 'Textures/Items/printer_crate.png')
 assert image.size == (48, 48) and image.mode == 'RGBA'
@@ -34,7 +48,7 @@ assert (root / 'assets/source/printer-crate-generated.png').is_file()
 assert (root / 'assets/source/PROMPT.md').is_file()
 for folder in ('src', 'docs', 'content', 'verify'):
     for path in (root / folder).rglob('*'):
-        if path.suffix.lower() not in ('.cs', '.md', '.xml', '.py'):
+        if path.suffix.lower() not in ('.cs', '.md', '.xml', '.py', '.csv'):
             continue
         value = path.read_text(encoding='utf-8')
         assert '\ufffd' not in value and not re.search(r'\?{3,}', value), str(path)

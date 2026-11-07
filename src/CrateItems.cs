@@ -7,8 +7,7 @@ namespace ScavengerTeams
     {
         internal const string MaterialId = "printer_plastic";
         internal const string CrateId = ModEntry.Id + ".printer_crate";
-        private static string Description(TeamDefinition team) => "双击打开，获得6个" + team.MaterialName
-            + "。占地3×3格。打开前请确保有足够的仓库空间。";
+        private static string Description(TeamDefinition team) => Text.For(team, "crate_description", DeliveryRules.CrateContents);
         internal static GridShapeBuilder FilledShape() => new GridShapeBuilder(3, 3).SetDataFill(3, 3);
         internal static void Register(ModItemDirectory directory)
         {
@@ -25,9 +24,9 @@ namespace ScavengerTeams
             var crate = DirectoryMaster.Item(team.MaterialId);
             if (crate == null) throw new InvalidOperationException(team.MaterialId + " is not registered.");
             crate.identifier = team.CrateId;
-            crate.name = "1箱" + team.MaterialName;
+            crate.name = Text.For(team, "crate_name");
             crate.shortDescription = Description(team);
-            crate.flavorText = "六件一箱，队员替你打包好了。";
+            crate.flavorText = Text.For(team, "crate_flavor");
             crate.unitValue = checked(crate.unitValue * DeliveryRules.CrateContents);
             crate.SetSpriteAndShapeFromMod(ModEntry.Id, team.SpriteKey);
             crate.SetShape(FilledShape()); // Size alone creates an EMPTY mask in the native API.
@@ -51,6 +50,8 @@ namespace ScavengerTeams
             // Retain its saved position/orientation while filling all nine local cells.
             item.SetShape(new GridShapeBuilder(item.shape).SetDataFill(3, 3));
             item.shortDescription = Description(team);
+            item.name = Text.For(team, "crate_name");
+            item.flavorText = Text.For(team, "crate_flavor");
         }
     }
 }

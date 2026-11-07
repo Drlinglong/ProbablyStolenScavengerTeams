@@ -6,7 +6,7 @@ namespace ScavengerTeams
     public sealed class ModEntry : IMod
     {
         internal const string Id = "ps_scavenger_teams";
-        internal const string DisplayName = "王尔德的拾荒者小队";
+        internal static string DisplayName => Text.Get("mod.name");
         internal static ModLog Log;
         private bool enabled;
         public void Init(ModManifest manifest) { Log = new ModLog(manifest); }

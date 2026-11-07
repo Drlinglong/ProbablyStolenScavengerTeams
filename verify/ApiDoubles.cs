@@ -48,6 +48,15 @@ public class UpgradeDefinition
 }
 public static class ModHelper
 {
+    public static string Locale = "zh";
+    public static readonly Dictionary<string, Dictionary<string, string>> Locales = new Dictionary<string, Dictionary<string, string>>();
+    public static string GetLocalized(string modId, string key, params object[] args)
+    {
+        string value;
+        if (!(Locales.TryGetValue(Locale, out var table) && table.TryGetValue(key, out value))
+            && !(Locales.TryGetValue("en", out table) && table.TryGetValue(key, out value))) return key;
+        return args.Length == 0 ? value : string.Format(value, args);
+    }
     public static readonly Dictionary<string, UpgradeDefinition> Upgrades = new Dictionary<string, UpgradeDefinition>();
     public static readonly Dictionary<string, Func<string>> Tabs = new Dictionary<string, Func<string>>();
     public static void SetNetworkTabLabel(string id, Func<string> label) => Tabs[id] = label;
@@ -231,7 +240,8 @@ public class StoreClientInstance
 public class Dialogue
 {
     public Action End, Choice;
-    public Dialogue SetText(string name, string text) => this;
+    public string Text;
+    public Dialogue SetText(string name, string text) { Text = text; return this; }
     public Dialogue SetEndAction(Action action) { End = action; return this; }
     public Dialogue AddChoice(GameItem item, string name, string description, Action choiceAction)
     { Choice = choiceAction; return this; }

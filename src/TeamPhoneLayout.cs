@@ -19,9 +19,9 @@ namespace ScavengerTeams
             if (!supplyMenu) { Restore(); return; }
             if (owner != ui) { Remove(); owner = ui; }
             if (panel == null) Create(ui);
+            Position(); // Finish layout before replacing the working native list.
             foreach (var bubble in native) bubble.gameObject.SetActive(false);
             ui.dialogChoiceBubbles = choices;
-            Position();
             panel.gameObject.SetActive(true);
         }
         private static void Create(DialoguePhoneUIManager ui)
@@ -63,17 +63,29 @@ namespace ScavengerTeams
         }
         private static void Position()
         {
-            var canvas = owner.GetComponentInParent<Canvas>().rootCanvas;
-            var root = (RectTransform)canvas.transform;
+            // The manager is outside the UI hierarchy. Only the actual panel is under Canvas.
+            var canvas = panel.GetComponentInParent<Canvas>();
+            var root = canvas != null ? (RectTransform)canvas.rootCanvas.transform : null;
+            if (root == null)
+            {
+                // Keep a usable phone-local menu if another UI mod removes/reparents Canvas.
+                var group = (RectTransform)native[0].transform.parent;
+                Layout(520, 60, new Vector2(group.anchoredPosition.x + group.sizeDelta.x / 2,
+                    group.anchoredPosition.y + 240));
+                return;
+            }
             var bounds = root.rect;
             var width = Mathf.Clamp(bounds.width * 0.42f, 280, 520);
             var row = Mathf.Min(68, (bounds.height - 140) / 6);
-            var height = row * 6 + 8;
-            panel.sizeDelta = new Vector2(width, height);
             // Canvas coordinates -> phone-local coordinates, so the menu stays inside the screen.
             var point = panel.parent.InverseTransformPoint(root.TransformPoint(
                 new Vector3(bounds.xMax - 24, bounds.yMax - 60, 0)));
-            panel.anchoredPosition = new Vector2(point.x, point.y);
+            Layout(width, row, new Vector2(point.x, point.y));
+        }
+        private static void Layout(float width, float row, Vector2 position)
+        {
+            panel.sizeDelta = new Vector2(width, row * 6 + 8);
+            panel.anchoredPosition = position;
             for (var i = 0; i < 6; i++)
             {
                 var rect = (RectTransform)choices[i].transform;

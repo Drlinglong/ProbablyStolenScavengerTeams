@@ -22,11 +22,13 @@ namespace UnityEngine
     public class Transform
     {
         public Transform parent;
+        public Canvas Canvas;
         public GameObject gameObject;
         public Vector3 localScale = new Vector3(2,2,2);
         public void SetParent(Transform value,bool worldPositionStays) {parent=value;}
         public Vector3 TransformPoint(Vector3 value)=>value;
         public Vector3 InverseTransformPoint(Vector3 value)=>value;
+        public T GetComponentInParent<T>() where T:class => (Canvas as T) ?? parent?.GetComponentInParent<T>();
     }
     public class RectTransform : Transform
     {
@@ -94,6 +96,7 @@ public class DialoguePhoneUIManager
     public Dialogue currentDialog;
     public UnityEngine.Canvas Canvas=new UnityEngine.Canvas();
     public List<DialogChoiceBubble> dialogChoiceBubbles = new List<DialogChoiceBubble>();
-    public T GetComponentInParent<T>()=>(T)(object)Canvas;
+    // Native manager is NOT a child of Canvas. The actual choice panel is.
+    public T GetComponentInParent<T>() where T:class => null;
     public void DisplayChoice() { }
 }

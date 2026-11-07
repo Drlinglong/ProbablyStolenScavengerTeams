@@ -24,6 +24,8 @@ internal static partial class RegressionTests
             var parent=new UnityEngine.RectTransform();
             var group=new UnityEngine.RectTransform {parent=parent};
             var ui=new DialoguePhoneUIManager();
+            parent.Canvas=ui.Canvas;
+            Require(ui.GetComponentInParent<UnityEngine.Canvas>()==null,"test must model the manager outside Canvas");
             for(var i=0;i<3;i++)
             {
                 var bubble=new DialogChoiceBubble {index=i,type=1};
@@ -58,6 +60,10 @@ internal static partial class RegressionTests
                 TeamPhoneLayout.Prepare(ui,false);
                 Require(ReferenceEquals(ui.dialogChoiceBubbles,original),"native list not restored");
                 Require(original[0].Fitter.enabled && original[0].Layout.enabled,"modified native controls");
+                parent.Canvas=null;
+                TeamPhoneLayout.Prepare(ui,true);
+                Require(ui.dialogChoiceBubbles.Count==6,"missing Canvas should retain all six choices");
+                Require(((UnityEngine.RectTransform)ui.dialogChoiceBubbles[0].transform).sizeDelta.x==520,"phone-local fallback missing");
                 TeamPhoneLayout.Prepare(ui,true);
             }
             finally {TeamPhoneLayout.Remove();}

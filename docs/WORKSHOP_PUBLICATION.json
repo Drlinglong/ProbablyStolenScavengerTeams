@@ -1,102 +1,106 @@
 {
-  "version": "0.2.1",
+  "version": "0.3.0",
+  "published_date_author_timezone": "2026-11-08 Australia/Sydney",
   "workshop_item_id": "3835169100",
   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3835169100",
   "app_id": 4348910,
   "visibility": "public",
   "content_upload": "SteamCMD Committing update...Success",
-  "preview_verified_sha1": "E6FB4BC5FC195C7AD1ABD120300EA85DF2460101",
-  "metadata_api": "Valve ISteamUGC SetItemUpdateLanguage; per-language SubmitItemUpdate and query readback",
+  "content_manifest_id": "2210205678343763588",
+  "content_size": "165109",
+  "content_snapshot_sha256": {
+    "content/LICENSE": "57cdcb0e7a4f0e71657c5fb229d2b13311e6997696d4005850c70ec14a0ba5f6",
+    "content/manifest.xml": "1738d201bf3985a062d762643267e875da579f3c115bcc9f4b0e5b439b4f431e",
+    "content/README.zh-CN.md": "32d106e29ed3d73cba4f4778d6851572331f489b41e8a0ac563e88b8bf8997fa",
+    "content/ScavengerTeams.dll": "7ab36e67341486694b78a4318de4dcb703e8dd05b9afcb8a87fda62557baeea4",
+    "content/Localization/de.csv": "f05ea973dcdc306ea9ecece48e95a7da1036ab85526bbbf215cf11ca7bf3993f",
+    "content/Localization/en.csv": "04c1482595709d5ba82ee0b006c48705f075d72b7a7c7f41e6105d636717a4ef",
+    "content/Localization/es.csv": "1cf6f98961db677089bd2aac027efa9d1c0c08bf8818a2971eeb6ae767e87c17",
+    "content/Localization/fr.csv": "b0e6a75296fc9ec9ed0cfbd9a5b2c26681bcfc16940b1d4b323ad92452a29412",
+    "content/Localization/ja.csv": "571fce0d7d81aeeca04aa1e1199c7653af91f236f151cfd14cd95627fe865817",
+    "content/Localization/pl.csv": "7ab886105475d7c171fde8551b041f697996ee2974fef43dabca2c8ca8ff615d",
+    "content/Localization/ru.csv": "8b641112b6f4c29ff1ccd5a4b58a78cbf754a9a509a578a14bc5a5f259834d0c",
+    "content/Localization/zh-CN.csv": "e12c1093953953ad782495452d7699ad4f860ddb660e718705d53def3828b8d6",
+    "content/Localization/zh-Hans.csv": "e12c1093953953ad782495452d7699ad4f860ddb660e718705d53def3828b8d6",
+    "content/Localization/zh.csv": "e12c1093953953ad782495452d7699ad4f860ddb660e718705d53def3828b8d6",
+    "content/Textures/Items/bottle_icon.png": "073e19c8433e5a44c51de53d91305ed33dbed2a85ecbfea44d7ed7076ed0ca0a",
+    "content/Textures/Items/electronic_crate.png": "b6c68826a521822326febc6603f8e0dd5b7e46da886d1a7b3d00c668e5bb7230",
+    "content/Textures/Items/metal_crate.png": "9039e77ab9135c4c493eefd291b7bbcbffbdf8034b684793e84f0dd439b7aadd",
+    "content/Textures/Items/ore_crate.png": "2d470edf9c5b9813fd42209915150236d607702ace73932a28fd87f3aef25210",
+    "content/Textures/Items/printer_crate.png": "0c4503d693f1fa682d019657935d77649972a9def7ba6a0045b836edd6acdb77"
+  },
+  "preview_sha256": "80c29cc051d5cfd6eb5a2949f4a6da596b4904bb3891b3f7a1775677799297ee",
+  "preview_readback_matches": true,
+  "metadata_api": "Valve ISteamUGC SetItemUpdateLanguage; per-language SubmitItemUpdate and full-description query readback (UTF-8, LF line endings)",
   "languages": {
     "en": {
       "steam_language": "english",
       "result": 1,
       "needs_legal_agreement": false,
-      "expected_sha256": "56219a1ead13f52f841e392d61010a4588ecf3cb993c110612fa42d019d3086b",
+      "expected_sha256": "c13a335d1790a685f0c1b78d487d41bd76ef7c599aacfe2697782c307a600997",
       "verified": true,
-      "actual_sha256": "56219a1ead13f52f841e392d61010a4588ecf3cb993c110612fa42d019d3086b"
+      "actual_sha256": "c13a335d1790a685f0c1b78d487d41bd76ef7c599aacfe2697782c307a600997"
     },
     "zh-CN": {
       "steam_language": "schinese",
       "result": 1,
       "needs_legal_agreement": false,
-      "expected_sha256": "a8ec9c639b77fd54c8b835b00836f4358497a36c420a24dc1d2bf1df5bd4c78d",
+      "expected_sha256": "ff46ebb01aa020c4d71f0edc03577931fa7f336ac82606f725c1b1ec066cb49b",
       "verified": true,
-      "actual_sha256": "a8ec9c639b77fd54c8b835b00836f4358497a36c420a24dc1d2bf1df5bd4c78d"
+      "actual_sha256": "ff46ebb01aa020c4d71f0edc03577931fa7f336ac82606f725c1b1ec066cb49b"
     },
     "fr": {
       "steam_language": "french",
       "result": 1,
       "needs_legal_agreement": false,
-      "expected_sha256": "19dbac7a7e54535f48b387520fca0ce4620273179b2d0095cd80aeaea8bbacc9",
+      "expected_sha256": "ea53efba1f65c9d093734dcf0ab62862eb1b8ffe218e7f80b1873cf69b101dc5",
       "verified": true,
-      "actual_sha256": "19dbac7a7e54535f48b387520fca0ce4620273179b2d0095cd80aeaea8bbacc9"
+      "actual_sha256": "ea53efba1f65c9d093734dcf0ab62862eb1b8ffe218e7f80b1873cf69b101dc5"
     },
     "de": {
       "steam_language": "german",
       "result": 1,
       "needs_legal_agreement": false,
-      "expected_sha256": "e1fd850373dacd502d06de3c4decd856af2326da06e8b374c1d02f3d7b441fee",
+      "expected_sha256": "725acb4c653610f685345f7e6adb98d9ac51247abc25c6341e0bc75363b75fbd",
       "verified": true,
-      "actual_sha256": "e1fd850373dacd502d06de3c4decd856af2326da06e8b374c1d02f3d7b441fee"
+      "actual_sha256": "725acb4c653610f685345f7e6adb98d9ac51247abc25c6341e0bc75363b75fbd"
     },
     "ja": {
       "steam_language": "japanese",
       "result": 1,
       "needs_legal_agreement": false,
-      "expected_sha256": "3c38819c632fc0e587e034f469eacaef8baf2f4bcb511bb1f4bd0012d24af615",
+      "expected_sha256": "13890aeedddd0543a53c11a006d8f860c83490e553ac541478175ce4336308d0",
       "verified": true,
-      "actual_sha256": "3c38819c632fc0e587e034f469eacaef8baf2f4bcb511bb1f4bd0012d24af615"
+      "actual_sha256": "13890aeedddd0543a53c11a006d8f860c83490e553ac541478175ce4336308d0"
     },
     "ru": {
       "steam_language": "russian",
       "result": 1,
       "needs_legal_agreement": false,
-      "expected_sha256": "d8ec2737e1a094f32e164848205eb395214de5417eb58762b35b1ec3a30a9347",
+      "expected_sha256": "2395025e0c0b5ea374ae4123a3773b8c6f47204d74748ad1feebd5f3aa3faf34",
       "verified": true,
-      "actual_sha256": "d8ec2737e1a094f32e164848205eb395214de5417eb58762b35b1ec3a30a9347"
+      "actual_sha256": "2395025e0c0b5ea374ae4123a3773b8c6f47204d74748ad1feebd5f3aa3faf34"
     },
     "es": {
       "steam_language": "spanish",
       "result": 1,
       "needs_legal_agreement": false,
-      "expected_sha256": "a00bbbbbb11606d3dc9aad06edce350b38f4d293b7e6ad2c0aca6f91da26d9d5",
+      "expected_sha256": "f064d69a49776306b40d61106553de24bb43b5c10f30660b14dd3e61a5aec06d",
       "verified": true,
-      "actual_sha256": "a00bbbbbb11606d3dc9aad06edce350b38f4d293b7e6ad2c0aca6f91da26d9d5"
+      "actual_sha256": "f064d69a49776306b40d61106553de24bb43b5c10f30660b14dd3e61a5aec06d"
     },
     "pl": {
       "steam_language": "polish",
       "result": 1,
       "needs_legal_agreement": false,
-      "expected_sha256": "097ca2e02e253a620fce2f7729b0b07dcf506adec39f5b4386cfc8e6724cbc91",
+      "expected_sha256": "05b038e9362a4e60f22a767fdb8598450c7137375f9517ef8e6ef4e0579362aa",
       "verified": true,
-      "actual_sha256": "097ca2e02e253a620fce2f7729b0b07dcf506adec39f5b4386cfc8e6724cbc91"
+      "actual_sha256": "05b038e9362a4e60f22a767fdb8598450c7137375f9517ef8e6ef4e0579362aa"
     }
   },
-  "translation_provider": "openai",
-  "translation_model": "gpt-6-luna",
-  "reasoning_effort": "medium",
-  "translation_tool": "Remis 3.4.0",
-  "additional_descriptions": [
-    "fr",
-    "de",
-    "ja",
-    "ru",
-    "es",
-    "pl"
-  ],
-  "review": "BBCode sections, six feature entries, prices, source/Remis links checked; targeted JA/PL/RU wording corrections retained in managed version history",
-  "private_test_mod_included": false,
-  "cover_revision": {
-    "file": "assets/workshop/cover-0.2.1-staggered-icons-zh-en.jpg",
-    "layout": "large bilingual title; larger original resource icons in staggered 1010 / 0101 layout",
-    "upload": "SteamCMD preview-only update succeeded",
-    "content_size_unchanged": true,
-    "english_description_unchanged": true,
-    "localized_description_setters_used": false,
-    "thumbnail_checked_pixels": [
-      200,
-      200
-    ]
-  }
+  "github_release": "https://github.com/Drlinglong/ProbablyStolenScavengerTeams/releases/tag/v0.3.0",
+  "github_release_tag": "v0.3.0",
+  "github_release_commit": "11aa13e12da35c9b4d1eb9455b4fab5023ba0a55",
+  "release_zip_sha256": "84c4ab487ea13f6e1e7b115627c43af2165b05c2665160e408a16fdf538169d8",
+  "private_test_money_mod": "Excluded; not pushed or uploaded"
 }

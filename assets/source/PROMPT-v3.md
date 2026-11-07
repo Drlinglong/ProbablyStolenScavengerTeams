@@ -1,0 +1,13 @@
+# Current printer crate artwork
+
+Historical v3. The user rejected this coarse-pixel/limited-palette direction after viewing it in game. Superseded by PROMPT-v4.md, which edits the first crate directly.
+
+2026-11-07. Generated with built-in image_gen, transparent_background=true. The original printer_plastic spool sprite was used as a palette/design reference only. Generated v2 was rejected by the user and was not installed or copied into this project.
+
+Selected source: printer-crate-two-spools-v3.png.
+Runtime sprite: ../../content/Textures/Items/printer_crate.png, 48×48 RGBA.
+Integration: nearest-neighbor resampling followed by a fixed 20-color palette, binary alpha and no dithering, via tools/prepare-art.ps1 -ReducePalette. Old v1 runtime sprite is retained as printer-crate-v1-runtime-48.png.
+
+Full generation prompt:
+
+Create a transparent game inventory sprite, a modified hinged-lid metal cargo box with exactly TWO large 3D printer filament spools poking out of the open top. Match the attached original game's spool design and subdued industrial colors. Authentic handcrafted low resolution pixel art, with the visual complexity of a carefully made 48x48 sprite, displayed as a crisp nearest-neighbor enlargement. The box has a small recognizably open metal lid tilted backward, a substantial square grey front face with one latch and two reinforced corners. Two large three-quarter-view dark grey spools of pale blue-grey filament dominate the top; EACH has clearly visible oval top disc with a black hole, wound filament side with just two horizontal bands, and bottom disc. Make spool shape readable rather than featureless circles. Dark charcoal single-pixel-style contour, medium grey metal, light cool grey highlights, muted pale teal filament, one small ochre latch. 20-color palette maximum. Every region MUST be perfectly uniform flat solid color, single-pixel-style hard sharp boundaries. NO gradients of ANY kind, NO airbrush, NO glow, NO lighting haze, NO translucent brushwork, NO texture noise, NO high resolution grain, NO smudges. Pixels must be geometrically aligned, no irregular fake pixel chunks. Restrained sharp highlights only one-pixel-wide edges; clean dark separation between lid, spool tops, spool sides, and box front. Do NOT draw an abstract app icon or huge flat circular shapes, do NOT draw six small spools, no extra inventory objects. Entire compact square object fills nearly all canvas with a narrow transparent margin. No words, no labels, no numbers, no background, no floor shadow. Purpose: a legible small pixel art item in a dark gritty space pawn shop game, not a detailed concept illustration.

@@ -2,7 +2,9 @@
 
 A Probably Stolen mod adding reliable deliveries of printer filament, scrap metal, common electronic components, and asteroid ore through Wild's Network.
 
-[简体中文](README.zh-CN.md) · [Build instructions](docs/BUILD.md) · [MIT license](LICENSE)
+[简体中文](README.zh-CN.md) · [Build instructions](docs/BUILD.md) · [MIT license](LICENSE) · [GitHub source](https://github.com/Drlinglong/ProbablyStolenScavengerTeams)
+
+![Workshop cover](assets/workshop/cover-0.2.1.jpg)
 
 ## Play
 
@@ -30,7 +32,7 @@ Adds services, suppliers and crates without replacing game files or original ite
 
 ## Source and verification
 
-The project is prepared for public release under MIT. It includes C# sources, API doubles, 68 host regression checks, original artwork sources, prompts, and final textures. Use [the build guide](docs/BUILD.md) to compile against your own game installation. No game assemblies, external compiler, saves or private test-money Mod are distributed. Host tests do not replace Unity or in-game verification.
+The project is open source under MIT. It includes C# sources, API doubles, 68 host regression checks, original artwork sources, prompts, and final textures. Use [the build guide](docs/BUILD.md) to compile against your own game installation. No game assemblies, external compiler, saves or private test-money Mod are distributed. Host tests do not replace Unity or in-game verification.
 
 Workshop assets: [English description](docs/WORKSHOP.en.bbcode.txt), [简体中文描述](docs/WORKSHOP.zh-CN.bbcode.txt), [cover JPG](assets/workshop/cover-0.2.1.jpg), [full PNG](assets/workshop/cover-0.2.1.png).
 

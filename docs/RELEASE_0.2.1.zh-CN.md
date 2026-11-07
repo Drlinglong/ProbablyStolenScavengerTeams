@@ -12,4 +12,4 @@
 
 用户已确认1140c6e文案、问候及c7554ea分句对话实机正常。其他七语只有自动结构及宿主检查，不视为人工审校或游戏内显示验收。版本整理和增加语言未改已验收的玩法及贴图。
 
-原版游戏程序集、第三方Mod、Remis运行时和私用测试资金Mod均不在发行包中。尚未上传Steam；GitHub开源地址以实际建库结果为准。
+原版游戏程序集、第三方Mod、Remis运行时和私用测试资金Mod均不在发行包中。尚未上传Steam；GitHub开源地址：https://github.com/Drlinglong/ProbablyStolenScavengerTeams 。

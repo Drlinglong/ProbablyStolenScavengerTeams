@@ -40,7 +40,7 @@ python ./verify/validate_artifact.py
 
 package、outputs、bin和obj是忽略的生成目录。原版游戏、反编译参考及测试资金Mod不在本仓库中。
 
-MIT开源准备版，GitHub远程地址以实际建库结果为准。测试资金Mod保持私用。
+MIT开源仓库：[https://github.com/Drlinglong/ProbablyStolenScavengerTeams](https://github.com/Drlinglong/ProbablyStolenScavengerTeams)。测试资金Mod保持私用。
 
 ## 文案编辑工作区
 

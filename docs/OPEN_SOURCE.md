@@ -8,6 +8,6 @@ Before the public push, confirm that the tracked tree and complete Git history c
 
 The Mod does not perform networking or load arbitrary files. Its only Harmony patch is scoped to this Mod's suppliers and guards wholesale invocation. It adds native services, custom item factories and customer hooks. Source availability allows inspection; it is not a guarantee about every game build or Mod combination.
 
-The intended remote should contain only this independent repository. Add its actual verified URL to both Workshop descriptions before publishing them. A prepared local release, Git tag, or description does not establish that GitHub or Steam publication has occurred.
+Public repository: https://github.com/Drlinglong/ProbablyStolenScavengerTeams. It contains only this independent project. Both Workshop descriptions include this verified repository URL. A prepared local release, Git tag, or description does not establish that GitHub or Steam publication has occurred.
 
 Do not upload a Remis companion package: all eight language CSVs are already embedded in ScavengerTeams. The runtime release should contain only `ScavengerTeams.dll` as its assembly.

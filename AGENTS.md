@@ -21,3 +21,5 @@
 
 - 八种语言必须内嵌在本Mod的content/Localization，不发布独立翻译Mod或附带Remis补丁DLL。OpenAI gpt-6-luna medium经Remis生成七语，中文源不变。
 - 正式版使用MIT许可证。工坊描述顺序固定：支持语言、为什么做这个模组、如何开始、主要内容、兼容性、本地化；仅开源Mod附实际GitHub源码链接。测试资金Mod继续私用，不纳入源码包、发行包或公开仓库。
+
+- 用户已明确授权创建公开仓库https://github.com/Drlinglong/ProbablyStolenScavengerTeams，推送本拾荒者源码及v0.2.1标签，并将实际链接加入工坊描述。此授权不包括测试资金Mod或Steam上传。

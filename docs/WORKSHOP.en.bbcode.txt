@@ -21,7 +21,9 @@ Standard base service fees are 200 / 300 / 450 credits for filament, scrap metal
 [h2]Compatibility[/h2]
 Adds new services, suppliers, and resource crates without replacing original game files or item definitions. Designed to work with existing saves; purchasing a service starts its own delivery schedule without resetting your progress. Gameplay and Chinese dialogue have been tested on game version 0.46D.
 
-Mods that change Wild's Network, customer generation, or wholesale trading may still interact with this mod; universal compatibility is not guaranteed. Before removing it, unpack or dispose of its custom crates. The private testing-money mod is not included.
+Mods that change Wild's Network, customer generation, or wholesale trading may still interact with this mod; universal compatibility is not guaranteed. Before removing it, unpack or dispose of its custom crates.
+
+Source code (MIT): [url=https://github.com/Drlinglong/ProbablyStolenScavengerTeams]GitHub[/url]
 
 [h2]Localization[/h2]
 This mod's multilingual localization was generated with OpenAI GPT-6 Luna through Remis and checked for tags, line breaks, placeholders, and text structure. The Chinese source and dialogue have been tested in game; the other languages have passed structural checks and welcome player feedback.

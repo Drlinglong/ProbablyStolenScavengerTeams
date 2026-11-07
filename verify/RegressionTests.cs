@@ -113,7 +113,7 @@ internal static partial class RegressionTests
         Check("supplier services share one scavenger category on the native basic panel without a new tab", () =>
         {
             var definitions = ModHelper.Upgrades.Values.ToArray();
-            Require(definitions.Length == 12 && definitions.All(d => string.IsNullOrEmpty(d.Tab)), "wrong service count or new tab created");
+            Require(definitions.Length == 15 && definitions.All(d => string.IsNullOrEmpty(d.Tab)), "wrong service count or new tab created");
             Require(definitions.All(d => d.Subtitle == "拾荒者"), "wrong category");
         });
         Check("three native upgrade definitions: exact costs and chained prerequisites", () =>
@@ -332,6 +332,7 @@ internal static partial class RegressionTests
         });
         RunAdditionalRoutes();
         RunLocalizationTests();
+        RunBottleTests();
         Console.WriteLine($"RESULT {passed} passed, {failed} failed (host doubles; no Unity runtime)");
         Environment.ExitCode = failed == 0 ? 0 : 1;
     }

@@ -19,7 +19,7 @@ root = Path(__file__).resolve().parents[1]
 package = root / 'package' / 'ScavengerTeams'
 manifest = ET.parse(package / 'manifest.xml').getroot()
 assert manifest.findtext('ID') == 'ps_scavenger_teams'
-assert manifest.findtext('ModVersion') == '0.2.1'
+assert manifest.findtext('ModVersion') == '0.3.0-dev'
 assert manifest.findtext('GameVersions/Version') == '0.46D'
 assert manifest.findtext('Assemblies/Assembly') == 'ScavengerTeams.dll'
 assert not list(manifest.find('Capabilities'))
@@ -31,7 +31,7 @@ for locale in ('zh','en','fr','de','ja','ru','es','pl'):
                            if line.strip() and not line.lstrip().startswith('#')))
     assert all(len(row) == 2 and row[0] for row in rows), path
     keys = [row[0] for row in rows]
-    assert len(keys) == len(set(keys)) == 46, path
+    assert len(keys) == len(set(keys)) == 52, path
     if locale_keys is not None: assert set(keys) == locale_keys
     locale_keys = set(keys)
     tables[locale] = dict(rows)
@@ -72,7 +72,7 @@ source_sizes = {p.name: len(p.read_text(encoding='utf-8').splitlines()) for p in
 assert all(size <= 500 for size in source_sizes.values())
 receipt = {
     'date': '2026-11-07',
-    'status': 'release-artifact-checked; gameplay-and-multilingual-display-user-accepted; individual-tested-locales-not-listed',
+    'status': 'local-candidate; original four routes accepted; bottle route pending in-game testing',
     'game_build': '26496118',
     'game_bundle_version': '0.46D',
     'mod_version': manifest.findtext('ModVersion'),

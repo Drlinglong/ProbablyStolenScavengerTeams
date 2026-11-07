@@ -20,7 +20,7 @@ namespace ScavengerTeams
             ModHook.OnModItemDirectoryInit += CrateItems.Register;
             ModHook.OnGenerateCustomerVeryLate += SafeQueue;
             ModHook.OnGameLoadedLate += DeliveryCoordinator.ClearRuntime;
-            Log.Log("Four supply routes enabled. Services register after new-game/load initialization in the native scavenger category.");
+            Log.Log("Five supply routes enabled. Services register after new-game/load initialization in the native scavenger category.");
         }
         public void OnDisable()
         {
@@ -32,6 +32,7 @@ namespace ScavengerTeams
             ModHook.OnGenerateCustomerVeryLate -= SafeQueue;
             ModHook.OnGameLoadedLate -= DeliveryCoordinator.ClearRuntime;
             ModHelper.RemoveNetworkUpgrades(Id);
+            NetworkRegistration.RemoveRuntimeIcons();
             DeliveryCoordinator.ClearRuntime();
         }
         private static void RegisterNewRun(string scenario) => NetworkRegistration.Register();

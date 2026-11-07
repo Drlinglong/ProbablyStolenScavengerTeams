@@ -1,30 +1,30 @@
 # key,value
-mod.name,"La cuadrilla de chatarreros de Wilde"
-category.scavengers,"Chatarrero"
-team.printer.material,"Materiales para impresión 3D"
-team.printer.service_title,"Materiales para impresión 3D{0}"
-team.printer.visitor_name,"Recolector de materiales para impresión 3D"
-team.printer.crate_name,"1 caja de materiales para impresión 3D"
-team.printer.crate_description,"Haz doble clic para abrir y obtener {0} unidades de materiales para impresión 3D. Asegúrate de tener suficiente espacio de almacenamiento antes de abrirla."
-team.printer.crate_flavor,"Seis unidades por caja; los miembros del equipo te las han empaquetado."
-team.metal.material,"Chatarra"
-team.metal.service_title,"Chatarra{0}"
-team.metal.visitor_name,"Chatarrero"
-team.metal.crate_name,"1 caja de chatarra"
-team.metal.crate_description,"Haz doble clic para abrir y obtener {0} unidades de chatarra. Asegúrate de tener suficiente espacio de almacenamiento antes de abrirla."
-team.metal.crate_flavor,"Seis unidades por caja; los miembros del equipo te las han empaquetado."
-team.electronic.material,"Componentes electrónicos (comunes)"
-team.electronic.service_title,"Componentes electrónicos{0}"
-team.electronic.visitor_name,"Recolector de componentes electrónicos"
-team.electronic.crate_name,"1 caja de componentes electrónicos (comunes)"
-team.electronic.crate_description,"Haz doble clic para abrir y obtener {0} unidades de componentes electrónicos (comunes). Asegúrate de tener suficiente espacio de almacenamiento antes de abrirla."
-team.electronic.crate_flavor,"Seis unidades por caja; los miembros del equipo te las han empaquetado."
-team.ore.material,"Mineral"
-team.ore.service_title,"Mineral{0}"
-team.ore.visitor_name,"Minero de asteroides"
-team.ore.crate_name,"1 caja de mineral"
-team.ore.crate_description,"Haz doble clic para abrir y obtener {0} unidades de mineral. Asegúrate de tener suficiente espacio de almacenamiento antes de abrirla."
-team.ore.crate_flavor,"Seis unidades por caja; los miembros del equipo te las han empaquetado."
+mod.name,La cuadrilla de chatarreros de Wilde
+category.scavengers,Chatarrero
+team.printer.material,Materiales para impresión 3D
+team.printer.service_title,Materiales para impresión 3D{0}
+team.printer.visitor_name,Recolector de materiales para impresión 3D
+team.printer.crate_name,1 caja de materiales para impresión 3D
+team.printer.crate_description,Haz doble clic para abrir y obtener {0} unidades de materiales para impresión 3D. Asegúrate de tener suficiente espacio de almacenamiento antes de abrirla.
+team.printer.crate_flavor,Seis unidades por caja; los miembros del equipo te las han empaquetado.
+team.metal.material,Chatarra
+team.metal.service_title,Chatarra{0}
+team.metal.visitor_name,Chatarrero
+team.metal.crate_name,1 caja de chatarra
+team.metal.crate_description,Haz doble clic para abrir y obtener {0} unidades de chatarra. Asegúrate de tener suficiente espacio de almacenamiento antes de abrirla.
+team.metal.crate_flavor,Seis unidades por caja; los miembros del equipo te las han empaquetado.
+team.electronic.material,Componentes electrónicos (comunes)
+team.electronic.service_title,Componentes electrónicos{0}
+team.electronic.visitor_name,Recolector de componentes electrónicos
+team.electronic.crate_name,1 caja de componentes electrónicos (comunes)
+team.electronic.crate_description,Haz doble clic para abrir y obtener {0} unidades de componentes electrónicos (comunes). Asegúrate de tener suficiente espacio de almacenamiento antes de abrirla.
+team.electronic.crate_flavor,Seis unidades por caja; los miembros del equipo te las han empaquetado.
+team.ore.material,Mineral
+team.ore.service_title,Mineral{0}
+team.ore.visitor_name,Minero de asteroides
+team.ore.crate_name,1 caja de mineral
+team.ore.crate_description,Haz doble clic para abrir y obtener {0} unidades de mineral. Asegúrate de tener suficiente espacio de almacenamiento antes de abrirla.
+team.ore.crate_flavor,Seis unidades por caja; los miembros del equipo te las han empaquetado.
 team.printer.service_description.1,"A través de la red de contactos de Wilde, puedes contratar a un pequeño grupo de chatarreros para que recoja materiales para impresión 3D. También traerán una pequeña cantidad de basura. Visitarán la tienda cada 3 días para vender lo que hayan recogido."
 team.printer.service_description.2,"Wilde ha conseguido contactar con más chatarreros para que recojan más materiales para impresión 3D. Visitarán la tienda cada 3 días y, para que te resulte más fácil recibirlos, ¡incluso han empaquetado los materiales para impresión 3D!"
 team.printer.service_description.3,"Una cuadrilla legendaria de chatarreros bien equipada se adentrará en la zona abandonada para recoger grandes cantidades de materiales para impresión 3D. Visitarán la tienda cada 3 días y, para que te resulte más fácil recibirlos, ¡incluso han empaquetado los materiales para impresión 3D!"
@@ -45,3 +45,9 @@ team.intro.2,"¡Comerciante, ya estamos aquí otra vez! Hemos oído que aquí co
 team.ore.intro.2,"¡Comerciante, cuánto tiempo! Gracias al dinero que nos diste para el equipo, el trabajo nos resulta mucho más fácil, y se han unido unos cuantos mineros más al equipo.\nPoco a poco nos va mejor a todos y no olvidamos lo que has hecho por nosotros.\nTambién hemos empaquetado el mineral de esta vez. ¡Échale un vistazo!"
 team.intro.3,"¡Comerciante, tu buena fama ya se ha extendido por toda la comunidad de chatarreros!\nAlgunos del equipo han conseguido ahorrar un poco y están pensando en abrir su propia tienda.\nDicen que, cuando la abran, también ayudarán a los compañeros que sigan buscando chatarra, igual que haces tú.\n¡Echa un vistazo a lo que hemos traído esta vez!"
 team.ore.intro.3,"¡Tendero, ahora mismo no hay nadie en la comunidad minera que no te conozca!\nVarios del equipo ya han ahorrado algo de dinero y se están preparando para abrir su propio negocio, igual que tú.\nAntes solo pensaban en dónde conseguirían la próxima comida; ahora incluso se atreven a soñar con esto.\nEsta vez he traído bastante mineral. ¡Tómate tu tiempo para elegir!"
+team.bottle.material,Botella vacía
+team.bottle.service_title,Botella vacía{0}
+team.bottle.visitor_name,Recolector de botellas vacías
+team.bottle.service_description.1,Ponte en contacto con un pequeño grupo de chatarreros a través de la red de contactos de Wilde para que recojan botellas vacías por ti. Visitarán la tienda cada 3 días y venderán lo que hayan conseguido rebuscando.
+team.bottle.service_description.2,Wilde ha contactado con más recolectores para que reúnan más botellas vacías para ti. Visitarán la tienda cada tres días para traer las botellas vacías que hayan recogido y venderlas.
+team.bottle.service_description.3,"Un equipo legendario de recolectores, bien equipado, se adentrará en la zona abandonada para reunir una gran cantidad de botellas vacías para ti. Visitarán la tienda cada tres días para vender lo que hayan recogido."

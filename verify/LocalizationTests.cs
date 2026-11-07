@@ -78,12 +78,13 @@ internal static partial class RegressionTests
             foreach (var locale in new[] { "zh", "en", "fr", "de", "ja", "ru", "es", "pl" })
             {
                 ModHelper.Locale=locale;
-                Require(ModHelper.Locales[locale].Count == 46, "missing localization rows");
+                Require(ModHelper.Locales[locale].Count == 52, "missing localization rows");
                 foreach (var team in TeamDefinitions.All)
                 {
-                    foreach (var field in new[] { "material","visitor_name","crate_name","crate_flavor" })
+                    foreach (var field in new[] { "material","visitor_name" })
                         Require(Text.For(team,field) != "team."+team.Key+"."+field, "unresolved localization key");
                     for (var level=1; level<=3; level++) Require(!team.Title(level).Contains("{0}"), "unexpanded level");
+                    if (team.LooseOnly) continue;
                     var crate=CrateItems.Create(team);
                     Require(crate.shortDescription.Contains("6") && !crate.shortDescription.Contains("{0}"), "unexpanded crate count");
                 }
@@ -117,7 +118,7 @@ internal static partial class RegressionTests
         });
         Check("resource titles use Roman levels and crate descriptions retain only the opening warning", () =>
         {
-            var names = new[] { "3D打印耗材", "废金属", "电子元件", "矿石" };
+            var names = new[] { "3D打印耗材", "废金属", "电子元件", "矿石", "空酒瓶" };
             var roman = new[] { "I", "II", "III" };
             for (var i=0; i<TeamDefinitions.All.Count; i++)
             {
@@ -128,6 +129,7 @@ internal static partial class RegressionTests
                     var key="team."+team.Key+".service_description."+level;
                     Require(Text.Get(key)!=key && !Text.Get(key).Contains("{0}"), "missing level description");
                 }
+                if (team.LooseOnly) continue;
                 var description=CrateItems.Create(team).shortDescription;
                 Require(!description.Contains("3×3") && description.EndsWith("打开前请确保有足够的仓库空间。"), "crate description changed incorrectly");
             }

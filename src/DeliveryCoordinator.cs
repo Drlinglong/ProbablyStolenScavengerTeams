@@ -81,20 +81,20 @@ namespace ScavengerTeams
             var state = TeamStateRepository.Read(team);
             try
             {
-                for (var i = 0; i < DeliveryRules.StockCount(state.offerLevel); i++)
+                for (var i = 0; i < DeliveryRules.StockCount(state.offerLevel, team.LooseOnly); i++)
                 {
                     if (DeliveryRules.IsSold(state, i)) continue;
                     var index = i;
                     // Always place all useful materials/crates before any junk. Native overflow
                     // destroys the item it cannot place; do not roll back or offer a retry.
-                    var material = i < DeliveryRules.MaterialCount(state.offerLevel);
-                    var id = material ? (state.offerLevel == 1 ? team.MaterialId : team.CrateId) : "junk";
+                    var material = i < DeliveryRules.MaterialCount(state.offerLevel, team.LooseOnly);
+                    var id = material ? (state.offerLevel == 1 || team.LooseOnly ? team.MaterialId : team.CrateId) : "junk";
                     var item = ItemSpawner.Spawn(id);
                     if (item == null) throw new InvalidOperationException("Missing stock: " + id);
                     item.mayStackItemFunc = (a, b) => false;
                     item.ModifyTag(StockIndexTag, tag => tag.Enable().SetInt(index));
                     if (!PlayerStore.Instance.TryAddDirectSellingItemToTable(item))
-                        DeliveryRules.Discard(state, i);
+                        DeliveryRules.Discard(state, i, team.LooseOnly);
                 }
             }
             catch (Exception error)
@@ -103,7 +103,7 @@ namespace ScavengerTeams
             }
             finally
             {
-                if (state.soldMask == (1 << DeliveryRules.StockCount(state.offerLevel)) - 1) state.closed = true;
+                if (state.soldMask == (1 << DeliveryRules.StockCount(state.offerLevel, team.LooseOnly)) - 1) state.closed = true;
                 TeamStateRepository.Write(state, team);
                 client.OnIntroduced();
             }
@@ -112,8 +112,8 @@ namespace ScavengerTeams
         {
             if (!ReferenceEquals(activeClient, client) || !item.IsTag(StockIndexTag)) return;
             var state = TeamStateRepository.Read(team);
-            DeliveryRules.Sold(state, item.GetTagReadonly(StockIndexTag).GetInt());
-            if (state.soldMask == (1 << DeliveryRules.StockCount(state.offerLevel)) - 1) state.closed = true;
+            DeliveryRules.Sold(state, item.GetTagReadonly(StockIndexTag).GetInt(), team.LooseOnly);
+            if (state.soldMask == (1 << DeliveryRules.StockCount(state.offerLevel, team.LooseOnly)) - 1) state.closed = true;
             TeamStateRepository.Write(state, team);
         }
         private static void Close(StoreClient client, TeamDefinition team)

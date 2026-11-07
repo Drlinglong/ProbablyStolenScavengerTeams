@@ -20,6 +20,7 @@ namespace HarmonyLib
 }
 public interface IMod { void Init(ModManifest manifest); void OnEnable(); void OnDisable(); }
 public class ModManifest { }
+public static class RenderHandler { public static object LoadFromAtlas(string atlas, string sprite) => atlas + "/" + sprite; }
 public class ModLog
 {
     public ModLog(ModManifest manifest) { }
@@ -97,9 +98,16 @@ public static class DirectoryMaster
         if (id == FailId && FailAfter-- == 0) throw new Exception("injected factory failure");
         if (Factories.TryGetValue(id, out var factory)) return factory();
         var value = id == "printer_plastic" ? 12 : id == "scrap_metal" ? 10
-            : id == "common_electronic" ? 33 : id == "common_ore" ? 15 : 1;
+            : id == "common_electronic" ? 33 : id == "common_ore" ? 15 : id == "wine_bottle" ? 12 : 1;
         var item = new GameItemElement { identifier = id, unitValue = value };
         item.SetShape(new GridShapeBuilder(id == "printer_plastic" ? 2 : 1, id == "printer_plastic" ? 2 : 1));
+        if (id == "wine_bottle")
+        {
+            item.SetShape(new GridShapeBuilder(1,4).SetDataFill(1,4));
+            item.EnableTag("WINE_CONTAINER_TAG");
+            item.ModifyTag("LIQUID_CONTAINER_CAPACITY", t=>t.Enable().SetInt(750));
+            item.itemTypes.Add("HOUSEHOLD_GOOD");
+        }
         if (id == "printer_plastic")
         {
             item.EnableTag("PRINTER_MATERIAL_TAG");
@@ -254,8 +262,10 @@ public class DialogUIManager
     public Dialogue Last;
     public void StartDialogue(Dialogue dialogue) { Last = dialogue; }
 }
+public class SpriteDictionaryState { public Dictionary<string,object> spriteDictionary = new Dictionary<string,object>(); }
 public static class SpriteDict
 {
+    public static SpriteDictionaryState Instance = new SpriteDictionaryState();
     public static string GetRandomScavSpriteName() => "scav-test-double";
     public static string GetRandomMinerSpriteName() => "miner-test-double";
 }

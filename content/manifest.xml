@@ -3,24 +3,25 @@
   <ID>ps_scavenger_teams</ID>
   <Name>Wild's Scavenger Teams</Name>
   <Author>Linglong</Author>
-  <ModVersion>0.2.1</ModVersion>
+  <ModVersion>0.3.0-dev</ModVersion>
   <Description><![CDATA[SUPPORTED LANGUAGES
 Simplified Chinese, English, French, German, Japanese, Russian, Spanish, Polish
 
 WHY THIS MOD?
-Building and upgrading equipment can become a waiting game once you need large quantities of materials. In the base game, whether a scavenger turns up - and what they bring - is largely down to luck. This mod gives your shop a steady supply of four basic resources, so production does not have to stop while you wait for the right visitor.
+Building and upgrading equipment can become a waiting game once you need large quantities of materials. In the base game, whether a scavenger turns up - and what they bring - is largely down to luck. This mod gives your shop a steady supply of four basic resources and empty wine bottles, so production does not have to stop while you wait for the right visitor.
 
 GETTING STARTED
 Open Wild's Network, find the Scavengers category on the Basic page, and purchase the service for the resource you need. Each service has three tiers; buy the next tier to upgrade that team's deliveries.
 
 FEATURES
-- Four independent suppliers: 3D printer filament, scrap metal, common electronic components, and ore from asteroid miners.
+- Five independent suppliers: 3D printer filament, scrap metal, common electronic components, ore from asteroid miners, and empty wine bottles.
 - The first visit is the day after purchase, followed by one visit every three days. These suppliers arrive in addition to the normal random customers.
-- Tier I brings 6 loose resources and 2 junk items. Tier II brings 2 resource crates and 4 junk items. Tier III brings 3 resource crates and 6 junk items.
+- For the four material routes, Tier I brings 6 loose resources and 2 junk items. Tier II brings 2 resource crates and 4 junk items. Tier III brings 3 resource crates and 6 junk items.
+- The bottle team brings 6 / 12 / 18 original empty wine bottles at tiers I / II / III, with no junk and no crates. The bottles retain their original winemaking functionality.
 - Resource crates make large deliveries easier to receive and store. Each occupies 3x3 cells and opens into 6 units of its resource. Double-click an owned crate to unpack it; leave enough storage space first.
 - Pick individual goods at regular prices, or buy the entire remaining shipment, including junk. Wholesale is half price on that team's first visit and 15% off on later visits.
 - Upgrades improve the same team's cargo without adding duplicate lower-tier visitors, resetting the delivery date, or renewing the first-visit discount.
-Standard base service fees are 200 / 300 / 450 credits for filament, scrap metal, and ore, and 250 / 350 / 500 for electronic components. These are one-time service fees; the goods are purchased separately. Normal difficulty and character price modifiers still apply.
+Standard base service fees are 200 / 300 / 450 credits for filament, scrap metal, ore, and bottles, and 250 / 350 / 500 for electronic components. These are one-time service fees; the goods are purchased separately. Normal difficulty and character price modifiers still apply.
 
 COMPATIBILITY
 Adds new services, suppliers, and resource crates without replacing original game files or item definitions. Designed to work with existing saves; purchasing a service starts its own delivery schedule without resetting your progress. Gameplay and Chinese dialogue have been tested on game version 0.46D.

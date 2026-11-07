@@ -21,7 +21,7 @@ internal static partial class RegressionTests
 
     private static void RunAdditionalRoutes()
     {
-        Check("all twelve native upgrade definitions have exact per-route prices and local prerequisites", () =>
+        Check("all fifteen native upgrade definitions have exact per-route prices and local prerequisites", () =>
         {
             var ordered = ModHelper.Upgrades.Keys.ToArray(); var index = 0;
             foreach (var team in TeamDefinitions.All) for (var level = 1; level <= 3; level++)
@@ -43,14 +43,16 @@ internal static partial class RegressionTests
                 Check(team.Key + " level" + level + " exact stock, single supplier and first-offer discount", () =>
                 {
                     BuyThrough(team, level); var client = Arrive(11);
-                    var materialId = level == 1 ? team.MaterialId : team.CrateId;
-                    Require(Stock.Count(i => i.identifier == materialId) == (level == 1 ? 6 : level == 2 ? 2 : 3), "wrong material stock");
-                    Require(Stock.Count(i => i.identifier == "junk") == level * 2, "wrong junk stock");
+                    var materialId = level == 1 || team.LooseOnly ? team.MaterialId : team.CrateId;
+                    Require(Stock.Count(i => i.identifier == materialId) == (team.LooseOnly ? level * 6 : level == 1 ? 6 : level == 2 ? 2 : 3), "wrong material stock");
+                    Require(Stock.Count(i => i.identifier == "junk") == (team.LooseOnly ? 0 : level * 2), "wrong junk stock");
                     Require(client.identifier == team.ClientId && client.wholesaleDiscount == -50, "wrong supplier/discount");
                     Require(TeamStateRepository.Read(team).nextDay == 14 && TeamStateRepository.Read(team).offerLevel == level, "wrong state route");
                     if (team == TeamDefinitions.Ore) Require(client.spriteName == "miner-test-double", "miner sprite not used");
                 });
             }
+            if (!team.LooseOnly)
+            {
             Check(team.Key + " crate inherits tags/value, opens into six correct units, blocks loose-item repair", () =>
             {
                 var source = DirectoryMaster.Item(team.MaterialId);
@@ -73,6 +75,7 @@ internal static partial class RegressionTests
                 UnpackController.Open(crate);
                 Require(inv.Items.Count == 1 && inv.Items[0] == crate && crate.unitCount == 1, "failed unpack lost or duplicated goods");
             });
+            }
             Check(team.Key + " uses wholesale funds and reentry guard", () =>
             {
                 BuyUpgrade(1, team); Arrive(11);
@@ -82,13 +85,13 @@ internal static partial class RegressionTests
                 Require(Guard(out var accepted), "valid route wholesale rejected"); ReleaseGuard(accepted);
             });
         }
-        Check("four due routes append exactly four customers in order and preserve native customers", () =>
+        Check("five due routes append exactly five customers in order and preserve native customers", () =>
         {
             foreach (var team in TeamDefinitions.All) BuyUpgrade(1, team);
             StoreStation.Day = 11;
             var manager = new StoreClientManager(); var native = new StoreClient { identifier = "native-client" };
             manager.AddClient(native); ModHook.Generate(manager); ModHook.Generate(manager);
-            Require(manager.clientStack.Count == 5 && manager.clientStack[0] == native, "native client replaced or duplicate route");
+            Require(manager.clientStack.Count == 6 && manager.clientStack[0] == native, "native client replaced or duplicate route");
             Require(manager.clientStack.Skip(1).Select(c => c.identifier).SequenceEqual(TeamDefinitions.All.Select(t => t.ClientId)), "wrong route ordering");
         });
         Check("route schedules, upgrades and first offers stay independent", () =>

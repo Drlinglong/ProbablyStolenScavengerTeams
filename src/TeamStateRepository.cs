@@ -11,14 +11,14 @@ namespace ScavengerTeams
             var json = ModHelper.GetModData(ModEntry.Id, team.StateKey);
             if (string.IsNullOrEmpty(json)) return new DeliveryState();
             var state = JsonUtility.FromJson<DeliveryState>(json);
-            if (!DeliveryRules.Valid(state))
+            if (!DeliveryRules.Valid(state, team.LooseOnly))
                 throw new InvalidOperationException("Invalid delivery state; refusing to reset it or grant duplicate stock.");
             return state;
         }
         internal static void Write(DeliveryState state, TeamDefinition team = null)
         {
             team = team ?? TeamDefinitions.Printer;
-            if (!DeliveryRules.Valid(state)) throw new InvalidOperationException("Invalid delivery state.");
+            if (!DeliveryRules.Valid(state, team.LooseOnly)) throw new InvalidOperationException("Invalid delivery state.");
             ModHelper.SetModData(ModEntry.Id, team.StateKey, JsonUtility.ToJson(state));
         }
         internal static int Day => StoreStation.GetDayCounter();

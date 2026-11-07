@@ -1,28 +1,28 @@
 # key,value
-mod.name,"Drużyna zbieraczy złomu Wilde’a"
-category.scavengers,"Zbieracz złomu"
-team.printer.material,"Materiały do druku 3D"
-team.printer.service_title,"Materiały do druku 3D{0}"
-team.printer.visitor_name,"Zbieracz materiałów do druku"
-team.printer.crate_name,"1 skrzynia materiałów do druku 3D"
+mod.name,Drużyna zbieraczy złomu Wilde’a
+category.scavengers,Zbieracz złomu
+team.printer.material,Materiały do druku 3D
+team.printer.service_title,Materiały do druku 3D{0}
+team.printer.visitor_name,Zbieracz materiałów do druku
+team.printer.crate_name,1 skrzynia materiałów do druku 3D
 team.printer.crate_description,"Kliknij dwukrotnie, aby otrzymać {0} szt. materiałów do druku 3D. Przed otwarciem upewnij się, że masz wystarczająco dużo miejsca w magazynie."
 team.printer.crate_flavor,"6 sztuk w każdej skrzyni, członkowie drużyny spakowali je za ciebie."
-team.metal.material,"Złom"
-team.metal.service_title,"Złom{0}"
-team.metal.visitor_name,"Zbieracz złomu"
-team.metal.crate_name,"1 skrzynia złomu"
+team.metal.material,Złom
+team.metal.service_title,Złom{0}
+team.metal.visitor_name,Zbieracz złomu
+team.metal.crate_name,1 skrzynia złomu
 team.metal.crate_description,"Kliknij dwukrotnie, aby otrzymać {0} szt. złomu. Przed otwarciem upewnij się, że masz wystarczająco dużo miejsca w magazynie."
 team.metal.crate_flavor,"6 sztuk w każdej skrzyni, członkowie drużyny spakowali je za ciebie."
-team.electronic.material,"Komponenty elektroniczne (zwykłe)"
-team.electronic.service_title,"Komponenty elektroniczne{0}"
-team.electronic.visitor_name,"Zbieracz komponentów elektronicznych"
-team.electronic.crate_name,"1 skrzynia komponentów elektronicznych (zwykłych)"
+team.electronic.material,Komponenty elektroniczne (zwykłe)
+team.electronic.service_title,Komponenty elektroniczne{0}
+team.electronic.visitor_name,Zbieracz komponentów elektronicznych
+team.electronic.crate_name,1 skrzynia komponentów elektronicznych (zwykłych)
 team.electronic.crate_description,"Kliknij dwukrotnie, aby otrzymać {0} szt. zwykłych komponentów elektronicznych. Przed otwarciem upewnij się, że masz wystarczająco dużo miejsca w magazynie."
 team.electronic.crate_flavor,"6 sztuk w każdej skrzyni, członkowie drużyny spakowali je za ciebie."
-team.ore.material,"Ruda"
-team.ore.service_title,"Ruda{0}"
-team.ore.visitor_name,"Górnik asteroid"
-team.ore.crate_name,"1 skrzynia rudy"
+team.ore.material,Ruda
+team.ore.service_title,Ruda{0}
+team.ore.visitor_name,Górnik asteroid
+team.ore.crate_name,1 skrzynia rudy
 team.ore.crate_description,"Kliknij dwukrotnie, aby otrzymać {0} szt. rudy. Przed otwarciem upewnij się, że masz wystarczająco dużo miejsca w magazynie."
 team.ore.crate_flavor,"6 sztuk w każdej skrzyni, członkowie drużyny spakowali je za ciebie."
 team.printer.service_description.1,"Za pośrednictwem swojej siatki kontaktów Wilde zwerbuje niewielką grupę zbieraczy złomu, którzy będą zbierać dla ciebie materiały do druku 3D, a przy okazji przyniosą trochę śmieci. Co 3 dni będą odwiedzać sklep i sprzedawać to, co udało im się znaleźć."
@@ -45,3 +45,9 @@ team.intro.2,"Szefie, znowu jesteśmy! Słyszeliśmy, że skupujesz tu towary, w
 team.ore.intro.2,"Szefie, dawno się nie widzieliśmy! Dzięki pieniądzom, które dałeś nam na sprzęt, praca idzie nam dużo sprawniej, a do ekipy dołączyło jeszcze kilku górników.\nWszystkim powoli zaczyna się lepiej układać i każdy pamięta, co dla nas zrobiłeś.\nTym razem ruda też jest już zapakowana. Proszę, obejrzyj ją!"
 team.intro.3,"Szefie, twoja dobra sława rozeszła się już po całej społeczności złomiarzy!\nKilku członków ekipy odłożyło trochę pieniędzy i właśnie rozmawiają o otwarciu własnego sklepu.\nMówią, że kiedy już go otworzą, tak jak ty dadzą szansę zarobku tym, którzy nadal zajmują się zbieraniem złomu.\nZobacz, co tym razem przywieźliśmy!"
 team.ore.intro.3,"Szefie, któż wśród górników cię nie zna!\nKilka osób z ekipy odłożyło już trochę pieniędzy i szykuje się, by tak jak ty otworzyć własny sklep.\nKiedyś myśleliśmy tylko o tym, skąd wziąć następny posiłek, a teraz śmiemy marzyć nawet o takich rzeczach.\nTym razem przynieśliśmy sporo rudy, wybieraj sobie do woli!"
+team.bottle.material,Pusta butelka
+team.bottle.service_title,Pusta butelka{0}
+team.bottle.visitor_name,Zbieracz pustych butelek
+team.bottle.service_description.1,"Za pośrednictwem kontaktów Wilde’a zwerbuj niewielką grupę zbieraczy, którzy będą gromadzić dla ciebie puste butelki. Co 3 dni odwiedzą sklep i sprzedadzą zebrane łupy."
+team.bottle.service_description.2,"Wilde skontaktował się z większą liczbą zbieraczy, którzy zgromadzą dla ciebie więcej pustych butelek. Będą odwiedzać sklep co 3 dni i przynosić zebrane butelki na sprzedaż."
+team.bottle.service_description.3,"Doskonale wyposażona, legendarna drużyna zbieraczy zapuści się w głąb opuszczonej strefy, by zgromadzić dla ciebie mnóstwo pustych butelek. Będą odwiedzać sklep co 3 dni, by sprzedawać zebrane łupy."

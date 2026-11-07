@@ -23,10 +23,13 @@ namespace ScavengerTeams
         public const int CrateContents = 6;
         public static int Cost(int level) => level == 1 ? 200 : level == 2 ? 300
             : level == 3 ? 450 : throw new ArgumentOutOfRangeException(nameof(level));
-        public static int MaterialCount(int level) => level == 1 ? 6 : level == 2 ? 2
-            : level == 3 ? 3 : throw new ArgumentOutOfRangeException(nameof(level));
-        public static int JunkCount(int level) => checked(level * 2);
-        public static int StockCount(int level) => MaterialCount(level) + JunkCount(level);
+        public static int MaterialCount(int level, bool looseOnly = false)
+        {
+            if (level < 1 || level > 3) throw new ArgumentOutOfRangeException(nameof(level));
+            return looseOnly ? checked(level * 6) : level == 1 ? 6 : level;
+        }
+        public static int JunkCount(int level, bool looseOnly = false) => looseOnly ? 0 : checked(level * 2);
+        public static int StockCount(int level, bool looseOnly = false) => MaterialCount(level, looseOnly) + JunkCount(level, looseOnly);
         public static void Unlock(DeliveryState state, int day)
         {
             if (state.nextDay < 0) state.nextDay = checked(day + 1);
@@ -51,17 +54,17 @@ namespace ScavengerTeams
         public static bool IsSold(DeliveryState state, int index)
             => (state.soldMask & (1 << index)) != 0;
         public static int WholesaleDiscount(DeliveryState state) => state.firstOffer ? -50 : -15;
-        public static void Sold(DeliveryState state, int index)
-            => MarkUnavailable(state, index);
-        public static void Discard(DeliveryState state, int index)
-            => MarkUnavailable(state, index);
-        private static void MarkUnavailable(DeliveryState state, int index)
+        public static void Sold(DeliveryState state, int index, bool looseOnly = false)
+            => MarkUnavailable(state, index, looseOnly);
+        public static void Discard(DeliveryState state, int index, bool looseOnly = false)
+            => MarkUnavailable(state, index, looseOnly);
+        private static void MarkUnavailable(DeliveryState state, int index, bool looseOnly)
         {
-            if (index < 0 || index >= StockCount(state.offerLevel))
+            if (index < 0 || index >= StockCount(state.offerLevel, looseOnly))
                 throw new ArgumentOutOfRangeException(nameof(index));
             state.soldMask |= 1 << index;
         }
-        public static bool Valid(DeliveryState state)
+        public static bool Valid(DeliveryState state, bool looseOnly = false)
         {
             if (state == null || state.version != 1 || state.nextDay < -1 || state.offerDay < -1)
                 return false;
@@ -71,7 +74,7 @@ namespace ScavengerTeams
             if (state.offerDay == -1)
                 return state.closed && state.offerLevel == 0 && state.soldMask == 0;
             if (state.offerLevel < 1 || state.offerLevel > 3) return false;
-            return state.soldMask >= 0 && state.soldMask < (1 << StockCount(state.offerLevel));
+            return state.soldMask >= 0 && state.soldMask < (1 << StockCount(state.offerLevel, looseOnly));
         }
     }
 }

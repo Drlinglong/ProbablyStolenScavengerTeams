@@ -1,0 +1,34 @@
+{
+  "version": "0.3.0-dev",
+  "source_keys": [
+    "team.bottle.material",
+    "team.bottle.service_title",
+    "team.bottle.visitor_name",
+    "team.bottle.service_description.1",
+    "team.bottle.service_description.2",
+    "team.bottle.service_description.3"
+  ],
+  "provider": "openai",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "remis_version": "3.4.0",
+  "incremental_job": "70ae0329-d641-4726-ab86-a3d7501ac04c",
+  "no_junk_description_revision_job": "3814a809-3b15-4dda-adf6-2f04e2c89b82",
+  "validation": "Both Remis jobs completed with 0 errors, warnings and human review items",
+  "review_notes": [
+    "Bottle tier1 text revised after user removed all junk from bottle route",
+    "English proper name Wilde corrected to Wild in two author-owned CSV entries after export; managed baseline retains model spelling",
+    "All original 46 values per locale preserved"
+  ],
+  "csv_sha256": {
+    "de": "ba7a5c6be2f826bc770cc8239debb91072cefa0efb4a5699fe7eecce78ddc4c3",
+    "en": "e39b899f0bd57c7779c4f17bd40d33809c5b4470176b985f6511b9a9754bf5f2",
+    "es": "97a3a6f35ec8fb1d6d31c2f09e336e1ca3c26bf2e9e271f4db7050284aae710f",
+    "fr": "8e773d1eb440234e0eb7d1deb4ed609b831831fbaaf4793fe62b1e8621a95075",
+    "ja": "07873eff5d21845d1bb5f7525449f82c56dd31918279c8e754b0b82ce7e44f5e",
+    "pl": "c96aedf92181bd3f8288dbb16eac6691cf070d50d8ee19a7b8f3e9ce1ff90bbf",
+    "ru": "2dfcc6eced4b4e2507653889e6b57658bc07fefc14c4c133fcc9ded1ba8a38d8",
+    "zh": "ce64dc7f1f5627fab5a04eab07b21ccbd422c96175c503118ebd511fed2a4446"
+  },
+  "in_game_acceptance": "pending for bottle route; original four-route baseline previously user accepted"
+}

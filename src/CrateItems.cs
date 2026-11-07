@@ -11,7 +11,7 @@ namespace ScavengerTeams
         internal static GridShapeBuilder FilledShape() => new GridShapeBuilder(3, 3).SetDataFill(3, 3);
         internal static void Register(ModItemDirectory directory)
         {
-            foreach (var route in TeamDefinitions.All)
+            foreach (var route in TeamDefinitions.Crated)
             {
                 var team = route;
                 directory.Add(team.CrateId, () => Create(team));
@@ -20,6 +20,7 @@ namespace ScavengerTeams
         internal static GameItem Create(TeamDefinition team = null)
         {
             team = team ?? TeamDefinitions.Printer;
+            if (team.LooseOnly) throw new InvalidOperationException("This route supplies original loose items, not crates.");
             // Start from the original factory: preserve its full tag state and item categories.
             var crate = DirectoryMaster.Item(team.MaterialId);
             if (crate == null) throw new InvalidOperationException(team.MaterialId + " is not registered.");
